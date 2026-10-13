@@ -31,6 +31,14 @@ const { fullBleed = false, ...props } = Astro.props;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
+    <script is:inline>
+      // Activa el motion solo con JS y sin "reducir movimiento". Si el script no carga, se muestra todo.
+      (function (d) {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        d.classList.add('motion');
+        setTimeout(function () { if (!d.classList.contains('is-loaded')) d.classList.remove('motion'); }, 3000);
+      })(document.documentElement);
+    </script>
     <SEO {...props} />
     <OrganizationSchema />
     <WebSiteSchema />
@@ -81,5 +89,8 @@ const { fullBleed = false, ...props } = Astro.props;
       </div>
       <p class="footer-legal">© {new Date().getFullYear()} {SITE.business.legalName || SITE.name}. Todos los derechos reservados.</p>
     </footer>
+    <script>
+      import '../scripts/motion';
+    </script>
   </body>
 </html>

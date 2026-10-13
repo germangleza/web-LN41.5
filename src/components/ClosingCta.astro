@@ -9,13 +9,13 @@ interface Props {
 const { whatsappMessage } = Astro.props;
 ---
 <section class="closing" id="contacto" aria-labelledby="contacto-title">
-  <div class="closing__bg">
+  <div class="closing__bg" data-parallax="0.2">
     <Photo name="cierre" alt="" />
   </div>
   <div class="closing__content">
-    <h2 id="contacto-title" class="heading">¿Estás pensando en ir o volver a España?</h2>
-    <p class="closing__text">Cuéntanos qué tienes en mente y empecemos a diseñar una ruta a tu medida.</p>
-    <div class="btn-row">
+    <h2 id="contacto-title" class="heading" data-split>¿Estás pensando en ir o volver a España?</h2>
+    <p class="closing__text" data-reveal>Cuéntanos qué tienes en mente y empecemos a diseñar una ruta a tu medida.</p>
+    <div class="btn-row" data-reveal style="--d: 150">
       <a class="btn btn--solid" href={designTripUrl()}>Diseñar mi viaje</a>
       <a class="btn btn--outline" href={whatsappUrl(whatsappMessage)} rel="noopener">Hablar por WhatsApp</a>
     </div>
@@ -31,7 +31,7 @@ const { whatsappMessage } = Astro.props;
     overflow: hidden;
     background: var(--color-ink);
   }
-  .closing__bg { position: absolute; inset: 0; }
+  .closing__bg { position: absolute; inset: -15% 0; }
   .closing__bg::after {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(to top, rgb(30 25 20 / 0.95) 0%, rgb(30 25 20 / 0.55) 55%, rgb(30 25 20 / 0.3) 100%);

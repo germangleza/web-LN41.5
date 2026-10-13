@@ -35,16 +35,16 @@ const paraTi = [
 <BaseLayout fullBleed>
   <!-- HERO -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero__bg">
+    <div class="hero__bg" data-parallax="0.25">
       <Photo name="hero" alt="" eager />
     </div>
     <div class="hero__content">
-      <h1 id="hero-title" class="display hero__title">
+      <h1 id="hero-title" class="display hero__title" data-split>
         <span>España</span>
         <span>desde</span>
         <span>dentro.</span>
       </h1>
-      <div class="hero__aside">
+      <div class="hero__aside" data-reveal style="--d: 700">
         <p class="hero__text">
           Diseñamos viajes a España para quienes quieren descubrir regiones, sabores e historias que normalmente se quedan fuera del itinerario tradicional.
         </p>
@@ -61,11 +61,11 @@ const paraTi = [
 
   <!-- EL PUNTO DE PARTIDA -->
   <section id="punto-de-partida" class="band band--light topo" aria-labelledby="partida-title">
-    <p class="caption section-label">01</p>
-    <h2 id="partida-title" class="heading partida__title">El punto de partida</h2>
+    <p class="caption section-label" data-reveal>01</p>
+    <h2 id="partida-title" class="heading partida__title" data-split>El punto de partida</h2>
     <div class="partida__grid">
-      <p class="lead">Viajar hoy es más fácil que nunca. <em>Reservar no es el problema.</em></p>
-      <div class="partida__text">
+      <p class="lead" data-reveal>Viajar hoy es más fácil que nunca. <em>Reservar no es el problema.</em></p>
+      <div class="partida__text" data-stagger>
         <p>El reto está en saber qué sí vale la pena, qué dejar fuera y cómo construir un viaje que realmente se sienta propio.</p>
         <p>LN41.5 nace desde esa idea: ayudar a viajeros a conocer España con más criterio, más contexto y menos itinerario típico.</p>
       </div>
@@ -74,23 +74,23 @@ const paraTi = [
 
   <!-- CADA VIAJE SE DISEÑA COMO UNA RUTA NUEVA -->
   <section class="band band--dark topo" aria-labelledby="ruta-nueva-title">
-    <p class="caption section-label">02</p>
+    <p class="caption section-label" data-reveal>02</p>
     <div class="ruta-nueva__top">
       <div class="ruta-nueva__intro">
-        <h2 id="ruta-nueva-title" class="heading ruta-nueva__title">Cada viaje se diseña como una ruta nueva</h2>
-        <p class="ruta-nueva__strong">No trabajamos desde paquetes genéricos.<br />Trabajamos desde intención, ritmo, intereses y contexto.</p>
-        <p class="ruta-nueva__text">Diseñamos experiencias que combinan criterio, curaduría y conocimiento local para ayudarte a vivir una España más auténtica y mejor elegida.</p>
+        <h2 id="ruta-nueva-title" class="heading ruta-nueva__title" data-split>Cada viaje se diseña como una ruta nueva</h2>
+        <p class="ruta-nueva__strong" data-reveal>No trabajamos desde paquetes genéricos.<br />Trabajamos desde intención, ritmo, intereses y contexto.</p>
+        <p class="ruta-nueva__text" data-reveal style="--d: 150">Diseñamos experiencias que combinan criterio, curaduría y conocimiento local para ayudarte a vivir una España más auténtica y mejor elegida.</p>
       </div>
       <div class="collage" aria-hidden="true">
-        <div class="collage__item collage__item--1"><Photo name="collage-1" alt="" sizes="(min-width: 64rem) 22vw, 50vw" /></div>
-        <div class="collage__item collage__item--2"><Photo name="collage-2" alt="" sizes="(min-width: 64rem) 20vw, 45vw" /></div>
-        <div class="collage__item collage__item--3"><Photo name="collage-3" alt="" sizes="(min-width: 64rem) 18vw, 40vw" /></div>
-        <span class="badge">
+        <div class="collage__item collage__item--1" data-toss data-parallax="0.06" style="--i: 0"><Photo name="collage-1" alt="" sizes="(min-width: 64rem) 22vw, 50vw" /></div>
+        <div class="collage__item collage__item--2" data-toss data-parallax="0.14" style="--i: 1"><Photo name="collage-2" alt="" sizes="(min-width: 64rem) 20vw, 45vw" /></div>
+        <div class="collage__item collage__item--3" data-toss data-parallax="0.1" style="--i: 2"><Photo name="collage-3" alt="" sizes="(min-width: 64rem) 18vw, 40vw" /></div>
+        <span class="badge" data-spin>
           <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.5" /><path d="M24 9l5 15-5 15-5-15z" fill="none" stroke="currentColor" stroke-width="1.5" /><path d="M24 9l5 15h-10z" fill="currentColor" /></svg>
         </span>
       </div>
     </div>
-    <ul class="servicios" role="list">
+    <ul class="servicios" role="list" data-stagger>
       {servicios.map((s, i) => (
         <li class="servicio">
           <p class="caption servicio__num">{String(i + 1).padStart(2, '0')}</p>
@@ -105,18 +105,18 @@ const paraTi = [
 
   <!-- NO ES PARA TODOS -->
   <section class="band band--light" aria-labelledby="para-quien-title">
-    <p class="caption section-label">03</p>
-    <h2 id="para-quien-title" class="heading para-quien__title">
+    <p class="caption section-label" data-reveal>03</p>
+    <h2 id="para-quien-title" class="heading para-quien__title" data-split>
       No es para todos.<br /><em>Es para quienes quieren viajar mejor.</em>
     </h2>
     <div class="para-quien__grid">
-      <div class="para-quien__photo">
+      <div class="para-quien__photo" data-toss>
         <Photo name="para-ti" alt="Viajero recorriendo una calle de un pueblo en España" sizes="(min-width: 64rem) 35vw, 90vw" />
       </div>
       <div>
-        <p class="lead para-quien__lead">LN41.5 está pensado para viajeros que valoran profundidad por encima de volumen.</p>
-        <h3 class="caption para-ti__label">Para ti si…</h3>
-        <ol class="para-ti" role="list">
+        <p class="lead para-quien__lead" data-reveal>LN41.5 está pensado para viajeros que valoran profundidad por encima de volumen.</p>
+        <h3 class="caption para-ti__label" data-reveal>Para ti si…</h3>
+        <ol class="para-ti" role="list" data-stagger>
           {paraTi.map((item, i) => (
             <li><span class="para-ti__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>{item}</li>
           ))}
@@ -127,9 +127,9 @@ const paraTi = [
 
   <!-- RUTAS -->
   <section id="rutas" class="band band--dark" aria-labelledby="rutas-title">
-    <p class="caption section-label">04</p>
-    <h2 id="rutas-title" class="heading rutas__title">Tres rutas para empezar a explorar</h2>
-    <div class="rutas__grid">
+    <p class="caption section-label" data-reveal>04</p>
+    <h2 id="rutas-title" class="heading rutas__title" data-split>Tres rutas para empezar a explorar</h2>
+    <div class="rutas__grid" data-stagger>
       {rutas.map((ruta) => <RouteCard ruta={ruta} />)}
     </div>
   </section>
@@ -147,7 +147,7 @@ const paraTi = [
     overflow: hidden;
     background: var(--color-ink);
   }
-  .hero__bg { position: absolute; inset: 0; }
+  .hero__bg { position: absolute; inset: -10% 0 0; }
   .hero__bg::after {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(to top, rgb(30 25 20 / 0.92) 0%, rgb(30 25 20 / 0.35) 50%, rgb(30 25 20 / 0.15) 100%);
@@ -185,10 +185,11 @@ const paraTi = [
   .ruta-nueva__text { max-width: var(--max-text); color: var(--color-stone); font-size: 1.0625rem; }
 
   .collage { position: relative; height: clamp(22rem, 60vw, 36rem); }
-  .collage__item { position: absolute; overflow: hidden; }
-  .collage__item--1 { width: 52%; aspect-ratio: 4 / 5; left: 0; top: 6%; rotate: -8deg; }
-  .collage__item--2 { width: 46%; aspect-ratio: 1; right: 2%; top: 0; rotate: 6deg; }
-  .collage__item--3 { width: 42%; aspect-ratio: 3 / 4; left: 38%; bottom: 0; rotate: 3deg; }
+  .collage__item { position: absolute; overflow: hidden; rotate: var(--rot); }
+  .para-quien__photo { rotate: var(--rot); }
+  .collage__item--1 { width: 52%; aspect-ratio: 4 / 5; left: 0; top: 6%; --rot: -8deg; }
+  .collage__item--2 { width: 46%; aspect-ratio: 1; right: 2%; top: 0; --rot: 6deg; }
+  .collage__item--3 { width: 42%; aspect-ratio: 3 / 4; left: 38%; bottom: 0; --rot: 3deg; }
   .badge { position: absolute; left: 4%; bottom: 6%; color: var(--color-gold); }
   @media (min-width: 64rem) {
     .ruta-nueva__top { grid-template-columns: 1fr 1fr; }
@@ -209,7 +210,7 @@ const paraTi = [
   .para-quien__title { color: var(--color-base); max-width: 20ch; margin-bottom: var(--space-6); }
   .para-quien__title em { color: var(--color-copper); }
   .para-quien__grid { display: grid; gap: var(--space-6); align-items: start; }
-  .para-quien__photo { aspect-ratio: 4 / 5; overflow: hidden; rotate: -3deg; max-width: 28rem; }
+  .para-quien__photo { aspect-ratio: 4 / 5; overflow: hidden; --rot: -3deg; max-width: 28rem; }
   .para-quien__lead { margin-bottom: var(--space-5); max-width: 36rem; }
   .para-ti__label { color: var(--color-copper); margin-bottom: var(--space-2); }
   .para-ti { list-style: none; margin: 0; padding: 0; }

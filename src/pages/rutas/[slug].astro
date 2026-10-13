@@ -24,13 +24,13 @@ const hasBody = Boolean(ruta.body?.trim());
   <BreadcrumbSchema items={[{ name: 'Rutas', url: '/#rutas' }, { name: title, url: Astro.url.pathname }]} />
 
   <section class="ruta-hero" aria-labelledby="ruta-title">
-    <div class="ruta-hero__bg">
+    <div class="ruta-hero__bg" data-parallax="0.25">
       <Photo name={photo} alt={photoAlt ?? ''} eager />
     </div>
     <div class="ruta-hero__content">
       <p class="caption ruta-hero__num"><a href="/#rutas">Rutas</a> / {String(order).padStart(2, '0')}</p>
-      <h1 id="ruta-title" class="heading ruta-hero__title">{title}</h1>
-      <p class="ruta-hero__subtitle">{subtitle}</p>
+      <h1 id="ruta-title" class="heading ruta-hero__title" data-split>{title}</h1>
+      <p class="ruta-hero__subtitle" data-reveal style="--d: 600">{subtitle}</p>
     </div>
   </section>
 
@@ -43,9 +43,9 @@ const hasBody = Boolean(ruta.body?.trim());
   )}
 
   <section class="band band--dark" aria-labelledby="otras-title">
-    <p class="caption section-label">Otras rutas</p>
-    <h2 id="otras-title" class="heading otras__title">Sigue explorando</h2>
-    <div class="otras__grid">
+    <p class="caption section-label" data-reveal>Otras rutas</p>
+    <h2 id="otras-title" class="heading otras__title" data-split>Sigue explorando</h2>
+    <div class="otras__grid" data-stagger>
       {otras.map((r) => <RouteCard ruta={r} />)}
     </div>
   </section>
@@ -62,7 +62,7 @@ const hasBody = Boolean(ruta.body?.trim());
     overflow: hidden;
     background: var(--color-ink);
   }
-  .ruta-hero__bg { position: absolute; inset: 0; }
+  .ruta-hero__bg { position: absolute; inset: -10% 0 0; }
   .ruta-hero__bg::after {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(to top, rgb(30 25 20 / 0.92) 0%, rgb(30 25 20 / 0.35) 55%, rgb(30 25 20 / 0.15) 100%);
