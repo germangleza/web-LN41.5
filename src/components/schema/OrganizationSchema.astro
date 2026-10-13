@@ -9,7 +9,7 @@ const schema: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': b.type,
   name: SITE.name,
-  legalName: b.legalName,
+  legalName: b.legalName || undefined,
   url: SITE.url,
   logo: new URL(SITE.logo, SITE.url).href,
   email: b.email,

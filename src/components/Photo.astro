@@ -1,0 +1,39 @@
+---
+/**
+ * Foto del sitio. Busca `src/assets/fotos/<name>.{jpg,jpeg,png,webp}` y la sirve optimizada
+ * (AVIF/WebP, varios tamaños). Si la foto aún no existe, muestra un placeholder con textura
+ * topográfica y el nombre del archivo esperado, para saber qué foto va en cada lugar.
+ */
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  name: string;
+  alt: string;
+  sizes?: string;
+  eager?: boolean;
+  class?: string;
+}
+const { name, alt, sizes = '100vw', eager = false, class: className } = Astro.props;
+
+const files = import.meta.glob<{ default: ImageMetadata }>('/src/assets/fotos/*.{jpg,jpeg,png,webp}', { eager: true });
+const match = Object.entries(files).find(([path]) => path.split('/').pop()!.replace(/\.\w+$/, '') === name);
+const image = match?.[1].default;
+---
+{image ? (
+  <Picture
+    src={image}
+    alt={alt}
+    formats={['avif', 'webp']}
+    widths={[480, 800, 1200, 1600, 2400].filter((w) => w <= image.width)}
+    sizes={sizes}
+    loading={eager ? 'eager' : 'lazy'}
+    fetchpriority={eager ? 'high' : undefined}
+    class:list={['photo', className]}
+    pictureAttributes={{ class: 'photo-picture' }}
+  />
+) : (
+  <div class:list={['photo', 'photo--placeholder', className]} role={alt ? 'img' : undefined} aria-label={alt || undefined} aria-hidden={alt ? undefined : 'true'}>
+    <span class="caption" aria-hidden="true">Foto · {name}.jpg</span>
+  </div>
+)}

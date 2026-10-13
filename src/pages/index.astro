@@ -1,34 +1,241 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FAQSchema from '../components/schema/FAQSchema.astro';
-import { SITE } from '../config/site.config';
+import Photo from '../components/Photo.astro';
+import RouteCard from '../components/RouteCard.astro';
+import ClosingCta from '../components/ClosingCta.astro';
+import { designTripUrl } from '../config/site.config';
 
-// Edita/borra estas FAQs. Son ejemplo de cómo alimentar SEO + GEO desde la home.
-const faqs = [
-  { question: `¿Qué hace ${SITE.name}?`, answer: SITE.description },
-  { question: '¿Cómo puedo contactarlos?', answer: `Escríbenos a ${SITE.business.email}.` },
+const rutas = (await getCollection('rutas', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const servicios = [
+  {
+    title: 'Curaduría',
+    items: ['Menos opciones, mejores decisiones', 'Qué sí vale la pena', 'Qué dejar fuera', 'Cómo combinar regiones y experiencias'],
+  },
+  {
+    title: 'Diseño de viaje',
+    items: ['Ruta personalizada', 'Ritmo y lógica del recorrido', 'Selección de experiencias', 'Hospedaje y estructura general'],
+  },
+  {
+    title: 'Acompañamiento',
+    items: ['Conversación inicial', 'Concepto de viaje', 'Propuesta', 'Coordinación y seguimiento'],
+  },
+];
+
+const paraTi = [
+  'Ya conociste España y quieres volver.',
+  'Quieres salirte del itinerario típico.',
+  'Valoras gastronomía, historia, cultura y regiones.',
+  'Prefieres criterio en vez de mil recomendaciones.',
+  'Quieres un viaje más personal y menos genérico.',
 ];
 ---
-<BaseLayout>
-  <FAQSchema faqs={faqs} />
-
-  <section class="hero">
-    <h1>{SITE.name}</h1>
-    <p>{SITE.description}</p>
+<BaseLayout fullBleed>
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__bg">
+      <Photo name="hero" alt="" eager />
+    </div>
+    <div class="hero__content">
+      <h1 id="hero-title" class="display hero__title">
+        <span>España</span>
+        <span>desde</span>
+        <span>dentro.</span>
+      </h1>
+      <div class="hero__aside">
+        <p class="hero__text">
+          Diseñamos viajes a España para quienes quieren descubrir regiones, sabores e historias que normalmente se quedan fuera del itinerario tradicional.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--solid" href={designTripUrl()}>Diseñar mi viaje</a>
+          <a class="btn btn--outline" href="#rutas">Explorar rutas</a>
+        </div>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#punto-de-partida" aria-label="Bajar a la siguiente sección">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" /><path d="M12 7v10m-4-4 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
+    </a>
   </section>
 
-  <section id="faq" aria-labelledby="faq-title">
-    <h2 id="faq-title">Preguntas frecuentes</h2>
-    {faqs.map((f) => (
-      <details>
-        <summary>{f.question}</summary>
-        <p>{f.answer}</p>
-      </details>
-    ))}
+  <!-- EL PUNTO DE PARTIDA -->
+  <section id="punto-de-partida" class="band band--light topo" aria-labelledby="partida-title">
+    <p class="caption section-label">01</p>
+    <h2 id="partida-title" class="heading partida__title">El punto de partida</h2>
+    <div class="partida__grid">
+      <p class="lead">Viajar hoy es más fácil que nunca. <em>Reservar no es el problema.</em></p>
+      <div class="partida__text">
+        <p>El reto está en saber qué sí vale la pena, qué dejar fuera y cómo construir un viaje que realmente se sienta propio.</p>
+        <p>LN41.5 nace desde esa idea: ayudar a viajeros a conocer España con más criterio, más contexto y menos itinerario típico.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="contacto" aria-labelledby="contacto-title">
-    <h2 id="contacto-title">Contacto</h2>
-    <p><a href={`mailto:${SITE.business.email}`}>{SITE.business.email}</a></p>
+  <!-- CADA VIAJE SE DISEÑA COMO UNA RUTA NUEVA -->
+  <section class="band band--dark topo" aria-labelledby="ruta-nueva-title">
+    <p class="caption section-label">02</p>
+    <div class="ruta-nueva__top">
+      <div class="ruta-nueva__intro">
+        <h2 id="ruta-nueva-title" class="heading ruta-nueva__title">Cada viaje se diseña como una ruta nueva</h2>
+        <p class="ruta-nueva__strong">No trabajamos desde paquetes genéricos.<br />Trabajamos desde intención, ritmo, intereses y contexto.</p>
+        <p class="ruta-nueva__text">Diseñamos experiencias que combinan criterio, curaduría y conocimiento local para ayudarte a vivir una España más auténtica y mejor elegida.</p>
+      </div>
+      <div class="collage" aria-hidden="true">
+        <div class="collage__item collage__item--1"><Photo name="collage-1" alt="" sizes="(min-width: 64rem) 22vw, 50vw" /></div>
+        <div class="collage__item collage__item--2"><Photo name="collage-2" alt="" sizes="(min-width: 64rem) 20vw, 45vw" /></div>
+        <div class="collage__item collage__item--3"><Photo name="collage-3" alt="" sizes="(min-width: 64rem) 18vw, 40vw" /></div>
+        <span class="badge">
+          <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.5" /><path d="M24 9l5 15-5 15-5-15z" fill="none" stroke="currentColor" stroke-width="1.5" /><path d="M24 9l5 15h-10z" fill="currentColor" /></svg>
+        </span>
+      </div>
+    </div>
+    <ul class="servicios" role="list">
+      {servicios.map((s, i) => (
+        <li class="servicio">
+          <p class="caption servicio__num">{String(i + 1).padStart(2, '0')}</p>
+          <h3 class="subheading servicio__title">{s.title}</h3>
+          <ul class="servicio__list">
+            {s.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </li>
+      ))}
+    </ul>
   </section>
+
+  <!-- NO ES PARA TODOS -->
+  <section class="band band--light" aria-labelledby="para-quien-title">
+    <p class="caption section-label">03</p>
+    <h2 id="para-quien-title" class="heading para-quien__title">
+      No es para todos.<br /><em>Es para quienes quieren viajar mejor.</em>
+    </h2>
+    <div class="para-quien__grid">
+      <div class="para-quien__photo">
+        <Photo name="para-ti" alt="Viajero recorriendo una calle de un pueblo en España" sizes="(min-width: 64rem) 35vw, 90vw" />
+      </div>
+      <div>
+        <p class="lead para-quien__lead">LN41.5 está pensado para viajeros que valoran profundidad por encima de volumen.</p>
+        <h3 class="caption para-ti__label">Para ti si…</h3>
+        <ol class="para-ti" role="list">
+          {paraTi.map((item, i) => (
+            <li><span class="para-ti__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>{item}</li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUTAS -->
+  <section id="rutas" class="band band--dark" aria-labelledby="rutas-title">
+    <p class="caption section-label">04</p>
+    <h2 id="rutas-title" class="heading rutas__title">Tres rutas para empezar a explorar</h2>
+    <div class="rutas__grid">
+      {rutas.map((ruta) => <RouteCard ruta={ruta} />)}
+    </div>
+  </section>
+
+  <ClosingCta />
 </BaseLayout>
+
+<style>
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex; align-items: flex-end;
+    padding: 8rem var(--gutter) clamp(3rem, 6vw, 5rem);
+    overflow: hidden;
+    background: var(--color-ink);
+  }
+  .hero__bg { position: absolute; inset: 0; }
+  .hero__bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgb(30 25 20 / 0.92) 0%, rgb(30 25 20 / 0.35) 50%, rgb(30 25 20 / 0.15) 100%);
+  }
+  .hero__content {
+    position: relative; width: 100%;
+    display: grid; gap: var(--space-5);
+    align-items: end;
+  }
+  .hero__title { color: var(--color-gold); }
+  .hero__title span { display: block; }
+  .hero__aside { display: grid; gap: var(--space-4); max-width: 26rem; }
+  .hero__text { font-size: 1.0625rem; color: var(--color-sand); }
+  .hero__scroll { position: absolute; left: 50%; bottom: 1.25rem; translate: -50% 0; color: var(--color-gold); display: none; }
+  @media (min-width: 64rem) {
+    .hero__content { grid-template-columns: 1fr auto; }
+    .hero__scroll { display: block; }
+  }
+
+  /* PUNTO DE PARTIDA */
+  .partida__title { color: var(--color-base); margin-bottom: var(--space-6); }
+  .partida__grid { display: grid; gap: var(--space-5); }
+  .partida__grid .lead { color: var(--color-base); max-width: 40rem; }
+  .partida__grid .lead em { color: var(--color-copper); }
+  .partida__text { display: grid; gap: var(--space-3); max-width: var(--max-text); font-size: 1.0625rem; }
+  @media (min-width: 56rem) {
+    .partida__grid { grid-template-columns: 7fr 5fr; align-items: end; }
+  }
+
+  /* RUTA NUEVA */
+  .ruta-nueva__top { display: grid; gap: var(--space-6); align-items: center; }
+  .ruta-nueva__intro { display: grid; gap: var(--space-4); }
+  .ruta-nueva__title { color: var(--color-gold); max-width: 14ch; }
+  .ruta-nueva__strong { font-family: var(--font-display); font-weight: 600; font-size: var(--text-subheading); line-height: 1.1; max-width: 30rem; }
+  .ruta-nueva__text { max-width: var(--max-text); color: var(--color-stone); font-size: 1.0625rem; }
+
+  .collage { position: relative; height: clamp(22rem, 60vw, 36rem); }
+  .collage__item { position: absolute; overflow: hidden; }
+  .collage__item--1 { width: 52%; aspect-ratio: 4 / 5; left: 0; top: 6%; rotate: -8deg; }
+  .collage__item--2 { width: 46%; aspect-ratio: 1; right: 2%; top: 0; rotate: 6deg; }
+  .collage__item--3 { width: 42%; aspect-ratio: 3 / 4; left: 38%; bottom: 0; rotate: 3deg; }
+  .badge { position: absolute; left: 4%; bottom: 6%; color: var(--color-gold); }
+  @media (min-width: 64rem) {
+    .ruta-nueva__top { grid-template-columns: 1fr 1fr; }
+  }
+
+  .servicios { list-style: none; margin: var(--space-6) 0 0; padding: 0; display: grid; gap: var(--space-5); }
+  .servicio { border-top: 1px solid var(--hairline-dark); padding-top: var(--space-4); display: grid; gap: var(--space-3); align-content: start; }
+  .servicio__num { color: var(--color-gold); }
+  .servicio__title { color: var(--color-sand); }
+  .servicio__list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-1); color: var(--color-stone); }
+  .servicio__list li { display: flex; gap: 0.75em; }
+  .servicio__list li::before { content: ''; flex: 0 0 0.75rem; height: 1px; margin-top: 0.8em; background: var(--color-gold); }
+  @media (min-width: 48rem) {
+    .servicios { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* PARA QUIÉN */
+  .para-quien__title { color: var(--color-base); max-width: 20ch; margin-bottom: var(--space-6); }
+  .para-quien__title em { color: var(--color-copper); }
+  .para-quien__grid { display: grid; gap: var(--space-6); align-items: start; }
+  .para-quien__photo { aspect-ratio: 4 / 5; overflow: hidden; rotate: -3deg; max-width: 28rem; }
+  .para-quien__lead { margin-bottom: var(--space-5); max-width: 36rem; }
+  .para-ti__label { color: var(--color-copper); margin-bottom: var(--space-2); }
+  .para-ti { list-style: none; margin: 0; padding: 0; }
+  .para-ti li {
+    display: grid; grid-template-columns: 3rem 1fr; align-items: baseline;
+    padding: var(--space-3) 0;
+    border-top: 1px solid var(--hairline-light);
+    font-size: 1.0625rem;
+  }
+  .para-ti li:last-child { border-bottom: 1px solid var(--hairline-light); }
+  .para-ti__num { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--color-copper); line-height: 1; }
+  @media (min-width: 56rem) {
+    .para-quien__grid { grid-template-columns: 5fr 7fr; }
+  }
+
+  /* RUTAS */
+  .rutas__title { color: var(--color-gold); max-width: 16ch; margin-bottom: var(--space-6); }
+  .rutas__grid { display: grid; gap: var(--space-6) var(--space-5); }
+  .rutas__grid > :global(:nth-child(1)) { --tilt: -2deg; }
+  .rutas__grid > :global(:nth-child(2)) { --tilt: 1.5deg; }
+  .rutas__grid > :global(:nth-child(3)) { --tilt: -1deg; }
+  @media (min-width: 40rem) {
+    .rutas__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 64rem) {
+    .rutas__grid { grid-template-columns: repeat(3, 1fr); }
+    .rutas__grid > :global(:nth-child(2)) { margin-top: var(--space-6); }
+  }
+</style>

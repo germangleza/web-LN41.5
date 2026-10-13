@@ -19,4 +19,21 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+/**
+ * Rutas de viaje. Cada archivo = una página en /rutas/<nombre-del-archivo>.
+ * `order` define el orden en la home. `photo` = nombre del archivo en src/assets/fotos (sin extensión).
+ */
+const rutas = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/rutas' }),
+  schema: z.object({
+    title: z.string().max(70),
+    subtitle: z.string(),
+    description: z.string().min(50).max(160, 'Description entre 50-160 caracteres'),
+    order: z.number(),
+    photo: z.string(),
+    photoAlt: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { blog, rutas };

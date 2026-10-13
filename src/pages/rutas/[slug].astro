@@ -1,0 +1,88 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Photo from '../../components/Photo.astro';
+import RouteCard from '../../components/RouteCard.astro';
+import ClosingCta from '../../components/ClosingCta.astro';
+
+export async function getStaticPaths() {
+  const rutas = (await getCollection('rutas', ({ data }) => !data.draft))
+    .sort((a, b) => a.data.order - b.data.order);
+  return rutas.map((ruta) => ({
+    params: { slug: ruta.id },
+    props: { ruta, otras: rutas.filter((r) => r.id !== ruta.id) },
+  }));
+}
+
+const { ruta, otras } = Astro.props;
+const { title, subtitle, description, order, photo, photoAlt } = ruta.data;
+const { Content } = await render(ruta);
+const hasBody = Boolean(ruta.body?.trim());
+---
+<BaseLayout fullBleed title={title} description={description}>
+  <BreadcrumbSchema items={[{ name: 'Rutas', url: '/#rutas' }, { name: title, url: Astro.url.pathname }]} />
+
+  <section class="ruta-hero" aria-labelledby="ruta-title">
+    <div class="ruta-hero__bg">
+      <Photo name={photo} alt={photoAlt ?? ''} eager />
+    </div>
+    <div class="ruta-hero__content">
+      <p class="caption ruta-hero__num"><a href="/#rutas">Rutas</a> / {String(order).padStart(2, '0')}</p>
+      <h1 id="ruta-title" class="heading ruta-hero__title">{title}</h1>
+      <p class="ruta-hero__subtitle">{subtitle}</p>
+    </div>
+  </section>
+
+  {hasBody && (
+    <section class="band band--light">
+      <div class="ruta-body">
+        <Content />
+      </div>
+    </section>
+  )}
+
+  <section class="band band--dark" aria-labelledby="otras-title">
+    <p class="caption section-label">Otras rutas</p>
+    <h2 id="otras-title" class="heading otras__title">Sigue explorando</h2>
+    <div class="otras__grid">
+      {otras.map((r) => <RouteCard ruta={r} />)}
+    </div>
+  </section>
+
+  <ClosingCta whatsappMessage={`Hola, me interesa la ruta "${title}" y me gustaría diseñar mi viaje.`} />
+</BaseLayout>
+
+<style>
+  .ruta-hero {
+    position: relative;
+    min-height: 88svh;
+    display: flex; align-items: flex-end;
+    padding: 8rem var(--gutter) clamp(3rem, 6vw, 5rem);
+    overflow: hidden;
+    background: var(--color-ink);
+  }
+  .ruta-hero__bg { position: absolute; inset: 0; }
+  .ruta-hero__bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgb(30 25 20 / 0.92) 0%, rgb(30 25 20 / 0.35) 55%, rgb(30 25 20 / 0.15) 100%);
+  }
+  .ruta-hero__content { position: relative; display: grid; gap: var(--space-4); }
+  .ruta-hero__num { color: var(--color-gold); }
+  .ruta-hero__num a { text-decoration: none; }
+  .ruta-hero__num a:hover { text-decoration: underline; }
+  .ruta-hero__title { color: var(--color-gold); font-size: clamp(3rem, 1rem + 8vw, 10rem); max-width: 12ch; }
+  .ruta-hero__subtitle { font-size: 1.125rem; max-width: var(--max-text); }
+
+  .ruta-body { max-width: 44rem; font-size: 1.0625rem; }
+  .ruta-body :global(h2) { font-size: var(--text-subheading); text-transform: uppercase; margin: 2.5rem 0 1rem; }
+  .ruta-body :global(p), .ruta-body :global(ul) { margin: 0 0 1.1em; }
+
+  .otras__title { color: var(--color-gold); margin-bottom: var(--space-6); }
+  .otras__grid { display: grid; gap: var(--space-6) var(--space-5); }
+  .otras__grid > :global(:nth-child(1)) { --tilt: -2deg; }
+  .otras__grid > :global(:nth-child(2)) { --tilt: 1.5deg; }
+  @media (min-width: 40rem) {
+    .otras__grid { grid-template-columns: repeat(2, 1fr); max-width: 60rem; }
+  }
+</style>

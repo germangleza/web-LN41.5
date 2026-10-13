@@ -3,7 +3,7 @@
 import SEO from '../components/SEO.astro';
 import OrganizationSchema from '../components/schema/OrganizationSchema.astro';
 import WebSiteSchema from '../components/schema/WebSiteSchema.astro';
-import { SITE } from '../config/site.config';
+import { SITE, designTripUrl, whatsappUrl, socialUrls } from '../config/site.config';
 import '../styles/global.css';
 
 interface Props {
@@ -15,8 +15,10 @@ interface Props {
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
+  /** Páginas de diseño full-bleed (home, rutas): el header flota sobre el hero y no hay contenedor. */
+  fullBleed?: boolean;
 }
-const props = Astro.props;
+const { fullBleed = false, ...props } = Astro.props;
 ---
 <!doctype html>
 <html lang={SITE.lang}>
@@ -24,7 +26,9 @@ const props = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content={SITE.themeColor} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
     <SEO {...props} />
@@ -35,22 +39,47 @@ const props = Astro.props;
     )}
   </head>
   <body>
-    <header class="site-header">
+    <header class:list={['site-header', { 'site-header--overlay': fullBleed }]}>
       <nav aria-label="Principal">
-        <a href="/" class="brand">{SITE.name}</a>
-        <ul>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/#contacto">Contacto</a></li>
+        <a href="/" class="brand">
+          <img src="/logo.webp" alt={SITE.name} width="480" height="254" />
+        </a>
+        <ul class="nav-links">
+          <li class="nav-text"><a class="caption" href="/#rutas">Rutas</a></li>
+          <li class="nav-text"><a class="caption" href="/blog">Blog</a></li>
+          <li><a class="btn btn--outline btn--small" href={designTripUrl()}>Diseñar mi viaje</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main class:list={{ page: !fullBleed }}>
       <slot />
     </main>
 
     <footer class="site-footer">
-      <p>© {new Date().getFullYear()} {SITE.business.legalName || SITE.name}. Todos los derechos reservados.</p>
+      <div class="footer-grid">
+        <a href="/" aria-label={`${SITE.name} — inicio`}>
+          <img src="/logo.webp" alt="" width="480" height="254" loading="lazy" />
+        </a>
+        <div>
+          <h2 class="caption">Explorar</h2>
+          <ul>
+            <li><a href="/#rutas">Rutas</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="caption">Contacto</h2>
+          <ul>
+            <li><a href={`mailto:${SITE.business.email}`}>{SITE.business.email}</a></li>
+            <li><a href={whatsappUrl()} rel="noopener">WhatsApp</a></li>
+            {socialUrls().map((url) => <li><a href={url} rel="noopener me">{new URL(url).hostname.replace('www.', '').replace('.com', '')}</a></li>)}
+          </ul>
+        </div>
+        <p class="caption footer-tagline">Viajes a España<br />diseñados con criterio<br />y conocimiento local</p>
+      </div>
+      <p class="footer-legal">© {new Date().getFullYear()} {SITE.business.legalName || SITE.name}. Todos los derechos reservados.</p>
     </footer>
   </body>
 </html>

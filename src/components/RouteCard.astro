@@ -1,0 +1,49 @@
+---
+/** Tarjeta de ruta: imagen + número + título + subtítulo. Toda la tarjeta enlaza a /rutas/<id>. */
+import Photo from './Photo.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  ruta: CollectionEntry<'rutas'>;
+  headingLevel?: 'h2' | 'h3';
+}
+const { ruta, headingLevel = 'h3' } = Astro.props;
+const { title, subtitle, order, photo, photoAlt } = ruta.data;
+const Heading = headingLevel;
+---
+<article class="route-card">
+  <div class="route-card__media">
+    <Photo name={photo} alt={photoAlt ?? title} sizes="(min-width: 64rem) 30vw, (min-width: 40rem) 45vw, 90vw" />
+  </div>
+  <p class="caption route-card__num">Ruta {String(order).padStart(2, '0')}</p>
+  <Heading class="subheading route-card__title">
+    <a href={`/rutas/${ruta.id}`}>{title}</a>
+  </Heading>
+  <p class="route-card__text">{subtitle}</p>
+  <p class="caption route-card__more" aria-hidden="true">Ver ruta <span>→</span></p>
+</article>
+
+<style>
+  .route-card { position: relative; display: flex; flex-direction: column; gap: 0.75rem; }
+  .route-card__media {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    transform: rotate(var(--tilt, 0deg));
+    transition: transform 0.4s ease;
+  }
+  .route-card__media :global(.photo) { transition: transform 0.6s ease; }
+  .route-card__num { color: var(--color-gold); }
+  .route-card__title { color: var(--color-sand); }
+  .route-card__title a { text-decoration: none; }
+  /* Toda la tarjeta es clicable sin anidar contenido dentro del link */
+  .route-card__title a::after { content: ''; position: absolute; inset: 0; }
+  .route-card__text { color: var(--color-stone); max-width: 26rem; }
+  .route-card__more { color: var(--color-gold); margin-top: auto; padding-top: 0.5rem; }
+  .route-card__more span { display: inline-block; transition: transform 0.2s ease; }
+  .route-card:hover .route-card__media { transform: rotate(0deg); }
+  .route-card:hover .route-card__media :global(.photo) { transform: scale(1.04); }
+  .route-card:hover .route-card__title { color: var(--color-gold); }
+  .route-card:hover .route-card__more span { transform: translateX(0.35rem); }
+  .route-card:has(a:focus-visible) .route-card__media { outline: 2px solid var(--color-gold); outline-offset: 4px; }
+</style>
