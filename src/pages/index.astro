@@ -24,6 +24,13 @@ const servicios = [
   },
 ];
 
+const pasos = [
+  { title: 'Conversación inicial', text: 'Entendemos quién viaja, qué buscan, qué fechas tienen y cómo quieren vivir el recorrido.' },
+  { title: 'Concepto de viaje', text: 'Construimos una lógica de ruta: regiones, ritmo, experiencias y enfoque general.' },
+  { title: 'Propuesta', text: 'Aterrizamos el viaje en una propuesta con estructura, opciones y costos.' },
+  { title: 'Coordinación', text: 'Te acompañamos para convertir la idea en un viaje listo para vivir.' },
+];
+
 const paraTi = [
   'Ya conociste España y quieres volver.',
   'Quieres salirte del itinerario típico.',
@@ -134,6 +141,50 @@ const paraTi = [
     </div>
   </section>
 
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" class="band band--light topo" aria-labelledby="proceso-title">
+    <p class="caption section-label" data-reveal>05</p>
+    <h2 id="proceso-title" class="heading proceso__title" data-split>Así se construye el viaje</h2>
+    <ol class="proceso" role="list" data-reveal>
+      {pasos.map((paso, i) => (
+        <li class="paso" style={`--i: ${i}`}>
+          <span class="paso__point" aria-hidden="true"></span>
+          <p class="paso__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</p>
+          <p class="caption paso__label">Paso {i + 1}</p>
+          <h3 class="subheading paso__title">{paso.title}</h3>
+          <p class="paso__text">{paso.text}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <!-- POR QUÉ ESPAÑA -->
+  <section class="band band--base topo" aria-labelledby="espana-title">
+    <p class="caption section-label" data-reveal>06</p>
+    <h2 id="espana-title" class="heading espana__title" data-split>Empezamos por España<br />por una razón</h2>
+    <div class="espana__grid">
+      <div class="espana__copy">
+        <p class="lead espana__lead" data-reveal>No queremos ser expertos en todo.<br /><em>Queremos construir profundidad donde realmente podemos aportar valor.</em></p>
+        <p class="espana__text" data-reveal style="--d: 150">España es el primer territorio de especialización de LN41.5: por su riqueza regional, su gastronomía, su historia y su capacidad de ofrecer mucho más que el itinerario tradicional.</p>
+      </div>
+      <p class="espana__remate" data-stagger>
+        <span><span class="caption">Especialidad</span> España.</span>
+        <span><span class="caption">Capacidad</span> Mundo.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- MANIFIESTO -->
+  <section class="band band--light manifiesto" aria-labelledby="manifiesto-title">
+    <p class="caption section-label manifiesto__label" data-reveal>07 · Nuestro norte</p>
+    <h2 id="manifiesto-title" class="heading manifiesto__title" data-split>Viajar con más sentido<br />y menos piloto automático</h2>
+    <p class="manifiesto__intro" data-reveal>Cada viaje debería dejar una sensación muy simple:</p>
+    <blockquote class="manifiesto__quote" data-split>
+      <p>“Esto no lo habría armado así por mi cuenta.”</p>
+    </blockquote>
+    <p class="caption manifiesto__cierre" data-reveal style="--d: 400">Ese es el estándar.</p>
+  </section>
+
   <ClosingCta />
 </BaseLayout>
 
@@ -225,6 +276,71 @@ const paraTi = [
   @media (min-width: 56rem) {
     .para-quien__grid { grid-template-columns: 5fr 7fr; }
   }
+
+  /* CÓMO FUNCIONA — checkpoints de ruta */
+  .proceso__title { color: var(--color-base); max-width: 14ch; margin-bottom: var(--space-6); }
+  .proceso { list-style: none; margin: 0; padding: 0; position: relative; display: grid; gap: var(--space-5); }
+  /* Línea de ruta punteada que une los checkpoints */
+  .proceso::before {
+    content: ''; position: absolute;
+    left: 0.5rem; top: 0.5rem; bottom: 0.5rem; width: 0;
+    border-left: 1px dashed var(--color-copper);
+    transform-origin: top;
+  }
+  .paso { position: relative; padding-left: var(--space-5); display: grid; gap: var(--space-2); align-content: start; }
+  .paso__point {
+    position: absolute; left: 0; top: 0.25rem;
+    width: 1rem; height: 1rem; border-radius: 50%;
+    background: var(--color-sand); border: 1px solid var(--color-copper);
+  }
+  .paso__point::after { content: ''; position: absolute; inset: 3px; border-radius: 50%; background: var(--color-copper); }
+  .paso__num { font-family: var(--font-display); font-weight: 600; font-size: clamp(4rem, 3rem + 4vw, 7rem); line-height: 0.8; color: var(--color-copper); }
+  .paso__label { color: var(--color-copper); margin-top: var(--space-2); }
+  .paso__title { color: var(--color-base); }
+  .paso__text { max-width: 22rem; }
+  @media (min-width: 56rem) {
+    .proceso { grid-template-columns: repeat(4, 1fr); gap: var(--space-4); padding-top: var(--space-5); }
+    .proceso::before { left: 0.5rem; right: 0; top: 0.5rem; bottom: auto; width: auto; height: 0; border-left: 0; border-top: 1px dashed var(--color-copper); transform-origin: left; }
+    .paso { padding-left: 0; padding-top: var(--space-5); }
+    .paso__point { top: calc(-1 * var(--space-5)); }
+    .paso:last-child .paso__point { background: var(--color-copper); }
+  }
+  /* Motion: la ruta se dibuja y los checkpoints aparecen uno tras otro */
+  :global(html.motion) .proceso[data-reveal] { opacity: 1; translate: none; }
+  :global(html.motion) .proceso::before { scale: 1 0; transition: scale 1.6s var(--ease-out) 0.2s; }
+  @media (min-width: 56rem) { :global(html.motion) .proceso::before { scale: 0 1; } }
+  :global(html.motion) .proceso.is-in::before { scale: 1 1; }
+  :global(html.motion) .paso { opacity: 0; translate: 0 1.5rem; transition: opacity 0.8s ease, translate 1s var(--ease-out); transition-delay: calc(300ms + var(--i) * 260ms); }
+  :global(html.motion) .proceso.is-in .paso { opacity: 1; translate: 0 0; }
+
+  /* POR QUÉ ESPAÑA */
+  .espana__title { color: var(--color-gold); margin-bottom: var(--space-6); }
+  .espana__grid { display: grid; gap: var(--space-6); align-items: end; }
+  .espana__copy { display: grid; gap: var(--space-4); }
+  .espana__lead { color: var(--color-sand); max-width: 38rem; }
+  .espana__lead em { color: var(--color-gold); }
+  .espana__text { max-width: var(--max-text); color: var(--color-stone); font-size: 1.0625rem; }
+  .espana__remate { display: grid; gap: var(--space-3); margin: 0; }
+  .espana__remate > span {
+    display: grid; gap: var(--space-1);
+    padding-top: var(--space-3); border-top: 1px solid var(--hairline-dark);
+    font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+    font-size: clamp(2.75rem, 1.5rem + 4vw, 5.5rem); line-height: 0.9; color: var(--color-gold);
+  }
+  .espana__remate .caption { color: var(--color-stone); font-family: var(--font-ui); }
+  @media (min-width: 56rem) {
+    .espana__grid { grid-template-columns: 7fr 5fr; }
+  }
+
+  /* MANIFIESTO */
+  .manifiesto { text-align: center; padding-block: calc(var(--section-pad) * 1.4); }
+  .manifiesto__label { justify-content: center; }
+  .manifiesto__label::before { content: ''; width: 3rem; height: 1px; background: currentColor; opacity: 0.6; }
+  .manifiesto__title { color: var(--color-base); margin-inline: auto; font-size: clamp(2.5rem, 1rem + 4.6vw, 5.25rem); text-wrap: balance; }
+  .manifiesto__intro { margin: var(--space-6) auto var(--space-4); max-width: 30rem; font-size: 1.125rem; }
+  .manifiesto__quote { margin: 0 auto; }
+  .manifiesto__quote p { font-family: var(--font-display); font-weight: 600; font-style: italic; font-size: clamp(2.25rem, 1.2rem + 4.2vw, 5.5rem); line-height: 1; color: var(--color-copper); max-width: 11em; margin-inline: auto; text-wrap: balance; }
+  .manifiesto__cierre { margin-top: var(--space-5); color: var(--color-base); }
 
   /* RUTAS */
   .rutas__title { color: var(--color-gold); max-width: 16ch; margin-bottom: var(--space-6); }
