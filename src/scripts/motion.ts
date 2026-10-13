@@ -7,6 +7,7 @@
  * - [data-toss]: fotos que "caen" a su ángulo final, como polaroids lanzadas
  * - [data-parallax="0.2"]: desplazamiento vertical según el scroll
  * - [data-spin]: gira suavemente con el scroll (brújula)
+ * - [data-scroll-line]: línea que avanza con el scroll; sus hijos se marcan .is-reached al alcanzarlos
  *
  * Todo es mejora progresiva: sin JS o con "reducir movimiento" el contenido se ve completo.
  */
@@ -75,6 +76,7 @@ function init() {
   // Parallax y giro ligados al scroll
   const parallax = [...document.querySelectorAll<HTMLElement>('[data-parallax]')];
   const spinners = [...document.querySelectorAll<HTMLElement>('[data-spin]')];
+  const lines = [...document.querySelectorAll<HTMLElement>('[data-scroll-line]')];
   const update = () => {
     const vh = window.innerHeight;
     parallax.forEach((el) => {
@@ -85,6 +87,22 @@ function init() {
       el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
     });
     spinners.forEach((el) => { el.style.transform = `rotate(${(window.scrollY * 0.12).toFixed(1)}deg)`; });
+    lines.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const items = [...el.children] as HTMLElement[];
+      // Horizontal si los hijos están en la misma fila (desktop); vertical en móvil
+      const horizontal = items.length > 1 && items[0].offsetTop === items[1].offsetTop;
+      // La línea avanza mientras la lista cruza la zona media de la pantalla
+      const raw = horizontal
+        ? (vh * 0.85 - rect.top) / (vh * 0.5)
+        : (vh * 0.7 - rect.top) / rect.height;
+      const progress = Math.min(1, Math.max(0, raw));
+      el.style.setProperty('--progress', progress.toFixed(3));
+      items.forEach((item) => {
+        const at = horizontal ? item.offsetLeft / el.offsetWidth : item.offsetTop / el.offsetHeight;
+        item.classList.toggle('is-reached', progress > 0 && progress >= at);
+      });
+    });
   };
   lenis.on('scroll', update);
   window.addEventListener('resize', update);
