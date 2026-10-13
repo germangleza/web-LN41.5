@@ -4,6 +4,6 @@ subtitle: "Un recorrido alrededor de vino, gastronomía, paisajes y regiones que
 description: "Ruta por la España del vino: gastronomía, paisajes y regiones que se disfrutan con tiempo y contexto. Diseñada a tu medida por LN41.5 Travel."
 order: 1
 photo: "ruta-vinedos"
-photoAlt: "Viñedos en España al atardecer"
+photoAlt: "Pueblo tradicional junto al río, rodeado de huertas y montañas"
 icon: "copa"
 ---

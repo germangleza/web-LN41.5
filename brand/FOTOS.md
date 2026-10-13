@@ -20,3 +20,17 @@ Tratamiento: tonos cálidos de hora dorada (como la presentación de marca), sin
 
 ## Originales del logo
 Los PNG originales están en esta carpeta (`brand/`). Las versiones web en `/public` se generaron desde aquí.
+
+## Asignación actual (octubre 2026)
+
+| Archivo | Foto |
+|---|---|
+| `hero` | Picos de Europa, Naranjo de Bulnes (Asturias) |
+| `collage-1` | Caminito del Rey (Málaga) |
+| `collage-2` | Puente romano de Cangas de Onís (Asturias) |
+| `collage-3` | Cudillero (Asturias) |
+| `para-ti` | Setenil de las Bodegas (Cádiz) |
+| `ruta-vinedos` | Pueblo junto al río entre montañas — **provisional, no muestra viñedos** |
+| `ruta-norte` | Cudillero (Asturias) — repetida con `collage-3` |
+| `ruta-medieval` | Puente romano de Cangas de Onís — repetida con `collage-2` |
+| `cierre` | Pueblo junto al río entre montañas — repetida con `ruta-vinedos` |
