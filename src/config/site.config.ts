@@ -54,6 +54,12 @@ export const SITE = {
     whatsappMessage: 'Hola, estoy pensando en viajar a España y me gustaría diseñar una ruta.',
   },
 
+  // === Crédito del estudio (footer) ===
+  credit: {
+    name: 'Maguey Studio',
+    url: 'https://www.magueystudio.mx',
+  },
+
   // === Blog ===
   blog: {
     title: 'Blog',

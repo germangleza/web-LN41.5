@@ -218,7 +218,13 @@ p { margin: 0; }
 .footer-grid a { text-decoration: none; color: var(--color-sand); }
 .footer-grid a:hover { color: var(--color-gold); }
 .footer-tagline { color: var(--color-gold); }
-.footer-legal { margin-top: var(--space-6); padding-top: var(--space-3); border-top: 1px solid var(--hairline-dark); font-size: var(--text-caption); letter-spacing: 0.06em; }
+.footer-legal {
+  margin-top: var(--space-6); padding-top: var(--space-3); border-top: 1px solid var(--hairline-dark);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3);
+  font-size: var(--text-caption); letter-spacing: 0.06em;
+}
+.footer-grid + .footer-legal a.footer-credit { color: var(--color-gold); }
+.footer-grid + .footer-legal a.footer-credit:hover { color: var(--color-ink); }
 @media (min-width: 48rem) {
   .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; align-items: start; }
   .footer-tagline { text-align: right; }

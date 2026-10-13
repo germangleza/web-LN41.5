@@ -87,7 +87,12 @@ const { fullBleed = false, ...props } = Astro.props;
         </div>
         <p class="caption footer-tagline">Viajes a España<br />diseñados con criterio<br />y conocimiento local</p>
       </div>
-      <p class="footer-legal">© {new Date().getFullYear()} {SITE.business.legalName || SITE.name}. Todos los derechos reservados.</p>
+      <div class="footer-legal">
+        <p>© {new Date().getFullYear()} {SITE.business.legalName || SITE.name}. Todos los derechos reservados.</p>
+        <a class="btn btn--outline btn--small footer-credit" href={SITE.credit.url} target="_blank" rel="noopener">
+          Construido por {SITE.credit.name} <span aria-hidden="true">↗</span>
+        </a>
+      </div>
     </footer>
     <script>
       import '../scripts/motion';
