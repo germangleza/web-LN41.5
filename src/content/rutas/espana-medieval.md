@@ -5,4 +5,5 @@ description: "Ruta por la España medieval: historia, patrimonio y pueblos con u
 order: 3
 photo: "ruta-medieval"
 photoAlt: "Pueblo medieval de piedra en España"
+icon: "castillo"
 ---

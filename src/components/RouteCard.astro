@@ -8,10 +8,21 @@ interface Props {
   headingLevel?: 'h2' | 'h3';
 }
 const { ruta, headingLevel = 'h3' } = Astro.props;
-const { title, subtitle, order, photo, photoAlt } = ruta.data;
+const { title, subtitle, order, photo, photoAlt, icon } = ruta.data;
 const Heading = headingLevel;
+
+// Íconos de línea (24x24) para el badge de cada ruta
+const icons: Record<string, string> = {
+  copa: 'M8 3h8l-.4 5.2a3.6 3.6 0 0 1-7.2 0L8 3zM12 12v8M8.5 20.5h7',
+  ola: 'M3 10c1.5 0 1.5-1.5 3-1.5S7.5 10 9 10s1.5-1.5 3-1.5S13.5 10 15 10s1.5-1.5 3-1.5S19.5 10 21 10M3 15c1.5 0 1.5-1.5 3-1.5S7.5 15 9 15s1.5-1.5 3-1.5S13.5 15 15 15s1.5-1.5 3-1.5S19.5 15 21 15',
+  castillo: 'M4 21V8h2.5v2.5H9V8h2.5v2.5h1V8H15v2.5h2.5V8H20v13H4zM10 21v-4.5a2 2 0 0 1 4 0V21',
+  brujula: 'M12 3l3.5 9L12 21l-3.5-9z',
+};
 ---
 <article class="route-card">
+  <span class="route-card__badge" data-trail-point aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="24" height="24"><path d={icons[icon]} fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+  </span>
   <div class="route-card__media">
     <Photo name={photo} alt={photoAlt ?? title} sizes="(min-width: 64rem) 30vw, (min-width: 40rem) 45vw, 90vw" />
   </div>
@@ -33,7 +44,20 @@ const Heading = headingLevel;
     transition: transform 0.4s ease;
   }
   .route-card__media :global(.photo) { transition: transform 0.6s ease; }
+  .route-card__badge {
+    position: absolute; z-index: 3; top: -1.5rem; right: 1.25rem;
+    display: grid; place-items: center;
+    width: 3.5rem; height: 3.5rem; border-radius: 50%;
+    background: var(--color-gold); color: var(--color-ink);
+    box-shadow: 0 0 0 4px var(--color-ink), 0 0 0 5.5px var(--color-gold);
+    transition: scale 0.6s var(--ease-out, ease), rotate 0.6s var(--ease-out, ease);
+  }
+  :global(html.motion) [data-trail] .route-card__badge:not(.is-reached) { scale: 0.4; opacity: 0; }
+  :global(html.motion) [data-trail] .route-card__badge { transition: scale 0.6s var(--ease-out), opacity 0.3s ease; }
+  .route-card:hover .route-card__badge { rotate: -12deg; }
   .route-card__num { color: var(--color-gold); }
+  /* El texto queda por encima del sendero */
+  .route-card > p, .route-card__title { position: relative; z-index: 3; }
   .route-card__title { color: var(--color-sand); }
   .route-card__title a { text-decoration: none; }
   /* Toda la tarjeta es clicable sin anidar contenido dentro del link */

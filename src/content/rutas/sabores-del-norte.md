@@ -5,4 +5,5 @@ description: "Ruta por el norte de España: costa, pueblos, mercados y cocina lo
 order: 2
 photo: "ruta-norte"
 photoAlt: "Pueblo costero del norte de España"
+icon: "ola"
 ---

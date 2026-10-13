@@ -5,4 +5,5 @@ description: "Ruta por la España del vino: gastronomía, paisajes y regiones qu
 order: 1
 photo: "ruta-vinedos"
 photoAlt: "Viñedos en España al atardecer"
+icon: "copa"
 ---

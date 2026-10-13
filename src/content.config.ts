@@ -32,6 +32,7 @@ const rutas = defineCollection({
     order: z.number(),
     photo: z.string(),
     photoAlt: z.string().optional(),
+    icon: z.enum(['copa', 'ola', 'castillo', 'brujula']).default('brujula'),
     draft: z.boolean().default(false),
   }),
 });
