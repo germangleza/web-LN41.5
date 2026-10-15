@@ -6,7 +6,7 @@
  * Uso:  PWPATH=$(npm root -g)/playwright node contenido/generar.mjs
  */
 import { createRequire } from 'module';
-import { mkdirSync, writeFileSync } from 'fs';
+import { mkdirSync, writeFileSync, readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -18,6 +18,8 @@ const root = join(here, '..');
 const W = 1080, H = 1350;
 const f = (p) => `file://${join(root, p)}`;
 const foto = (n) => f(`contenido/fotos/${n}.jpg`);
+// La textura topográfica va incrustada: Chromium no aplica máscaras SVG desde file://
+const topo = `data:image/svg+xml;base64,${readFileSync(join(root, 'public/img/topo.svg')).toString('base64')}`;
 
 const css = `
 @font-face { font-family: 'Cormorant'; font-weight: 600; src: url('${f('node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-600-normal.woff2')}'); }
@@ -30,8 +32,8 @@ const css = `
 body { width: var(--w); height: ${H}px; position: relative; overflow: hidden; font-family: 'Montserrat'; font-variant-numeric: lining-nums; -webkit-font-smoothing: antialiased; }
 .slide { position: absolute; top: 0; width: ${W}px; height: ${H}px; overflow: hidden; padding: 96px 88px; }
 .ink { background: var(--ink); color: var(--sand); } .base { background: var(--base); color: var(--sand); } .sand { background: var(--sand); color: var(--base); }
-.topo::before { content:''; position:absolute; inset:0; background: var(--tc, var(--gold)); opacity: var(--to, .08); -webkit-mask: url('${f('public/img/topo.svg')}') center/cover no-repeat; }
-.sand.topo { --tc: var(--copper); --to: .12; }
+.topo::before { content:''; position:absolute; inset:0; background: var(--tc, var(--gold)); opacity: var(--to, .16); z-index: 0; -webkit-mask: url('${topo}') center/cover no-repeat; }
+.sand.topo { --tc: var(--copper); --to: .2; }
 .bg { position:absolute; inset:0; background-size: cover; background-position: center; }
 .shade::after { content:''; position:absolute; inset:0; background: linear-gradient(to top, rgba(30,25,20,.96) 0%, rgba(30,25,20,.6) 42%, rgba(30,25,20,.12) 75%, rgba(30,25,20,.35) 100%); }
 .shade.strong::after { background: linear-gradient(to top, rgba(30,25,20,.97) 0%, rgba(30,25,20,.82) 55%, rgba(30,25,20,.35) 100%); }
@@ -59,7 +61,6 @@ svg.overlay { position:absolute; top:0; left:0; z-index:5; pointer-events:none; 
 .row span { font-size: 36px; line-height: 1.35; }
 `;
 
-const mono = `<img class="mono" src="${f('brand/monograma-dorado-transparente.png')}" alt="">`;
 const count = (i, n, cls = 'gold') => `<p class="cap count ${cls}">${String(i).padStart(2, '0')} / ${String(n).padStart(2, '0')}</p>`;
 const icon = {
   copa: 'M8 3h8l-.4 5.2a3.6 3.6 0 0 1-7.2 0L8 3zM12 12v8M8.5 20.5h7',
@@ -76,7 +77,6 @@ const posts = [];
 posts.push({ id: 'post-01-espana-desde-dentro', n: 1, html: `
 <section class="slide ink" style="${at(0)}">
   <div class="bg shade" style="background-image:url('${foto('picos')}');background-position:40% center"></div>
-  <img class="rel" src="${f('public/logo.png')}" style="height:110px" alt="">
   <div class="bottom">
     <h1 class="disp gold" style="font-size:190px">España<br>desde<br>dentro.</h1>
     <p class="cap sandc" style="margin-top:44px">Viajes a España diseñados a tu medida</p>
@@ -102,9 +102,8 @@ posts.push({ id: 'post-02-punto-de-partida', n: 6, html: `
     <h2 class="disp gold" style="font-size:150px">El reto<br>es otro.</h2>
     <p class="lead sandc" style="font-size:62px;margin-top:64px">Saber qué sí vale la pena, qué dejar fuera y cómo construir un viaje que realmente se sienta propio.</p>
   </div>
-  ${mono}
 </section>
-<section class="slide ink" style="${at(2)}">
+<section class="slide ink topo" style="${at(2)}">
   ${count(3, 6)}
   <div class="tilt" style="left:150px;top:150px;width:780px;height:640px;rotate:-4deg;background-image:url('${foto('setenil')}')"></div>
   <div class="bottom" style="bottom:150px">
@@ -112,7 +111,7 @@ posts.push({ id: 'post-02-punto-de-partida', n: 6, html: `
     <p class="lead it gold" style="font-size:76px;margin-top:22px">Es para quienes quieren viajar mejor.</p>
   </div>
 </section>
-<section class="slide sand" style="${at(3)}">
+<section class="slide sand topo" style="${at(3)}">
   ${count(4, 6, 'copper')}
   <p class="cap label copper rel">Para ti si…</p>
   <div class="bottom" style="bottom:170px">
@@ -121,7 +120,7 @@ posts.push({ id: 'post-02-punto-de-partida', n: 6, html: `
     <div class="row"><b>03</b><span>Valoras gastronomía, historia, cultura y regiones.</span></div>
   </div>
 </section>
-<section class="slide sand" style="${at(4)}">
+<section class="slide sand topo" style="${at(4)}">
   ${count(5, 6, 'copper')}
   <p class="cap label copper rel">Para ti si…</p>
   <div class="bottom" style="bottom:170px">
@@ -136,7 +135,6 @@ posts.push({ id: 'post-02-punto-de-partida', n: 6, html: `
     <p class="body sandc" style="margin-top:48px;max-width:820px">Conocer España con más criterio, más contexto y menos itinerario típico.</p>
     <p style="margin-top:64px"><span class="btn gold">Diseñar mi viaje →</span></p>
   </div>
-  ${mono}
 </section>` });
 
 // POST 3 · Imagen · Manifiesto
@@ -146,7 +144,6 @@ posts.push({ id: 'post-03-manifiesto', n: 1, html: `
   <p class="body basec rel" style="margin-top:110px">Cada viaje debería dejar<br>una sensación muy simple:</p>
   <p class="lead it copper rel" style="font-size:118px;line-height:1;margin-top:56px">“Esto no lo habría armado así por mi cuenta.”</p>
   <p class="cap basec rel" style="margin-top:110px">Ese es el estándar.</p>
-  <img class="rel" src="${f('brand/monograma-dorado-transparente.png')}" style="height:90px;margin-top:80px" alt="">
 </section>` });
 
 // POST 4 · Carrusel · Tres rutas (con sendero continuo)
@@ -169,7 +166,7 @@ posts.push({ id: 'post-04-tres-rutas', n: 5, html: `
   <p class="cap gold" style="position:absolute;left:88px;bottom:120px">Desliza →</p>
 </section>
 ${rutas.map((r, i) => `
-<section class="slide ink" style="${at(i + 1)}">
+<section class="slide ink topo" style="${at(i + 1)}">
   <p class="cap gold" style="position:absolute;top:96px;left:88px;z-index:4">${String(i + 2).padStart(2, '0')} / 05</p>
   <div class="tilt" style="left:110px;top:220px;width:860px;height:640px;rotate:${r.rot}deg;background-image:url('${foto(r.img)}')"></div>
   <div class="bottom" style="bottom:110px">
@@ -185,7 +182,6 @@ ${rutas.map((r, i) => `
     <p class="body sandc" style="margin-top:44px;max-width:700px">Cada ruta es un punto de partida. La ajustamos a tu ritmo, tus fechas y tus intereses.</p>
   </div>
   <p style="position:absolute;left:340px;bottom:150px;z-index:6"><span class="btn solid">Hablar por WhatsApp</span></p>
-  ${mono}
 </section>
 <svg class="overlay" width="${5 * W}" height="${H}" viewBox="0 0 ${5 * W} ${H}">
   <path d="${trailPath}" fill="none" stroke="#fccc6c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".95"/>
@@ -206,7 +202,6 @@ posts.push({ id: 'post-05-por-que-espana', n: 1, html: `
     <p class="cap stone">Capacidad</p>
     <p class="disp gold" style="font-size:180px;margin-top:10px">Mundo.</p>
   </div>
-  ${mono}
 </section>` });
 
 // POST 6 · Carrusel · Así se construye el viaje (línea punteada continua)
