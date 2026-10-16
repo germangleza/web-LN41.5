@@ -29,7 +29,8 @@ const {
 } = Astro.props;
 
 const pageTitle = title ? `${title} | ${SITE.name}` : SITE.title;
-const canonical = Astro.props.canonical ?? new URL(Astro.url.pathname, SITE.url).href;
+// El build genera archivos .html, pero el sitio se sirve con URLs limpias (vercel.json: cleanUrls)
+const canonical = Astro.props.canonical ?? new URL(Astro.url.pathname.replace(/(index)?\.html$/, ''), SITE.url).href;
 const ogImage = new URL(image, SITE.url).href;
 ---
 

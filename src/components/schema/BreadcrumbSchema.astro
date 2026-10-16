@@ -14,7 +14,7 @@ const schema = {
       '@type': 'ListItem',
       position: i + 2,
       name: c.name,
-      item: new URL(c.url, SITE.url).href,
+      item: new URL(c.url.replace(/\.html$/, ''), SITE.url).href,
     })),
   ],
 };
