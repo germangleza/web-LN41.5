@@ -12,5 +12,6 @@ export default defineConfig({
   redirects: {
     '/rutas/espana-entre-vinedos': '/rutas/espana-del-vino',
     '/rutas/espana-medieval': '/rutas/espana-castellana',
+    '/rutas/sabores-del-norte': '/rutas/espana-atlantica',
   },
 });

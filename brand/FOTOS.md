@@ -11,9 +11,7 @@ Astro las optimiza solas (AVIF/WebP, varios tamaños): sube el original en buena
 | `collage-2` | Collage inclinado | Cuadrada |
 | `collage-3` | Collage inclinado | Vertical 3:4 |
 | `para-ti` | Sección "No es para todos" | Vertical 4:5 |
-| `ruta-vinedos` | Tarjeta y hero de "España entre viñedos" | Vertical 4:5 (también se usa de fondo horizontal) |
-| `ruta-norte` | Tarjeta y hero de "Sabores del norte" | Igual |
-| `ruta-medieval` | Tarjeta y hero de "España medieval" | Igual |
+| `ruta-castellana`, `ruta-vino`, `ruta-catalunya`, `ruta-profunda`, `ruta-atlantica`, `ruta-navidad` | Tarjeta y hero de cada ruta | Vertical 4:5, mínimo 1600 px (también se usa de fondo horizontal) |
 | `cierre` | Fondo del cierre "¿Estás pensando en ir o volver a España?" | Horizontal, ≥ 2400 px |
 
 Tratamiento: tonos cálidos de hora dorada (como la presentación de marca), sin blanco y negro.
@@ -35,5 +33,5 @@ Los PNG originales están en esta carpeta (`brand/`). Las versiones web en `/pub
 | `ruta-vino` | Tarjeta y hero de España del Vino | Hileras de viñedo (baja resolución) |
 | `ruta-catalunya` | Tarjeta y hero de Catalunya Insólita | **FALTA** |
 | `ruta-profunda` | Tarjeta y hero de España Profunda | **FALTA** |
-| `ruta-norte` | Tarjeta y hero de Sabores del Norte | Cudillero (Asturias) |
+| `ruta-atlantica` | Tarjeta y hero de España Atlántica | Cudillero (Asturias) |
 | `ruta-navidad` | Banner de la home y hero de España en Navidad | **FALTA** |
