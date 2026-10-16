@@ -31,7 +31,7 @@ const icons: Record<string, string> = {
   </div>
   <p class="caption route-card__num">Ruta {String(order).padStart(2, '0')}</p>
   <Heading class="subheading route-card__title">
-    <a href={`/rutas/${ruta.id}`}>{title}</a>
+    <a href={`/rutas/${ruta.id}`}><span class="route-card__label">{title}</span></a>
   </Heading>
   <p class="caption route-card__tagline">{subtitle}</p>
   <p class="route-card__text">{summary}</p>
@@ -61,11 +61,12 @@ const icons: Record<string, string> = {
   .route-card:hover .route-card__badge { rotate: -12deg; }
   .route-card__num { color: var(--color-gold); }
   /* El texto queda por encima del sendero */
-  .route-card > p, .route-card__title { position: relative; z-index: 3; }
+  /* El texto queda por encima del sendero; el título NO se posiciona para que el link cubra toda la tarjeta */
+  .route-card > p, .route-card__label { position: relative; z-index: 3; }
   .route-card__title { color: var(--color-sand); }
   .route-card__title a { text-decoration: none; }
   /* Toda la tarjeta es clicable sin anidar contenido dentro del link */
-  .route-card__title a::after { content: ''; position: absolute; inset: 0; }
+  .route-card__title a::after { content: ''; position: absolute; inset: 0; z-index: 7; }
   .route-card__tagline { color: var(--color-gold); opacity: 0.85; }
   .route-card__text { color: var(--color-stone); max-width: 26rem; }
   .route-card__more { color: var(--color-gold); margin-top: auto; padding-top: 0.5rem; }
