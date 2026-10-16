@@ -42,41 +42,51 @@ function setup(section: HTMLElement) {
     svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
     const mobile = w < 640;
 
-    // Salida: debajo del título (móvil) o a su derecha (desktop)
+    // El sendero va por los espacios libres: sale del título, corre por el carril que hay
+    // encima de cada fila de tarjetas y, para cambiar de fila, baja por el margen derecho
+    // de la tarjeta. Así no cruza títulos ni textos, en desktop (varias columnas) o móvil.
     const s = offsetIn(start);
+    const badges = points.map(center);
     const first: Pt = mobile
-      ? { x: w * 0.55, y: s.y + start.offsetHeight + 24 }
-      : { x: Math.min(s.x + start.offsetWidth + 60, w * 0.7), y: s.y + start.offsetHeight * 0.55 };
-    const anchors = [first, ...points.map(center)];
-    // Llegada: baja un poco después del último badge
-    const last = anchors[anchors.length - 1];
-    anchors.push({ x: mobile ? w * 0.3 : Math.min(last.x + 80, w - 24), y: last.y + (mobile ? 160 : 220) });
-
-    // Puntos intermedios con desvíos laterales para que parezca un sendero
-    const pts: Pt[] = [];
+      ? { x: w * 0.6, y: s.y + start.offsetHeight + 28 }
+      : { x: Math.min(s.x + start.offsetWidth + 60, w * 0.7), y: s.y + start.offsetHeight * 0.6 };
+    const pts: Pt[] = [first];
     const dotAt: Pt[] = [];
     let seed = 415;
-    const rand = () => ((seed = (seed * 9301 + 49297) % 233280) / 233280);
-    anchors.forEach((a, i) => {
-      pts.push(a);
-      const b = anchors[i + 1];
-      if (!b) return;
-      const dx = b.x - a.x, dy = b.y - a.y;
-      const len = Math.hypot(dx, dy);
-      const nx = -dy / len, ny = dx / len;
-      const steps = mobile ? 4 : 5;
-      for (let k = 1; k < steps; k++) {
-        const t = k / steps;
-        const swing = Math.sin(t * Math.PI) * len * (mobile ? 0.14 : 0.3 + rand() * 0.1) * (i % 2 ? 1 : -1);
-        const wobble = (rand() - 0.5) * 26;
-        const p = {
-          x: Math.min(w - 20, Math.max(20, a.x + dx * t + nx * (swing + wobble))),
-          y: a.y + dy * t + ny * (swing + wobble),
-        };
-        pts.push(p);
-        if (k === Math.floor(steps / 2)) dotAt.push(p);
+    const wob = () => ((seed = (seed * 9301 + 49297) % 233280) / 233280 - 0.5) * 22;
+    const lane = (y: number) => y - 64; // carril libre sobre la fila (los badges asoman ahí)
+    const margin = (x: number) => Math.min(w - 14, x + 70); // hueco a la derecha de la tarjeta
+    let prev = first;
+    badges.forEach((b, i) => {
+      if (i === 0) {
+        const ly = lane(b.y);
+        pts.push({ x: prev.x + wob(), y: (prev.y + ly) / 2 });
+        const mid = { x: (prev.x + b.x) / 2, y: ly + wob() };
+        pts.push(mid); dotAt.push(mid);
+      } else if (Math.abs(b.y - prev.y) < 120) {
+        // misma fila: por encima de las fotos
+        const mid = { x: (prev.x + b.x) / 2, y: Math.min(prev.y, b.y) - 64 + wob() };
+        pts.push(mid); dotAt.push(mid);
+      } else {
+        // fila siguiente: baja por el margen y cruza por el carril de arriba de la nueva fila
+        const ex = margin(prev.x), ly = lane(b.y);
+        pts.push({ x: ex, y: prev.y + 90 });
+        dotAt.push({ x: ex, y: (prev.y + 90 + ly - 20) / 2 });
+        pts.push({ x: ex + wob() * 0.3, y: ly - 20 });
+        if (Math.abs(ex - b.x) > 120) {
+          const mid = { x: (ex + b.x) / 2, y: ly + wob() };
+          pts.push(mid);
+        }
       }
+      pts.push(b);
+      prev = b;
     });
+    // Llegada: baja por el margen después del último badge
+    const endX = margin(prev.x);
+    pts.push({ x: endX, y: prev.y + 90 });
+    const end = { x: endX, y: prev.y + 220 };
+    pts.push(end);
+    const anchors = [first, ...badges, end];
 
     // Catmull-Rom → Bézier para un trazo suave
     let d = `M${pts[0].x.toFixed(1)} ${pts[0].y.toFixed(1)}`;

@@ -6,8 +6,10 @@ import RouteCard from '../components/RouteCard.astro';
 import ClosingCta from '../components/ClosingCta.astro';
 import { designTripUrl } from '../config/site.config';
 
-const rutas = (await getCollection('rutas', ({ data }) => !data.draft))
-  .sort((a, b) => a.data.order - b.data.order);
+const todas = await getCollection('rutas', ({ data }) => !data.draft);
+const rutas = todas.filter((r) => r.data.kind === 'ruta').sort((a, b) => a.data.order - b.data.order);
+// Edición especial que se anuncia en el banner (la primera publicada)
+const especial = todas.find((r) => r.data.kind === 'especial');
 
 const servicios = [
   {
@@ -144,6 +146,30 @@ const paraTi = [
       {rutas.map((ruta) => <RouteCard ruta={ruta} />)}
     </div>
   </section>
+
+  <!-- BANNER EDICIÓN ESPECIAL -->
+  {especial && (
+    <section class="band band--base topo especial" aria-labelledby="especial-title">
+      <div class="especial__grid">
+        <div class="especial__copy">
+          <p class="caption especial__tag" data-reveal>Edición especial / Viaje de temporada</p>
+          <h2 id="especial-title" class="heading especial__title" data-split>{especial.data.title}</h2>
+          <p class="lead especial__tagline" data-reveal><em>{especial.data.subtitle}</em></p>
+          <p class="especial__text" data-reveal style="--d: 150">{especial.data.summary}</p>
+          {especial.data.dates && <p class="caption especial__dates" data-reveal style="--d: 250">{especial.data.dates}</p>}
+          <div class="btn-row" data-reveal style="--d: 350">
+            <a class="btn btn--solid" href={`/rutas/${especial.id}`}>{especial.data.hero?.cta ?? 'Quiero saber más'}</a>
+          </div>
+        </div>
+        <a class="especial__media" href={`/rutas/${especial.id}`} tabindex="-1" aria-hidden="true" data-toss style="--rot: 3deg">
+          <Photo name={especial.data.photo} alt="" sizes="(min-width: 56rem) 40vw, 90vw" />
+          <span class="especial__seal">
+            <svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" /></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+  )}
 
   <!-- CÓMO FUNCIONA -->
   <section id="como-funciona" class="band band--light topo" aria-labelledby="proceso-title">
@@ -348,6 +374,29 @@ const paraTi = [
   .manifiesto__quote p { font-family: var(--font-display); font-weight: 600; font-style: italic; font-size: clamp(2.25rem, 1.2rem + 4.2vw, 5.5rem); line-height: 1; color: var(--color-copper); max-width: 11em; margin-inline: auto; text-wrap: balance; }
   .manifiesto__cierre { margin-top: var(--space-5); color: var(--color-base); }
 
+  /* BANNER EDICIÓN ESPECIAL */
+  .especial { border-block: 1px solid var(--hairline-dark); }
+  .especial__grid { display: grid; gap: var(--space-6); align-items: center; }
+  .especial__copy { display: grid; gap: var(--space-3); max-width: 38rem; }
+  .especial__tag { justify-self: start; color: var(--color-gold); border: 1px solid currentColor; padding: 0.6rem 1rem; }
+  .especial__title { color: var(--color-gold); margin-top: var(--space-2); }
+  .especial__tagline { color: var(--color-sand); }
+  .especial__text { color: var(--color-stone); font-size: 1.0625rem; }
+  .especial__dates { color: var(--color-gold); display: flex; align-items: center; gap: var(--space-2); }
+  .especial__dates::before { content: ''; width: 3rem; height: 1px; background: currentColor; opacity: 0.6; }
+  .especial .btn-row { margin-top: var(--space-2); }
+  .especial__media { position: relative; display: block; aspect-ratio: 4 / 5; max-width: 30rem; width: 100%; justify-self: center; rotate: var(--rot); }
+  .especial__media :global(.photo) { position: absolute; inset: 0; }
+  .especial__seal {
+    position: absolute; top: -1.75rem; right: -1rem; z-index: 2;
+    display: grid; place-items: center; width: 4.5rem; height: 4.5rem; border-radius: 50%;
+    background: var(--color-gold); color: var(--color-ink);
+    box-shadow: 0 0 0 5px var(--color-base), 0 0 0 6.5px var(--color-gold);
+  }
+  @media (min-width: 56rem) {
+    .especial__grid { grid-template-columns: 7fr 5fr; }
+  }
+
   /* RUTAS */
   .rutas__intro { width: fit-content; max-width: 100%; margin-bottom: var(--space-6); }
   .rutas__title { color: var(--color-gold); max-width: 14ch; }
@@ -362,6 +411,8 @@ const paraTi = [
   .rutas__grid > :global(:nth-child(1)) { --tilt: -2deg; }
   .rutas__grid > :global(:nth-child(2)) { --tilt: 1.5deg; }
   .rutas__grid > :global(:nth-child(3)) { --tilt: -1deg; }
+  .rutas__grid > :global(:nth-child(4)) { --tilt: 1deg; }
+  .rutas__grid > :global(:nth-child(5)) { --tilt: -1.5deg; }
   @media (min-width: 40rem) {
     .rutas__grid { grid-template-columns: repeat(2, 1fr); }
   }

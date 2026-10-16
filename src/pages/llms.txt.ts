@@ -23,7 +23,7 @@ export const GET: APIRoute = async () => {
 - Contacto: ${SITE.business.email}
 
 ## Rutas
-${rutas.map((r) => `- [${r.data.title}](${SITE.url}/rutas/${r.id}): ${r.data.subtitle}`).join('\n')}
+${rutas.map((r) => `- [${r.data.title} — ${r.data.subtitle}](${SITE.url}/rutas/${r.id}): ${r.data.summary}${r.data.dates ? ` (${r.data.dates})` : ''}`).join('\n')}
 
 ## Blog
 ${posts.map((p) => `- [${p.data.title}](${SITE.url}/blog/${p.id}): ${p.data.description}`).join('\n')}

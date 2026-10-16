@@ -8,7 +8,7 @@ interface Props {
   headingLevel?: 'h2' | 'h3';
 }
 const { ruta, headingLevel = 'h3' } = Astro.props;
-const { title, subtitle, order, photo, photoAlt, icon } = ruta.data;
+const { title, subtitle, summary, order, photo, photoAlt, icon } = ruta.data;
 const Heading = headingLevel;
 
 // Íconos de línea (24x24) para el badge de cada ruta
@@ -17,6 +17,9 @@ const icons: Record<string, string> = {
   ola: 'M3 10c1.5 0 1.5-1.5 3-1.5S7.5 10 9 10s1.5-1.5 3-1.5S13.5 10 15 10s1.5-1.5 3-1.5S19.5 10 21 10M3 15c1.5 0 1.5-1.5 3-1.5S7.5 15 9 15s1.5-1.5 3-1.5S13.5 15 15 15s1.5-1.5 3-1.5S19.5 15 21 15',
   castillo: 'M4 21V8h2.5v2.5H9V8h2.5v2.5h1V8H15v2.5h2.5V8H20v13H4zM10 21v-4.5a2 2 0 0 1 4 0V21',
   brujula: 'M12 3l3.5 9L12 21l-3.5-9z',
+  montana: 'M2.5 20 9 9l3.5 5.5L15 11l6.5 9zM7.2 12.2 9 13.5l1.6-1.4',
+  encina: 'M12 21v-6M12 15c-4.5 0-7.5-2.4-7.5-5.6C4.5 6.3 7.8 4 12 4s7.5 2.3 7.5 5.4c0 3.2-3 5.6-7.5 5.6zM9 21h6',
+  estrella: 'M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z',
 };
 ---
 <article class="route-card">
@@ -30,7 +33,8 @@ const icons: Record<string, string> = {
   <Heading class="subheading route-card__title">
     <a href={`/rutas/${ruta.id}`}>{title}</a>
   </Heading>
-  <p class="route-card__text">{subtitle}</p>
+  <p class="caption route-card__tagline">{subtitle}</p>
+  <p class="route-card__text">{summary}</p>
   <p class="caption route-card__more" aria-hidden="true">Ver ruta <span>→</span></p>
 </article>
 
@@ -62,6 +66,7 @@ const icons: Record<string, string> = {
   .route-card__title a { text-decoration: none; }
   /* Toda la tarjeta es clicable sin anidar contenido dentro del link */
   .route-card__title a::after { content: ''; position: absolute; inset: 0; }
+  .route-card__tagline { color: var(--color-gold); opacity: 0.85; }
   .route-card__text { color: var(--color-stone); max-width: 26rem; }
   .route-card__more { color: var(--color-gold); margin-top: auto; padding-top: 0.5rem; }
   .route-card__more span { display: inline-block; transition: transform 0.2s ease; }

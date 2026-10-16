@@ -1,62 +1,174 @@
 ---
-import { getCollection, render } from 'astro:content';
+/**
+ * Página de cada Ruta de autor (y de las ediciones especiales).
+ * Todo el contenido viene del frontmatter de src/content/rutas/<slug>.md;
+ * las secciones sin datos no se muestran.
+ */
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import Photo from '../../components/Photo.astro';
 import RouteCard from '../../components/RouteCard.astro';
 import ClosingCta from '../../components/ClosingCta.astro';
+import { designTripUrl } from '../../config/site.config';
 
 export async function getStaticPaths() {
-  const rutas = (await getCollection('rutas', ({ data }) => !data.draft))
-    .sort((a, b) => a.data.order - b.data.order);
-  return rutas.map((ruta) => ({
+  const todas = await getCollection('rutas', ({ data }) => !data.draft);
+  const rutas = todas.filter((r) => r.data.kind === 'ruta').sort((a, b) => a.data.order - b.data.order);
+  return todas.map((ruta) => ({
     params: { slug: ruta.id },
     props: { ruta, otras: rutas.filter((r) => r.id !== ruta.id) },
   }));
 }
 
 const { ruta, otras } = Astro.props;
-const { title, subtitle, description, order, photo, photoAlt } = ruta.data;
-const { Content } = await render(ruta);
-const hasBody = Boolean(ruta.body?.trim());
----
-<BaseLayout fullBleed title={title} description={description}>
-  <BreadcrumbSchema items={[{ name: 'Rutas', url: '/#rutas' }, { name: title, url: Astro.url.pathname }]} />
+const d = ruta.data;
+const especial = d.kind === 'especial';
+const pad = (n: number) => String(n).padStart(2, '0');
+const subject = `${d.hero?.cta ?? 'Quiero saber más'}: ${d.title}`;
+const whatsappMessage = `Hola, me interesa ${especial ? 'la edición especial' : 'la ruta'} "${d.title}" y me gustaría saber más.`;
 
+// Numeración de las secciones que sí se muestran
+let n = 0;
+const next = () => pad(++n);
+const isHighlight = (p: string) => p.startsWith('> ');
+const clean = (p: string) => p.replace(/^> /, '');
+---
+<BaseLayout fullBleed title={`${d.title}: ${d.subtitle}`} description={d.description}>
+  <BreadcrumbSchema items={[{ name: 'Rutas de autor', url: '/#rutas' }, { name: d.title, url: Astro.url.pathname }]} />
+
+  <!-- HERO -->
   <section class="ruta-hero" aria-labelledby="ruta-title">
     <div class="ruta-hero__bg" data-parallax="0.25">
-      <Photo name={photo} alt={photoAlt ?? ''} eager />
+      <Photo name={d.photo} alt={d.photoAlt ?? ''} eager />
     </div>
     <div class="ruta-hero__content">
-      <p class="caption ruta-hero__num"><a href="/#rutas">Rutas</a> / {String(order).padStart(2, '0')}</p>
-      <h1 id="ruta-title" class="heading ruta-hero__title" data-split>{title}</h1>
-      <p class="ruta-hero__subtitle" data-reveal style="--d: 600">{subtitle}</p>
+      <p class="caption ruta-hero__eyebrow">
+        {especial ? d.eyebrow : <><a href="/#rutas">Rutas de autor</a> / {pad(d.order)}</>}
+      </p>
+      <h1 id="ruta-title" class="heading ruta-hero__title" data-split>{d.title}</h1>
+      <p class="lead ruta-hero__tagline" data-reveal style="--d: 500"><em>{d.subtitle}</em></p>
+      <p class="ruta-hero__text" data-reveal style="--d: 650">{d.hero?.text ?? d.summary}</p>
+      {(d.duration || d.dates) && <p class="caption ruta-hero__meta" data-reveal style="--d: 750">{d.dates ?? d.duration}</p>}
+      <div class="btn-row" data-reveal style="--d: 850">
+        <a class="btn btn--solid" href={designTripUrl(subject)}>{d.hero?.cta ?? 'Diseñar esta ruta'}</a>
+        {d.route && <a class="btn btn--outline" href="#recorrido">Ver {d.route.title.toLowerCase()}</a>}
+      </div>
     </div>
   </section>
 
-  {hasBody && (
-    <section class="band band--light">
-      <div class="ruta-body">
-        <Content />
+  <!-- INTRO -->
+  {d.intro && (
+    <section class="band band--light topo" aria-labelledby="intro-title">
+      <p class="caption section-label" data-reveal>{next()}</p>
+      <div class="intro__grid">
+        <h2 id="intro-title" class="heading intro__title" data-split>{d.intro.title}</h2>
+        <div class="intro__text">
+          {d.intro.paragraphs.map((p) => isHighlight(p)
+            ? <p class="lead intro__highlight" data-reveal><em>{clean(p)}</em></p>
+            : <p data-reveal>{p}</p>)}
+        </div>
       </div>
     </section>
   )}
 
-  <section class="band band--dark" aria-labelledby="otras-title">
-    <p class="caption section-label" data-reveal>Otras rutas</p>
-    <h2 id="otras-title" class="heading otras__title" data-split>Sigue explorando</h2>
-    <div class="otras__grid" data-stagger>
-      {otras.map((r) => <RouteCard ruta={r} />)}
-    </div>
-  </section>
+  <!-- LA RUTA -->
+  {d.route && (
+    <section id="recorrido" class="band band--dark topo" aria-labelledby="recorrido-title">
+      <p class="caption section-label" data-reveal>{next()}</p>
+      <h2 id="recorrido-title" class="heading recorrido__title" data-split>{d.route.title}</h2>
+      {d.route.groups.map((g) => {
+        const StopHeading = g.title ? 'h4' : 'h3';
+        return (
+        <div class="grupo">
+          {g.title && <h3 class="subheading grupo__title" data-reveal>{g.title}</h3>}
+          <ol class="paradas" role="list" data-scroll-line>
+            {g.stops.map((s) => (
+              <li class="parada">
+                <span class="parada__point" aria-hidden="true"></span>
+                <div class="parada__head">
+                  <StopHeading class="heading parada__name">{s.name}</StopHeading>
+                </div>
+                <div class="parada__body">
+                  {s.title && <p class="lead parada__title"><em>{s.title}</em></p>}
+                  {s.paragraphs.map((p) => <p>{p}</p>)}
+                  {s.itemsIntro && <p class="caption parada__items-intro">{s.itemsIntro}</p>}
+                  {s.items.length > 0 && <ul class="parada__items">{s.items.map((it) => <li>{it}</li>)}</ul>}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+        );
+      })}
+    </section>
+  )}
 
-  <ClosingCta whatsappMessage={`Hola, me interesa la ruta "${title}" y me gustaría diseñar mi viaje.`} />
+  <!-- LO QUE DEFINE -->
+  {d.defines && (
+    <section class="band band--light" aria-labelledby="define-title">
+      <p class="caption section-label" data-reveal>{next()}</p>
+      <div class="define__grid">
+        <h2 id="define-title" class="heading define__title" data-split>{d.defines.title}</h2>
+        <div>
+          <ol class="define__list" role="list" data-stagger>
+            {d.defines.items.map((it, i) => <li><span class="define__num" aria-hidden="true">{pad(i + 1)}</span>{it}</li>)}
+          </ol>
+          {d.defines.note && <p class="lead define__note" data-reveal><em>{d.defines.note}</em></p>}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- SECCIONES EXTRA (p. ej. edición especial) -->
+  {d.extra.map((x, i) => (
+    <section class="band band--base topo" aria-labelledby={`extra-${i}`}>
+      <p class="caption section-label" data-reveal>{next()}</p>
+      <h2 id={`extra-${i}`} class="heading extra__title" data-split>{x.title}</h2>
+      <div class="extra__text">
+        {x.paragraphs.map((p) => isHighlight(p)
+          ? <p class="lead extra__highlight" data-reveal><em>{clean(p)}</em></p>
+          : <p data-reveal>{p}</p>)}
+      </div>
+    </section>
+  ))}
+
+  <!-- IDEAL PARA TI SI -->
+  {d.idealFor.length > 0 && (
+    <section class="band band--base topo" aria-labelledby="ideal-title">
+      <p class="caption section-label" data-reveal>{next()}</p>
+      <h2 id="ideal-title" class="heading ideal__title" data-split>Ideal para ti si…</h2>
+      <div class="ideal__text">
+        {d.idealFor.map((p, i) => <p class:list={['lead', { 'ideal__first': i === 0 }]} data-reveal style={`--d: ${i * 150}`}>{p}</p>)}
+      </div>
+    </section>
+  )}
+
+  <!-- OTRAS RUTAS -->
+  {otras.length > 0 && (
+    <section class="band band--dark" aria-labelledby="otras-title">
+      <p class="caption section-label" data-reveal>{especial ? 'Rutas de autor' : 'Otras rutas de autor'}</p>
+      <h2 id="otras-title" class="heading otras__title" data-split>Sigue explorando</h2>
+      <div class="otras__grid" data-stagger>
+        {otras.map((r) => <RouteCard ruta={r} />)}
+      </div>
+    </section>
+  )}
+
+  <ClosingCta
+    title={d.closing?.title}
+    text={d.closing?.text}
+    cta={d.closing?.cta}
+    subject={subject}
+    whatsappMessage={whatsappMessage}
+  />
 </BaseLayout>
 
 <style>
+  /* HERO */
   .ruta-hero {
     position: relative;
-    min-height: 88svh;
+    min-height: 100svh;
     display: flex; align-items: flex-end;
     padding: 8rem var(--gutter) clamp(3rem, 6vw, 5rem);
     overflow: hidden;
@@ -65,24 +177,95 @@ const hasBody = Boolean(ruta.body?.trim());
   .ruta-hero__bg { position: absolute; inset: -10% 0 0; }
   .ruta-hero__bg::after {
     content: ''; position: absolute; inset: 0;
-    background: linear-gradient(to top, rgb(30 25 20 / 0.92) 0%, rgb(30 25 20 / 0.35) 55%, rgb(30 25 20 / 0.15) 100%);
+    background: linear-gradient(to top, rgb(30 25 20 / 0.95) 0%, rgb(30 25 20 / 0.55) 55%, rgb(30 25 20 / 0.2) 100%);
   }
-  .ruta-hero__content { position: relative; display: grid; gap: var(--space-4); }
-  .ruta-hero__num { color: var(--color-gold); }
-  .ruta-hero__num a { text-decoration: none; }
-  .ruta-hero__num a:hover { text-decoration: underline; }
-  .ruta-hero__title { color: var(--color-gold); font-size: clamp(3rem, 1rem + 8vw, 10rem); max-width: 12ch; }
-  .ruta-hero__subtitle { font-size: 1.125rem; max-width: var(--max-text); }
+  .ruta-hero__content { position: relative; display: grid; gap: var(--space-3); max-width: 64rem; }
+  .ruta-hero__eyebrow { color: var(--color-gold); }
+  .ruta-hero__eyebrow a { text-decoration: none; }
+  .ruta-hero__eyebrow a:hover { text-decoration: underline; }
+  .ruta-hero__title { color: var(--color-gold); font-size: clamp(3rem, 1rem + 8vw, 10rem); }
+  .ruta-hero__tagline { color: var(--color-sand); }
+  .ruta-hero__text { font-size: 1.125rem; max-width: 36rem; }
+  .ruta-hero__meta { color: var(--color-gold); display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-2); }
+  .ruta-hero__meta::before { content: ''; width: 3rem; height: 1px; background: currentColor; opacity: 0.6; }
+  .ruta-hero .btn-row { margin-top: var(--space-3); }
 
-  .ruta-body { max-width: 44rem; font-size: 1.0625rem; }
-  .ruta-body :global(h2) { font-size: var(--text-subheading); text-transform: uppercase; margin: 2.5rem 0 1rem; }
-  .ruta-body :global(p), .ruta-body :global(ul) { margin: 0 0 1.1em; }
+  /* INTRO */
+  .intro__grid { display: grid; gap: var(--space-5); }
+  .intro__title { color: var(--color-base); max-width: 14ch; }
+  .intro__text { display: grid; gap: var(--space-3); max-width: 38rem; font-size: 1.0625rem; }
+  .intro__highlight { color: var(--color-copper); }
+  @media (min-width: 56rem) {
+    .intro__grid { grid-template-columns: 6fr 6fr; align-items: start; }
+  }
 
+  /* LA RUTA — paradas con línea punteada que avanza con el scroll */
+  .recorrido__title { color: var(--color-gold); margin-bottom: var(--space-6); }
+  .grupo + .grupo { margin-top: var(--space-6); }
+  .grupo__title { color: var(--color-sand); margin-bottom: var(--space-5); }
+  .paradas { list-style: none; margin: 0; padding: 0; position: relative; display: grid; gap: var(--space-6); }
+  .paradas::before {
+    content: ''; position: absolute; left: 0.5rem; top: 0.5rem; bottom: 0.5rem;
+    border-left: 1px dashed var(--color-gold); opacity: 0.7; transform-origin: top;
+  }
+  .parada { position: relative; padding-left: var(--space-5); display: grid; gap: var(--space-3); }
+  .parada__point {
+    position: absolute; left: 0; top: 0.6rem; width: 1rem; height: 1rem; border-radius: 50%;
+    background: var(--color-ink); border: 1px solid var(--color-gold);
+  }
+  .parada__point::after { content: ''; position: absolute; inset: 3px; border-radius: 50%; background: var(--color-gold); }
+  .parada__name { color: var(--color-gold); font-size: clamp(2.25rem, 1.4rem + 3vw, 4rem); }
+  .parada__body { display: grid; gap: var(--space-2); max-width: 36rem; color: var(--color-stone); font-size: 1.0625rem; }
+  .parada__title { color: var(--color-sand); font-size: var(--text-subheading); }
+  .parada__items-intro { color: var(--color-gold); margin-top: var(--space-2); }
+  .parada__items { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-1); }
+  .parada__items li { display: flex; gap: 0.75em; }
+  .parada__items li::before { content: ''; flex: 0 0 0.75rem; height: 1px; margin-top: 0.8em; background: var(--color-gold); }
+  @media (min-width: 56rem) {
+    .parada { grid-template-columns: 5fr 7fr; gap: var(--space-5); }
+  }
+  :global(html.motion) .paradas::before { scale: 1 var(--progress, 0); transition: scale 0.15s linear; }
+  :global(html.motion) .parada > :not(.parada__point) { opacity: 0; translate: 0 1.5rem; transition: opacity 0.7s ease, translate 0.9s var(--ease-out); }
+  :global(html.motion) .parada__point { scale: 0; transition: scale 0.5s var(--ease-out); }
+  :global(html.motion) .parada.is-reached > :not(.parada__point) { opacity: 1; translate: none; }
+  :global(html.motion) .parada.is-reached .parada__point { scale: 1; }
+
+  /* LO QUE DEFINE */
+  .define__grid { display: grid; gap: var(--space-5); }
+  .define__title { color: var(--color-base); max-width: 12ch; }
+  .define__list { list-style: none; margin: 0; padding: 0; }
+  .define__list li {
+    display: grid; grid-template-columns: 3rem 1fr; align-items: baseline;
+    padding: var(--space-3) 0; border-top: 1px solid var(--hairline-light); font-size: 1.0625rem;
+  }
+  .define__list li:last-child { border-bottom: 1px solid var(--hairline-light); }
+  .define__num { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--color-copper); line-height: 1; }
+  .define__note { color: var(--color-copper); margin-top: var(--space-5); max-width: 36rem; }
+  @media (min-width: 56rem) {
+    .define__grid { grid-template-columns: 5fr 7fr; }
+  }
+
+  /* EXTRA */
+  .extra__title { color: var(--color-gold); max-width: 18ch; margin-bottom: var(--space-5); }
+  .extra__text { display: grid; gap: var(--space-3); max-width: 38rem; font-size: 1.0625rem; }
+  .extra__highlight { color: var(--color-gold); }
+
+  /* IDEAL PARA TI */
+  .ideal__title { color: var(--color-gold); margin-bottom: var(--space-5); }
+  .ideal__text { display: grid; gap: var(--space-4); max-width: 46rem; }
+  .ideal__text .lead { color: var(--color-stone); font-size: var(--text-subheading); }
+  .ideal__text .ideal__first { color: var(--color-sand); font-size: var(--text-lead); }
+
+  /* OTRAS RUTAS */
   .otras__title { color: var(--color-gold); margin-bottom: var(--space-6); }
   .otras__grid { display: grid; gap: var(--space-6) var(--space-5); }
-  .otras__grid > :global(:nth-child(1)) { --tilt: -2deg; }
-  .otras__grid > :global(:nth-child(2)) { --tilt: 1.5deg; }
+  .otras__grid > :global(:nth-child(3n+1)) { --tilt: -2deg; }
+  .otras__grid > :global(:nth-child(3n+2)) { --tilt: 1.5deg; }
+  .otras__grid > :global(:nth-child(3n)) { --tilt: -1deg; }
   @media (min-width: 40rem) {
-    .otras__grid { grid-template-columns: repeat(2, 1fr); max-width: 60rem; }
+    .otras__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 64rem) {
+    .otras__grid { grid-template-columns: repeat(3, 1fr); }
   }
 </style>

@@ -78,8 +78,8 @@ export const SITE = {
 export type SiteConfig = typeof SITE;
 
 /** Destino del CTA "Diseñar mi viaje" */
-export function designTripUrl(): string {
-  return SITE.cta.designTrip || `mailto:${SITE.business.email}?subject=${encodeURIComponent(SITE.cta.designTripSubject)}`;
+export function designTripUrl(subject: string = SITE.cta.designTripSubject): string {
+  return SITE.cta.designTrip || `mailto:${SITE.business.email}?subject=${encodeURIComponent(subject)}`;
 }
 
 /** Link de WhatsApp con mensaje prellenado */

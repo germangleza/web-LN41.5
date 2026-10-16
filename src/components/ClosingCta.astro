@@ -7,8 +7,21 @@ interface Props {
   whatsappMessage?: string;
   /** Numeración de sección (ej. '08'). Se omite en las páginas de ruta. */
   label?: string;
+  title?: string;
+  text?: string;
+  /** Texto del botón principal */
+  cta?: string;
+  /** Asunto del correo del botón principal */
+  subject?: string;
 }
-const { whatsappMessage, label } = Astro.props;
+const {
+  whatsappMessage,
+  label,
+  title = '¿Estás pensando en ir o volver a España?',
+  text = 'Cuéntanos qué tienes en mente y empecemos a diseñar una ruta a tu medida.',
+  cta = 'Diseñar mi viaje',
+  subject,
+} = Astro.props;
 ---
 <section class="closing" id="contacto" aria-labelledby="contacto-title">
   <div class="closing__bg" data-parallax="0.2">
@@ -16,10 +29,10 @@ const { whatsappMessage, label } = Astro.props;
   </div>
   <div class="closing__content">
     {label && <p class="caption section-label closing__label" data-reveal>{label}</p>}
-    <h2 id="contacto-title" class="heading" data-split>¿Estás pensando en ir o volver a España?</h2>
-    <p class="closing__text" data-reveal>Cuéntanos qué tienes en mente y empecemos a diseñar una ruta a tu medida.</p>
+    <h2 id="contacto-title" class="heading" data-split>{title}</h2>
+    {text && <p class="closing__text" data-reveal>{text}</p>}
     <div class="btn-row" data-reveal style="--d: 150">
-      <a class="btn btn--solid" href={designTripUrl()}>Diseñar mi viaje</a>
+      <a class="btn btn--solid" href={designTripUrl(subject)}>{cta}</a>
       <a class="btn btn--outline" href={whatsappUrl(whatsappMessage)} rel="noopener">Hablar por WhatsApp</a>
     </div>
   </div>

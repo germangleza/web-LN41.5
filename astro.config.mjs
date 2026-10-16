@@ -8,4 +8,9 @@ export default defineConfig({
   integrations: [sitemap(), mdx()],
   trailingSlash: 'never',
   build: { format: 'file' },
+  // Rutas anteriores que se sustituyeron por las nuevas Rutas de autor
+  redirects: {
+    '/rutas/espana-entre-vinedos': '/rutas/espana-del-vino',
+    '/rutas/espana-medieval': '/rutas/espana-castellana',
+  },
 });
