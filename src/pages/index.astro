@@ -71,7 +71,7 @@ const paraTi = [
     <p class="caption section-label" data-reveal>01</p>
     <h2 id="partida-title" class="heading partida__title" data-split>El punto de partida</h2>
     <div class="partida__grid">
-      <p class="lead" data-reveal>Viajar hoy es más fácil que nunca. <em>Reservar no es el problema.</em></p>
+      <p class="lead" data-reveal>Viajar hoy es más fácil que nunca <em>y reservar no es el problema.</em></p>
       <div class="partida__text" data-stagger>
         <p>El reto está en saber qué sí vale la pena, qué dejar fuera y cómo construir un viaje que realmente se sienta propio.</p>
         <p>LN41.5 nace desde esa idea: ayudar a viajeros a conocer España con más criterio, más contexto y menos itinerario típico.</p>
@@ -84,8 +84,8 @@ const paraTi = [
     <p class="caption section-label" data-reveal>02</p>
     <div class="ruta-nueva__top">
       <div class="ruta-nueva__intro">
-        <h2 id="ruta-nueva-title" class="heading ruta-nueva__title" data-split>Cada viaje se diseña como una ruta nueva</h2>
-        <p class="ruta-nueva__strong" data-reveal>No trabajamos desde paquetes genéricos.<br />Trabajamos desde intención, ritmo, intereses y contexto.</p>
+        <h2 id="ruta-nueva-title" class="heading ruta-nueva__title" data-split>Cada viaje se diseña como una nueva experiencia.</h2>
+        <p class="ruta-nueva__strong" data-reveal>Trabajamos desde la intención de tu viaje, el ritmo, los intereses y el contexto.</p>
         <p class="ruta-nueva__text" data-reveal style="--d: 150">Diseñamos experiencias que combinan criterio, curaduría y conocimiento local para ayudarte a vivir una España más auténtica y mejor elegida.</p>
       </div>
       <div class="collage" aria-hidden="true">
@@ -136,7 +136,10 @@ const paraTi = [
   <section id="rutas" class="band band--dark" aria-labelledby="rutas-title" data-trail>
     <svg class="trail" aria-hidden="true" focusable="false"><path class="trail__path" /><g class="trail__dots"></g></svg>
     <p class="caption section-label" data-reveal>04</p>
-    <h2 id="rutas-title" class="heading rutas__title" data-split data-trail-start>Tres rutas para empezar a explorar</h2>
+    <div class="rutas__intro" data-trail-start>
+      <h2 id="rutas-title" class="heading rutas__title" data-split>Rutas de autor LN41.5</h2>
+      <p class="rutas__lead" data-reveal>5 maneras de comenzar a conocer la otra España.</p>
+    </div>
     <div class="rutas__grid" data-stagger>
       {rutas.map((ruta) => <RouteCard ruta={ruta} />)}
     </div>
@@ -166,7 +169,7 @@ const paraTi = [
     <div class="espana__grid">
       <div class="espana__copy">
         <p class="lead espana__lead" data-reveal>No queremos ser expertos en todo.<br /><em>Queremos construir profundidad donde realmente podemos aportar valor.</em></p>
-        <p class="espana__text" data-reveal style="--d: 150">España es el primer territorio de especialización de LN41.5: por su riqueza regional, su gastronomía, su historia y su capacidad de ofrecer mucho más que el itinerario tradicional.</p>
+        <p class="espana__text" data-reveal style="--d: 150">A España no la conocemos por guías ni por listas: la conocemos desde dentro. Sus regiones, su mesa, sus pueblos y su ritmo. Por eso es el primer territorio de LN41.5: sabemos qué vale la pena, qué se queda fuera de los itinerarios y cómo se vive de verdad.</p>
       </div>
       <p class="espana__remate" data-stagger>
         <span><span class="caption">Especialidad</span> España.</span>
@@ -346,7 +349,10 @@ const paraTi = [
   .manifiesto__cierre { margin-top: var(--space-5); color: var(--color-base); }
 
   /* RUTAS */
-  .rutas__title { color: var(--color-gold); max-width: 16ch; margin-bottom: var(--space-6); }
+  .rutas__intro { width: fit-content; max-width: 100%; margin-bottom: var(--space-6); }
+  .rutas__title { color: var(--color-gold); max-width: 14ch; }
+  /* Mismo estilo que "Trabajamos desde la intención…" */
+  .rutas__lead { font-family: var(--font-display); font-weight: 600; font-size: var(--text-subheading); line-height: 1.1; max-width: 30rem; margin-top: var(--space-4); color: var(--color-sand); }
   .rutas__grid { display: grid; gap: var(--space-6) var(--space-5); }
   /* Sendero (ver src/scripts/trail.ts) */
   .trail { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; overflow: visible; }
