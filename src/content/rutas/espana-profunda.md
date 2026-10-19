@@ -5,7 +5,7 @@ summary: "Ciudades monumentales, dehesas, productores, monasterios y paisajes ab
 description: "España Profunda: Extremadura entre Cáceres, Trujillo, Guadalupe, Mérida, la dehesa y Monfragüe. Patrimonio, productores y calma. 10 días."
 order: 4
 photo: "ruta-profunda"
-photoAlt: "Dehesa extremeña con encinas y ganado pastando"
+photoAlt: "Cerdos ibéricos en la dehesa extremeña, con la sierra al fondo"
 icon: "encina"
 duration: "10 días · 9 noches"
 hero:

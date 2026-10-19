@@ -24,14 +24,14 @@ Los PNG originales están en esta carpeta (`brand/`). Las versiones web en `/pub
 | Archivo | Dónde aparece | Foto |
 |---|---|---|
 | `hero` | Hero de la home | Siurana, Priorat (Catalunya) |
-| `collage-1` | Collage, sección 02 | Castillo de Peñafiel entre viñedos |
-| `collage-2` | Collage, sección 02 | Puente romano de Cangas de Onís (Asturias) |
-| `collage-3` | Collage, sección 02 | Cudillero (Asturias) |
+| `collage-1` | Collage, sección 02 | Calle de pueblo de piedra con rosales |
+| `collage-2` | Collage, sección 02 | Casa rural en la dehesa extremeña |
+| `collage-3` | Collage, sección 02 | Castillo de Peñafiel entre viñedos |
 | `para-ti` | "Es para quienes quieren viajar mejor" | Faro de Cabo Vilán (Costa da Morte) |
 | `cierre` | Cierre de todas las páginas | Pueblo junto al río entre montañas |
 | `ruta-castellana` | Tarjeta y hero de España Castellana | Castillo de Peñafiel (panorámica recortada) |
 | `ruta-vino` | Tarjeta y hero de España del Vino | Viñedos de Abadía Retuerta, Ribera del Duero |
 | `ruta-catalunya` | Tarjeta y hero de Catalunya Insólita | Besalú desde el aire |
-| `ruta-profunda` | Tarjeta y hero de España Profunda | Dehesa con encinas y ganado |
+| `ruta-profunda` | Tarjeta y hero de España Profunda | Cerdos ibéricos en la dehesa |
 | `ruta-atlantica` | Tarjeta y hero de España Atlántica | Faro de Cabo Vilán, Costa da Morte |
 | `ruta-navidad` | Banner de la home y hero de España en Navidad | Reyes Magos en Alcoy (© Paco Grau) |
