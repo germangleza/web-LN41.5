@@ -29,9 +29,9 @@ Los PNG originales están en esta carpeta (`brand/`). Las versiones web en `/pub
 | `collage-3` | Collage, sección 02 | Cudillero (Asturias) |
 | `para-ti` | "No es para todos" | Setenil de las Bodegas (Cádiz) |
 | `cierre` | Cierre de todas las páginas | Pueblo junto al río entre montañas |
-| `ruta-castellana` | Tarjeta y hero de España Castellana | Viñedos con castillo |
+| `ruta-castellana` | Tarjeta y hero de España Castellana | Castillo de Peñafiel entre viñedos |
 | `ruta-vino` | Tarjeta y hero de España del Vino | Hileras de viñedo (baja resolución) |
-| `ruta-catalunya` | Tarjeta y hero de Catalunya Insólita | Siurana, Priorat |
-| `ruta-profunda` | Tarjeta y hero de España Profunda | **FALTA** |
-| `ruta-atlantica` | Tarjeta y hero de España Atlántica | Cudillero (Asturias) |
+| `ruta-catalunya` | Tarjeta y hero de Catalunya Insólita | Besalú desde el aire |
+| `ruta-profunda` | Tarjeta y hero de España Profunda | Dehesa extremeña en flor |
+| `ruta-atlantica` | Tarjeta y hero de España Atlántica | Faro de Cabo Vilán, Costa da Morte |
 | `ruta-navidad` | Banner de la home y hero de España en Navidad | Reyes Magos en Alcoy (© Paco Grau) |

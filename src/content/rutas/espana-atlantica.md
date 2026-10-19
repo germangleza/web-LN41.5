@@ -5,7 +5,7 @@ summary: "De Galicia al País Vasco: faros, pueblos marineros, aldeas de piedra,
 description: "España Atlántica: de Santiago y la Costa da Morte a Asturias, Cantabria y Getaria. Pueblos marineros, aldeas de piedra y cocina atlántica. 10 días."
 order: 5
 photo: "ruta-atlantica"
-photoAlt: "Casas de colores sobre el puerto de Cudillero, Asturias"
+photoAlt: "Faro de Cabo Vilán al atardecer en la Costa da Morte, Galicia"
 icon: "ola"
 duration: "10 días · 9 noches"
 hero:

@@ -5,7 +5,7 @@ summary: "De Barcelona al Priorat, los Pirineos y el Empordà: pueblos, paisaje,
 description: "Catalunya Insólita: de Barcelona al Priorat, Montserrat, la Garrotxa, los Pirineos y el Empordà. Pueblos, vino y paisaje más allá de lo obvio. 10 días."
 order: 3
 photo: "ruta-catalunya"
-photoAlt: "Ermita de Siurana sobre el acantilado y el embalse, en el Priorat"
+photoAlt: "Vista aérea de Besalú y su puente medieval sobre el río Fluvià"
 icon: "montana"
 duration: "10 días · 9 noches"
 hero:
