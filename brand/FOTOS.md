@@ -24,7 +24,7 @@ Los PNG originales están en esta carpeta (`brand/`). Las versiones web en `/pub
 | Archivo | Dónde aparece | Foto |
 |---|---|---|
 | `hero` | Hero de la home | Siurana, Priorat (Catalunya) |
-| `collage-1` | Collage, sección 02 | Calle de pueblo de piedra con rosales |
+| `collage-1` | Collage, sección 02 | Catedral de Santiago, plaza del Obradoiro |
 | `collage-2` | Collage, sección 02 | Casa rural en la dehesa extremeña |
 | `collage-3` | Collage, sección 02 | Castillo de Peñafiel entre viñedos |
 | `para-ti` | "Es para quienes quieren viajar mejor" | Faro de Cabo Vilán (Costa da Morte) |
