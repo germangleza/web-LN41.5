@@ -85,7 +85,7 @@ posts.push({ id: 'post-01-espana-desde-dentro', n: 1, html: `
   <div class="bg shade" style="background-image:url('${foto('hero')}');background-position:62% center"></div>
   <div class="bottom">
     <h1 class="disp gold" style="font-size:190px">España<br>desde<br>dentro.</h1>
-    <p class="cap sandc" style="margin-top:44px">Viajes a España diseñados a tu medida</p>
+    <p class="cap sandc" style="margin-top:44px;font-size:26px">Viajes a España diseñados a tu medida</p>
   </div>
 </section>` });
 
