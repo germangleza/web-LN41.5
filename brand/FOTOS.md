@@ -31,7 +31,7 @@ Los PNG originales están en esta carpeta (`brand/`). Las versiones web en `/pub
 | `cierre` | Cierre de todas las páginas | Pueblo junto al río entre montañas |
 | `ruta-castellana` | Tarjeta y hero de España Castellana | Viñedos con castillo |
 | `ruta-vino` | Tarjeta y hero de España del Vino | Hileras de viñedo (baja resolución) |
-| `ruta-catalunya` | Tarjeta y hero de Catalunya Insólita | **FALTA** |
+| `ruta-catalunya` | Tarjeta y hero de Catalunya Insólita | Siurana, Priorat |
 | `ruta-profunda` | Tarjeta y hero de España Profunda | **FALTA** |
 | `ruta-atlantica` | Tarjeta y hero de España Atlántica | Cudillero (Asturias) |
 | `ruta-navidad` | Banner de la home y hero de España en Navidad | **FALTA** |
