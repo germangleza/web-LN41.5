@@ -34,4 +34,4 @@ Los PNG originales están en esta carpeta (`brand/`). Las versiones web en `/pub
 | `ruta-catalunya` | Tarjeta y hero de Catalunya Insólita | Siurana, Priorat |
 | `ruta-profunda` | Tarjeta y hero de España Profunda | **FALTA** |
 | `ruta-atlantica` | Tarjeta y hero de España Atlántica | Cudillero (Asturias) |
-| `ruta-navidad` | Banner de la home y hero de España en Navidad | **FALTA** |
+| `ruta-navidad` | Banner de la home y hero de España en Navidad | Reyes Magos en Alcoy (© Paco Grau) |

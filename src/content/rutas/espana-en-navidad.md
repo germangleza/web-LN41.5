@@ -6,7 +6,7 @@ summary: "Una edición especial entre obradores, aceite, cerámica, castillos, t
 description: "España en Navidad, edición especial 2026/27: obradores, aceite, cerámica, castillos, turrón y la Cabalgata de Reyes de Alcoy. Grupo de 6–8 viajeros."
 order: 100
 photo: "ruta-navidad"
-photoAlt: "Dulces navideños tradicionales españoles"
+photoAlt: "Llegada de los Reyes Magos a la plaza de Alcoy entre fuegos artificiales"
 icon: "estrella"
 eyebrow: "Edición especial · Navidad 2026/27"
 dates: "27 diciembre 2026 — 6 enero 2027"
