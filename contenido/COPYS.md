@@ -20,7 +20,7 @@ Esto es LN41.5. Bienvenido.
 
 ---
 
-## Post 2 · Carrusel (6) · `post-02-punto-de-partida/`
+## Post 2 · Carrusel (5) · `post-02-punto-de-partida/`
 Hoy cualquiera puede reservar un vuelo, un hotel y diez actividades en una tarde.
 
 Lo difícil es elegir. Qué sí vale la pena, qué dejar fuera y cómo armar un recorrido con sentido.

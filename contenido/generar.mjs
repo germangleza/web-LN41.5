@@ -60,6 +60,9 @@ svg.overlay { position:absolute; top:0; left:0; z-index:5; pointer-events:none; 
 .row:last-child { border-bottom: 1.5px solid rgba(134,65,5,.3); }
 .row b { font-family:'Cormorant'; font-weight:600; font-size: 64px; color: var(--copper); line-height: 1; }
 .row span { font-size: 36px; line-height: 1.35; }
+.rows5 .row { padding: 30px 0; }
+.rows5 .row b { font-size: 58px; }
+.rows5 .row span { font-size: 34px; }
 `;
 
 const count = (i, n, cls = 'gold') => `<p class="cap count ${cls}">${String(i).padStart(2, '0')} / ${String(n).padStart(2, '0')}</p>`;
@@ -87,51 +90,47 @@ posts.push({ id: 'post-01-espana-desde-dentro', n: 1, html: `
 </section>` });
 
 // POST 2 · Carrusel · El punto de partida
-posts.push({ id: 'post-02-punto-de-partida', n: 6, html: `
-<section class="slide sand topo" style="${at(0)}">
-  ${count(1, 6, 'copper')}
+posts.push({ id: 'post-02-punto-de-partida', n: 5, html: `
+<section class="slide ink" style="${at(0)}">
+  <div class="bg shade" style="background-image:url('${foto('ruta-vino')}');background-position:center"></div>
+  <div style="position:absolute;inset:0 0 auto 0;height:360px;z-index:2;background:linear-gradient(to bottom, rgba(30,25,20,.85), rgba(30,25,20,0))"></div>
+  ${count(1, 5)}
   <div class="rel">
-    <p class="cap label copper">El punto de partida</p>
+    <p class="cap label gold">El punto de partida</p>
   </div>
   <div class="bottom">
-    <h2 class="disp basec" style="font-size:132px">Viajar hoy es más fácil que nunca.</h2>
-    <p class="lead it copper" style="font-size:80px;margin-top:40px">Y reservar no es el problema.</p>
-    <p class="cap copper" style="margin-top:72px">Desliza →</p>
+    <h2 class="disp sandc" style="font-size:132px">Viajar hoy es más fácil que nunca.</h2>
+    <p class="lead it gold" style="font-size:80px;margin-top:40px">Y reservar no es el problema.</p>
+    <p class="cap gold" style="margin-top:72px">Desliza →</p>
   </div>
 </section>
 <section class="slide ink topo" style="${at(1)}">
-  ${count(2, 6)}
+  ${count(2, 5)}
   <div class="bottom" style="bottom:200px">
     <h2 class="disp gold" style="font-size:150px">El reto<br>es otro.</h2>
     <p class="lead sandc" style="font-size:62px;margin-top:64px">Saber qué sí vale la pena, qué dejar fuera y cómo construir un viaje que realmente se sienta propio.</p>
   </div>
 </section>
 <section class="slide ink topo" style="${at(2)}">
-  ${count(3, 6)}
+  ${count(3, 5)}
   <div class="tilt" style="left:150px;top:150px;width:780px;height:640px;rotate:-4deg;background-image:url('${foto('para-ti')}')"></div>
   <div class="bottom" style="bottom:150px">
     <h2 class="disp sandc" style="font-size:118px">Es para quienes quieren viajar mejor.</h2>
   </div>
 </section>
 <section class="slide sand topo" style="${at(3)}">
-  ${count(4, 6, 'copper')}
+  ${count(4, 5, 'copper')}
   <p class="cap label copper rel">Para ti si…</p>
-  <div class="bottom" style="bottom:170px">
+  <div class="bottom rows5" style="bottom:130px">
     <div class="row"><b>01</b><span>Ya conociste España y quieres volver.</span></div>
     <div class="row"><b>02</b><span>Quieres salirte del itinerario típico.</span></div>
     <div class="row"><b>03</b><span>Valoras gastronomía, historia, cultura y regiones.</span></div>
-  </div>
-</section>
-<section class="slide sand topo" style="${at(4)}">
-  ${count(5, 6, 'copper')}
-  <p class="cap label copper rel">Para ti si…</p>
-  <div class="bottom" style="bottom:170px">
     <div class="row"><b>04</b><span>Prefieres criterio en vez de mil recomendaciones.</span></div>
     <div class="row"><b>05</b><span>Quieres un viaje más personal y menos genérico.</span></div>
   </div>
 </section>
-<section class="slide base topo" style="${at(5)}">
-  ${count(6, 6)}
+<section class="slide base topo" style="${at(4)}">
+  ${count(5, 5)}
   <div class="bottom" style="bottom:200px">
     <h2 class="disp gold" style="font-size:132px">LN41.5 nace de esa idea.</h2>
     <p class="body sandc" style="margin-top:48px;max-width:820px">Conocer España con más criterio, más contexto y menos itinerario típico.</p>
@@ -244,7 +243,7 @@ ${pasos.map((p, i) => `
 </section>`).join('')}
 <section class="slide ink" style="${at(5)}">
   <div class="bg shade strong" style="background-image:url('${foto('cierre')}')"></div>
-  ${count(6, 6)}
+  
   <div class="bottom" style="bottom:150px">
     <h2 class="disp gold" style="font-size:118px">¿Estás pensando en ir o volver a España?</h2>
     <p class="body sandc" style="margin-top:40px;max-width:860px">Cuéntanos qué tienes en mente y empecemos a diseñar una ruta a tu medida.</p>
