@@ -29,8 +29,8 @@ Los PNG originales están en esta carpeta (`brand/`). Las versiones web en `/pub
 | `collage-3` | Collage, sección 02 | Cudillero (Asturias) |
 | `para-ti` | "No es para todos" | Setenil de las Bodegas (Cádiz) |
 | `cierre` | Cierre de todas las páginas | Pueblo junto al río entre montañas |
-| `ruta-castellana` | Tarjeta y hero de España Castellana | Castillo de Peñafiel sobre su cerro |
-| `ruta-vino` | Tarjeta y hero de España del Vino | Hileras de viñedo (baja resolución) |
+| `ruta-castellana` | Tarjeta y hero de España Castellana | Castillo de Peñafiel (panorámica recortada) |
+| `ruta-vino` | Tarjeta y hero de España del Vino | Viñedos de Abadía Retuerta, Ribera del Duero |
 | `ruta-catalunya` | Tarjeta y hero de Catalunya Insólita | Besalú desde el aire |
 | `ruta-profunda` | Tarjeta y hero de España Profunda | Dehesa con encinas y ganado |
 | `ruta-atlantica` | Tarjeta y hero de España Atlántica | Faro de Cabo Vilán, Costa da Morte |

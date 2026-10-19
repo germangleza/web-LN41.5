@@ -5,7 +5,7 @@ summary: "Dos territorios, dos formas de interpretar el vino. Un viaje entre vi�
 description: "España del Vino: Rioja Alavesa y Ribera del Duero. Bodegas de autor, viñedos, gastronomía y las personas detrás de cada botella. 10 días."
 order: 2
 photo: "ruta-vino"
-photoAlt: "Hileras de viñedo con montañas al fondo"
+photoAlt: "Viñedos de la Abadía Retuerta al atardecer, en la Ribera del Duero"
 icon: "copa"
 duration: "10 días · 9 noches"
 hero:

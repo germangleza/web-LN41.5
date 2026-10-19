@@ -5,7 +5,7 @@ summary: "Una Castilla de fortalezas, pueblos medievales, viñedos y mesas compa
 description: "España Castellana: Segovia, Pedraza, Ribera del Duero, Peñafiel, Burgos, Lerma y Palencia. Castillos, vino y cocina castellana sin prisas. 10 días."
 order: 1
 photo: "ruta-castellana"
-photoAlt: "Castillo de Peñafiel sobre su cerro, en la Ribera del Duero"
+photoAlt: "Murallas y torre del homenaje del castillo de Peñafiel"
 icon: "castillo"
 duration: "10 días · 9 noches"
 hero:
