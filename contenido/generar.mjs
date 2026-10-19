@@ -17,7 +17,8 @@ const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..');
 const W = 1080, H = 1350;
 const f = (p) => `file://${join(root, p)}`;
-const foto = (n) => f(`contenido/fotos/${n}.jpg`);
+// Usa las mismas fotos de la web (src/assets/fotos)
+const foto = (n) => f(`src/assets/fotos/${n}.jpg`);
 // La textura topográfica va incrustada: Chromium no aplica máscaras SVG desde file://
 const topo = `data:image/svg+xml;base64,${readFileSync(join(root, 'public/img/topo.svg')).toString('base64')}`;
 
@@ -66,6 +67,8 @@ const icon = {
   copa: 'M8 3h8l-.4 5.2a3.6 3.6 0 0 1-7.2 0L8 3zM12 12v8M8.5 20.5h7',
   ola: 'M3 10c1.5 0 1.5-1.5 3-1.5S7.5 10 9 10s1.5-1.5 3-1.5S13.5 10 15 10s1.5-1.5 3-1.5S19.5 10 21 10M3 15c1.5 0 1.5-1.5 3-1.5S7.5 15 9 15s1.5-1.5 3-1.5S13.5 15 15 15s1.5-1.5 3-1.5S19.5 15 21 15',
   castillo: 'M4 21V8h2.5v2.5H9V8h2.5v2.5h1V8H15v2.5h2.5V8H20v13H4zM10 21v-4.5a2 2 0 0 1 4 0V21',
+  montana: 'M2.5 20 9 9l3.5 5.5L15 11l6.5 9zM7.2 12.2 9 13.5l1.6-1.4',
+  encina: 'M12 21v-6M12 15c-4.5 0-7.5-2.4-7.5-5.6C4.5 6.3 7.8 4 12 4s7.5 2.3 7.5 5.4c0 3.2-3 5.6-7.5 5.6zM9 21h6',
 };
 const badge = (name, x, y) => `<div class="badge" style="left:${x - 54}px;top:${y - 54}px"><svg viewBox="0 0 24 24"><path d="${icon[name]}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`;
 const at = (i) => `left:${i * W}px`;
@@ -76,7 +79,7 @@ const posts = [];
 // POST 1 · Imagen · España desde dentro
 posts.push({ id: 'post-01-espana-desde-dentro', n: 1, html: `
 <section class="slide ink" style="${at(0)}">
-  <div class="bg shade" style="background-image:url('${foto('picos')}');background-position:40% center"></div>
+  <div class="bg shade" style="background-image:url('${foto('hero')}');background-position:62% center"></div>
   <div class="bottom">
     <h1 class="disp gold" style="font-size:190px">España<br>desde<br>dentro.</h1>
     <p class="cap sandc" style="margin-top:44px">Viajes a España diseñados a tu medida</p>
@@ -92,7 +95,7 @@ posts.push({ id: 'post-02-punto-de-partida', n: 6, html: `
   </div>
   <div class="bottom">
     <h2 class="disp basec" style="font-size:132px">Viajar hoy es más fácil que nunca.</h2>
-    <p class="lead it copper" style="font-size:80px;margin-top:40px">Reservar no es el problema.</p>
+    <p class="lead it copper" style="font-size:80px;margin-top:40px">Y reservar no es el problema.</p>
     <p class="cap copper" style="margin-top:72px">Desliza →</p>
   </div>
 </section>
@@ -105,10 +108,9 @@ posts.push({ id: 'post-02-punto-de-partida', n: 6, html: `
 </section>
 <section class="slide ink topo" style="${at(2)}">
   ${count(3, 6)}
-  <div class="tilt" style="left:150px;top:150px;width:780px;height:640px;rotate:-4deg;background-image:url('${foto('setenil')}')"></div>
+  <div class="tilt" style="left:150px;top:150px;width:780px;height:640px;rotate:-4deg;background-image:url('${foto('para-ti')}')"></div>
   <div class="bottom" style="bottom:150px">
-    <h2 class="disp sandc" style="font-size:118px">No es para todos.</h2>
-    <p class="lead it gold" style="font-size:76px;margin-top:22px">Es para quienes quieren viajar mejor.</p>
+    <h2 class="disp sandc" style="font-size:118px">Es para quienes quieren viajar mejor.</h2>
   </div>
 </section>
 <section class="slide sand topo" style="${at(3)}">
@@ -146,44 +148,55 @@ posts.push({ id: 'post-03-manifiesto', n: 1, html: `
   <p class="cap basec rel" style="margin-top:110px">Ese es el estándar.</p>
 </section>` });
 
-// POST 4 · Carrusel · Tres rutas (con sendero continuo)
+// POST 4 · Carrusel · Rutas de autor (sendero continuo de badge en badge)
 const rutas = [
-  { badge: 'copa', num: '01', title: 'España entre viñedos', text: 'Vino, gastronomía, paisajes y regiones que se disfrutan con tiempo y contexto.', img: 'vinedos-castillo', rot: -3 },
-  { badge: 'ola', num: '02', title: 'Sabores del norte', text: 'Costa, pueblos, mercados, cocina local y una forma distinta de conocer el norte español.', img: 'cudillero', rot: 2.5 },
-  { badge: 'castillo', num: '03', title: 'España medieval', text: 'Historia, patrimonio, pueblos y trayectos con una narrativa más rica que el circuito clásico.', img: 'cangas', rot: -2 },
+  { badge: 'castillo', title: 'España Castellana', sub: 'Castillos, Fogones y Silencio', text: 'Fortalezas, pueblos medievales, viñedos y mesas compartidas. Historia y gastronomía sin prisas.', img: 'ruta-castellana', rot: -3 },
+  { badge: 'copa', title: 'España del Vino', sub: 'Rioja Alavesa & Ribera del Duero', text: 'Dos territorios, dos formas de interpretar el vino. Viñedos, bodegas de autor y las personas detrás de cada botella.', img: 'ruta-vino', rot: 2.5 },
+  { badge: 'montana', title: 'Catalunya Insólita', sub: 'Menos evidente, más personal', text: 'Del Priorat a los Pirineos y el Empordà: pueblos, paisaje y gastronomía más allá de Barcelona.', img: 'ruta-catalunya', rot: -2 },
+  { badge: 'encina', title: 'España Profunda', sub: 'Extremadura · Dehesa, Imperios y Silencio', text: 'Ciudades monumentales, dehesas, productores y monasterios en una de las regiones menos exploradas.', img: 'ruta-profunda', rot: 2 },
+  { badge: 'ola', title: 'España Atlántica', sub: 'La España Verde, Marinera y Celta', text: 'De Galicia al País Vasco: faros, pueblos marineros, aldeas de piedra y cocina del Cantábrico.', img: 'ruta-atlantica', rot: -2.5 },
 ];
-const B = [1960, 3040, 4120].map((x) => ({ x, y: 150 })); // badges de cada ruta
-// Sendero: sale bajo el título, recorre la franja superior de badge en badge y baja por la derecha al botón
-const trailPath = 'M600 1060 C820 1060, 1010 900, 1010 700 S1180 120, 1500 110 S1800 230, 1960 150 '
-  + 'S2300 40, 2520 110 S2860 230, 3040 150 S3380 50, 3600 110 S3940 230, 4120 150 '
-  + 'S4700 120, 4980 420 S5300 900, 5280 1110';
-const dots = [{ x: 600, y: 1060 }, { x: 1010, y: 700 }, { x: 2520, y: 110 }, { x: 3600, y: 110 }, { x: 5280, y: 1110 }];
-posts.push({ id: 'post-04-tres-rutas', n: 5, html: `
+const NR = rutas.length, NS = NR + 2;
+const B = rutas.map((_, i) => ({ x: (i + 1) * W + 880, y: 150 })); // badges de cada ruta
+// Sendero: sale bajo el título, corre por la franja superior de badge en badge y baja por la derecha al botón
+let trailPath = `M600 1060 C820 1060, 1010 900, 1010 700 S1180 120, 1500 110 S1800 230, ${B[0].x} ${B[0].y}`;
+const dots = [{ x: 600, y: 1060 }, { x: 1010, y: 700 }];
+for (let i = 0; i < NR - 1; i++) {
+  const x = B[i].x;
+  trailPath += ` S${x + 340} 40, ${x + 560} 110 S${x + 900} 230, ${B[i + 1].x} ${B[i + 1].y}`;
+  dots.push({ x: x + 560, y: 110 });
+}
+const L = B[NR - 1].x;
+trailPath += ` S${L + 580} 120, ${L + 860} 420 S${L + 1180} 900, ${L + 1160} 1110`;
+dots.push({ x: L + 1160, y: 1110 });
+posts.push({ id: 'post-04-rutas-de-autor', n: NS, html: `
 <section class="slide ink topo" style="${at(0)}">
-  ${count(1, 5)}
-  <p class="cap label gold rel">Rutas</p>
-  <h2 class="disp gold rel" style="font-size:150px;margin-top:150px">Tres rutas<br>para empezar<br>a explorar</h2>
+  ${count(1, NS)}
+  <p class="cap label gold rel">Rutas de autor</p>
+  <h2 class="disp gold rel" style="font-size:150px;margin-top:150px">Rutas de<br>autor<br>LN41.5</h2>
+  <p class="lead sandc rel" style="font-size:56px;margin-top:40px;max-width:640px">5 maneras de comenzar a conocer la otra España.</p>
   <p class="cap gold" style="position:absolute;left:88px;bottom:120px">Desliza →</p>
 </section>
 ${rutas.map((r, i) => `
 <section class="slide ink topo" style="${at(i + 1)}">
-  <p class="cap gold" style="position:absolute;top:96px;left:88px;z-index:4">${String(i + 2).padStart(2, '0')} / 05</p>
-  <div class="tilt" style="left:110px;top:220px;width:860px;height:640px;rotate:${r.rot}deg;background-image:url('${foto(r.img)}')"></div>
-  <div class="bottom" style="bottom:110px">
-    <p class="cap gold">Ruta ${r.num}</p>
+  <p class="cap gold" style="position:absolute;top:96px;left:88px;z-index:4">${String(i + 2).padStart(2, '0')} / ${String(NS).padStart(2, '0')}</p>
+  <div class="tilt" style="left:110px;top:220px;width:860px;height:600px;rotate:${r.rot}deg;background-image:url('${foto(r.img)}')"></div>
+  <div class="bottom" style="bottom:100px">
+    <p class="cap gold">Ruta ${String(i + 1).padStart(2, '0')}</p>
     <h3 class="disp sandc" style="font-size:96px;margin-top:20px">${r.title}</h3>
-    <p class="body stone" style="margin-top:24px;font-size:32px">${r.text}</p>
+    <p class="lead it gold" style="font-size:44px;margin-top:14px">${r.sub}</p>
+    <p class="body stone" style="margin-top:20px;font-size:30px">${r.text}</p>
   </div>
 </section>`).join('')}
-<section class="slide base topo" style="${at(4)}">
-  ${count(5, 5)}
+<section class="slide base topo" style="${at(NS - 1)}">
+  ${count(NS, NS)}
   <div class="bottom" style="bottom:330px;left:88px">
     <h2 class="disp gold" style="font-size:140px">¿Cuál va<br>contigo?</h2>
     <p class="body sandc" style="margin-top:44px;max-width:700px">Cada ruta es un punto de partida. La ajustamos a tu ritmo, tus fechas y tus intereses.</p>
   </div>
   <p style="position:absolute;left:340px;bottom:150px;z-index:6"><span class="btn solid">Hablar por WhatsApp</span></p>
 </section>
-<svg class="overlay" width="${5 * W}" height="${H}" viewBox="0 0 ${5 * W} ${H}">
+<svg class="overlay" width="${NS * W}" height="${H}" viewBox="0 0 ${NS * W} ${H}">
   <path d="${trailPath}" fill="none" stroke="#fccc6c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".95"/>
   ${dots.map((p) => `<circle cx="${p.x}" cy="${p.y}" r="13" fill="#1e1914" stroke="#fccc6c" stroke-width="4.5"/>`).join('')}
 </svg>
@@ -193,7 +206,7 @@ ${rutas.map((r, i) => badge(r.badge, B[i].x, B[i].y)).join('')}
 // POST 5 · Imagen · Por qué España
 posts.push({ id: 'post-05-por-que-espana', n: 1, html: `
 <section class="slide ink" style="${at(0)}">
-  <div class="bg shade" style="background-image:url('${foto('caminito')}');background-position:center 30%"></div>
+  <div class="bg shade" style="background-image:url('${foto('ruta-castellana')}');background-position:38% center"></div>
   <p class="cap label gold rel">Por qué España</p>
   <div class="bottom" style="bottom:130px">
     <p class="cap stone">Especialidad</p>
@@ -230,7 +243,7 @@ ${pasos.map((p, i) => `
   </div>
 </section>`).join('')}
 <section class="slide ink" style="${at(5)}">
-  <div class="bg shade strong" style="background-image:url('${foto('pueblo')}')"></div>
+  <div class="bg shade strong" style="background-image:url('${foto('cierre')}')"></div>
   ${count(6, 6)}
   <div class="bottom" style="bottom:150px">
     <h2 class="disp gold" style="font-size:118px">¿Estás pensando en ir o volver a España?</h2>

@@ -46,18 +46,20 @@ Viajar con más sentido y menos piloto automático. Ese es el estándar con el q
 
 ---
 
-## Post 4 · Carrusel (5) · `post-04-tres-rutas/`
-Tres formas de empezar a conocer España desde dentro:
+## Post 4 · Carrusel (7) · `post-04-rutas-de-autor/`
+Cinco maneras de comenzar a conocer la otra España:
 
-01 · España entre viñedos: vino, mesa y paisaje, con tiempo.
-02 · Sabores del norte: costa, pueblos y cocina local.
-03 · España medieval: historia y patrimonio con contexto.
+01 · España Castellana: castillos, fogones y silencio.
+02 · España del Vino: Rioja Alavesa y Ribera del Duero.
+03 · Catalunya Insólita: una Catalunya menos evidente y más personal.
+04 · España Profunda: Extremadura, dehesa, imperios y silencio.
+05 · España Atlántica: la España verde, marinera y celta.
 
-Ninguna es un paquete cerrado. Son puntos de partida que adaptamos a quién viaja y cómo quiere vivirlo.
+Ninguna es un paquete cerrado. Son Rutas de autor que adaptamos a quién viaja y cómo quiere vivirlo.
 
 ¿Cuál va contigo? Escríbenos y empezamos a diseñarla.
 
-#LN415Travel #RutasPorEspaña #Asturias #VinoEspañol #ViajesAMedida
+#LN415Travel #RutasDeAutor #ViajarAEspaña #ViajesAMedida #España
 
 ---
 
@@ -68,7 +70,7 @@ Queremos construir profundidad donde realmente podemos aportar valor. Por eso em
 
 Especialidad: España. Capacidad: mundo.
 
-#LN415Travel #España #ViajarAEspaña #CaminitoDelRey
+#LN415Travel #España #ViajarAEspaña #Castilla
 
 ---
 
