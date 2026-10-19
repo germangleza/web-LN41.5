@@ -23,7 +23,7 @@ Los PNG originales están en esta carpeta (`brand/`). Las versiones web en `/pub
 
 | Archivo | Dónde aparece | Foto |
 |---|---|---|
-| `hero` | Hero de la home | Picos de Europa, Naranjo de Bulnes (Asturias) |
+| `hero` | Hero de la home | Siurana, Priorat (Catalunya) |
 | `collage-1` | Collage, sección 02 | Caminito del Rey (Málaga) |
 | `collage-2` | Collage, sección 02 | Puente romano de Cangas de Onís (Asturias) |
 | `collage-3` | Collage, sección 02 | Cudillero (Asturias) |
