@@ -23,8 +23,8 @@ export const SITE = {
     type: 'Organization' as const,           // 'Organization' | 'LocalBusiness'
     legalName: '',                           // PENDIENTE razón social
     email: 'hola@ln415travel.com',           // PENDIENTE confirmar
-    phone: '+52 55 7810 1234',               // PENDIENTE confirmar
-    whatsapp: '525578101234',                // Solo dígitos con lada país, para wa.me — PENDIENTE confirmar
+    phone: '+52 663 313 5555',
+    whatsapp: '526633135555',                // Solo dígitos con lada país, para wa.me
     address: {
       street: '',
       city: '',
@@ -48,7 +48,7 @@ export const SITE = {
 
   // === Llamados a la acción ===
   cta: {
-    // "Diseñar mi viaje": URL del formulario. Si se deja vacío, abre un correo a business.email.
+    // "Diseñar mi viaje": URL del formulario. Si se deja vacío, abre WhatsApp con un mensaje prellenado.
     designTrip: '',
     designTripSubject: 'Quiero diseñar mi viaje a España',
     whatsappMessage: 'Hola, estoy pensando en viajar a España y me gustaría diseñar una ruta.',
@@ -77,9 +77,9 @@ export const SITE = {
 
 export type SiteConfig = typeof SITE;
 
-/** Destino del CTA "Diseñar mi viaje" */
+/** Destino del CTA "Diseñar mi viaje": WhatsApp con el asunto como mensaje */
 export function designTripUrl(subject: string = SITE.cta.designTripSubject): string {
-  return SITE.cta.designTrip || `mailto:${SITE.business.email}?subject=${encodeURIComponent(subject)}`;
+  return SITE.cta.designTrip || whatsappUrl(`Hola, ${subject.charAt(0).toLowerCase()}${subject.slice(1)}.`);
 }
 
 /** Link de WhatsApp con mensaje prellenado */

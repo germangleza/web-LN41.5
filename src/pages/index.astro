@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Photo from '../components/Photo.astro';
 import RouteCard from '../components/RouteCard.astro';
 import ClosingCta from '../components/ClosingCta.astro';
+import SectionCta from '../components/SectionCta.astro';
 import { designTripUrl } from '../config/site.config';
 
 const todas = await getCollection('rutas', ({ data }) => !data.draft);
@@ -79,6 +80,7 @@ const paraTi = [
         <p>LN41.5 nace desde esa idea: ayudar a viajeros a conocer España con más criterio, más contexto y menos itinerario típico.</p>
       </div>
     </div>
+    <SectionCta />
   </section>
 
   <!-- CADA VIAJE SE DISEÑA COMO UNA RUTA NUEVA -->
@@ -110,6 +112,7 @@ const paraTi = [
         </li>
       ))}
     </ul>
+    <SectionCta />
   </section>
 
   <!-- NO ES PARA TODOS -->
@@ -132,6 +135,7 @@ const paraTi = [
         </ol>
       </div>
     </div>
+    <SectionCta />
   </section>
 
   <!-- BANNER EDICIÓN ESPECIAL -->
@@ -146,6 +150,7 @@ const paraTi = [
           {especial.data.dates && <p class="caption especial__dates" data-reveal style="--d: 250">{especial.data.dates}</p>}
           <div class="btn-row" data-reveal style="--d: 350">
             <a class="btn btn--solid" href={`/rutas/${especial.id}`}>{especial.data.hero?.cta ?? 'Quiero saber más'}</a>
+            <a class="btn btn--outline" href={designTripUrl(`Quiero diseñar mi viaje: ${especial.data.title}`)}>Diseñar mi viaje</a>
           </div>
         </div>
         <a class="especial__media" href={`/rutas/${especial.id}`} tabindex="-1" aria-hidden="true" data-toss style="--rot: 3deg">
@@ -194,6 +199,7 @@ const paraTi = [
         </li>
       ))}
     </ol>
+    <SectionCta />
   </section>
 
   <!-- POR QUÉ ESPAÑA -->
@@ -210,6 +216,7 @@ const paraTi = [
         <span><span class="caption">Capacidad</span> Mundo.</span>
       </p>
     </div>
+    <SectionCta />
   </section>
 
   <!-- MANIFIESTO -->
@@ -221,6 +228,7 @@ const paraTi = [
       <p>“Esto no lo habría armado así por mi cuenta.”</p>
     </blockquote>
     <p class="caption manifiesto__cierre" data-reveal style="--d: 400">Ese es el estándar.</p>
+    <SectionCta align="center" />
   </section>
 
   <ClosingCta label="08" />

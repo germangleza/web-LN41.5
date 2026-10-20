@@ -1,21 +1,19 @@
 ---
 /** Cierre con llamado a la acción. Se usa en la home y en cada ruta. */
 import Photo from './Photo.astro';
-import { designTripUrl, whatsappUrl } from '../config/site.config';
+import { designTripUrl } from '../config/site.config';
 
 interface Props {
-  whatsappMessage?: string;
   /** Numeración de sección (ej. '08'). Se omite en las páginas de ruta. */
   label?: string;
   title?: string;
   text?: string;
   /** Texto del botón principal */
   cta?: string;
-  /** Asunto del correo del botón principal */
+  /** Mensaje de WhatsApp del botón */
   subject?: string;
 }
 const {
-  whatsappMessage,
   label,
   title = '¿Estás pensando en ir o volver a España?',
   text = 'Cuéntanos qué tienes en mente y empecemos a diseñar una ruta a tu medida.',
@@ -33,7 +31,6 @@ const {
     {text && <p class="closing__text" data-reveal>{text}</p>}
     <div class="btn-row" data-reveal style="--d: 150">
       <a class="btn btn--solid" href={designTripUrl(subject)}>{cta}</a>
-      <a class="btn btn--outline" href={whatsappUrl(whatsappMessage)} rel="noopener">Hablar por WhatsApp</a>
     </div>
   </div>
 </section>

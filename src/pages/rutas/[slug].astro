@@ -25,8 +25,8 @@ const { ruta, otras } = Astro.props;
 const d = ruta.data;
 const especial = d.kind === 'especial';
 const pad = (n: number) => String(n).padStart(2, '0');
-const subject = `${d.hero?.cta ?? 'Quiero saber más'}: ${d.title}`;
-const whatsappMessage = `Hola, me interesa ${especial ? 'la edición especial' : 'la ruta'} "${d.title}" y me gustaría saber más.`;
+// Mensaje prellenado de WhatsApp para los botones de esta ruta
+const subject = `Me interesa ${especial ? 'la edición especial' : 'la ruta'} "${d.title}" y me gustaría diseñar mi viaje`;
 
 // Numeración de las secciones que sí se muestran
 let n = 0;
@@ -144,6 +144,13 @@ const clean = (p: string) => p.replace(/^> /, '');
     </section>
   )}
 
+  <ClosingCta
+    title={d.closing?.title}
+    text={d.closing?.text}
+    cta={d.closing?.cta}
+    subject={subject}
+  />
+
   <!-- OTRAS RUTAS -->
   {otras.length > 0 && (
     <section class="band band--dark" aria-labelledby="otras-title">
@@ -155,13 +162,6 @@ const clean = (p: string) => p.replace(/^> /, '');
     </section>
   )}
 
-  <ClosingCta
-    title={d.closing?.title}
-    text={d.closing?.text}
-    cta={d.closing?.cta}
-    subject={subject}
-    whatsappMessage={whatsappMessage}
-  />
 </BaseLayout>
 
 <style>

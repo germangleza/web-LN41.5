@@ -1,0 +1,18 @@
+---
+/** Botón "Diseñar mi viaje" al cierre de cada sección (abre WhatsApp). */
+import { designTripUrl } from '../config/site.config';
+
+interface Props {
+  subject?: string;
+  align?: 'start' | 'center';
+}
+const { subject, align = 'start' } = Astro.props;
+---
+<div class:list={['section-cta', `section-cta--${align}`]} data-reveal>
+  <a class="btn btn--solid" href={designTripUrl(subject)}>Diseñar mi viaje</a>
+</div>
+
+<style>
+  .section-cta { position: relative; z-index: 3; display: flex; margin-top: var(--space-6); }
+  .section-cta--center { justify-content: center; }
+</style>

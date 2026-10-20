@@ -4,6 +4,7 @@ import SEO from '../components/SEO.astro';
 import OrganizationSchema from '../components/schema/OrganizationSchema.astro';
 import WebSiteSchema from '../components/schema/WebSiteSchema.astro';
 import { SITE, designTripUrl, whatsappUrl, socialUrls } from '../config/site.config';
+import { getCollection } from 'astro:content';
 import '../styles/global.css';
 
 interface Props {
@@ -19,6 +20,9 @@ interface Props {
   fullBleed?: boolean;
 }
 const { fullBleed = false, ...props } = Astro.props;
+// Rutas para el footer: las de autor en orden y al final las ediciones especiales
+const footerRutas = (await getCollection('rutas', ({ data }) => !data.draft))
+  .sort((a, b) => (a.data.kind === b.data.kind ? a.data.order - b.data.order : a.data.kind === 'ruta' ? -1 : 1));
 ---
 <!doctype html>
 <html lang={SITE.lang}>
@@ -77,11 +81,19 @@ const { fullBleed = false, ...props } = Astro.props;
             <li><a href="/#contacto">Contacto</a></li>
           </ul>
         </div>
+        <div class="footer-rutas">
+          <h2 class="caption">Rutas</h2>
+          <ul>
+            {footerRutas.map((r) => (
+              <li><a class="btn btn--outline btn--small" href={`/rutas/${r.id}`}>{r.data.title} <span aria-hidden="true">→</span></a></li>
+            ))}
+          </ul>
+        </div>
         <div>
           <h2 class="caption">Contacto</h2>
           <ul>
             <li><a href={`mailto:${SITE.business.email}`}>{SITE.business.email}</a></li>
-            <li><a href={whatsappUrl()} rel="noopener">WhatsApp</a></li>
+            <li><a href={whatsappUrl()} rel="noopener">WhatsApp {SITE.business.phone}</a></li>
             {socialUrls().map((url) => <li><a href={url} rel="noopener me">{new URL(url).hostname.replace('www.', '').replace('.com', '')}</a></li>)}
           </ul>
         </div>
