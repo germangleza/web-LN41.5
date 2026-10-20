@@ -1,5 +1,5 @@
 /**
- * Tarjeta de branding de LN41.5: paleta (café oscuro, café claro, cobre) y tipografías
+ * Tarjeta de branding de LN41.5: paleta (café oscuro, café claro, dorado) y tipografías
  * (Cormorant Garamond Semibold + Montserrat).
  *
  * Uso:  PWPATH=$(npm root -g)/playwright node contenido/templates/generar-branding.mjs
@@ -22,7 +22,7 @@ const W = 1920, H = 1080;
 const colores = [
   { name: 'Café oscuro', hex: '#2F271F', rgb: '47 · 39 · 31', bg: '#2f271f', fg: '#eee6d8', use: 'Fondos principales' },
   { name: 'Café claro', hex: '#EEE6D8', rgb: '238 · 230 · 216', bg: '#eee6d8', fg: '#2f271f', use: 'Fondos y texto sobre oscuro' },
-  { name: 'Cobre', hex: '#864105', rgb: '134 · 65 · 5', bg: '#864105', fg: '#eee6d8', use: 'Títulos y detalles sobre claro' },
+  { name: 'Dorado', hex: '#F0C054', rgb: '240 · 192 · 84', bg: '#f0c054', fg: '#2f271f', use: 'Títulos, líneas y detalles sobre oscuro' },
 ];
 
 const html = `<style>
@@ -35,10 +35,10 @@ body { width: ${W}px; height: ${H}px; display: grid; grid-template-columns: 1fr 
 .half { position: relative; padding: 90px 96px; overflow: hidden; display: flex; flex-direction: column; }
 .half::before { content: ''; position: absolute; inset: 0; background: var(--tc); opacity: var(--to); -webkit-mask: url('${topo}') center/cover no-repeat; }
 .half > * { position: relative; }
-.dark { background: #2f271f; color: #eee6d8; --tc: #864105; --to: .35; }
-.light { background: #eee6d8; color: #2f271f; --tc: #864105; --to: .2; }
+.dark { background: #2f271f; color: #eee6d8; --tc: #f0c054; --to: .16; }
+.light { background: #eee6d8; color: #2f271f; --tc: #2f271f; --to: .12; }
 .cap { font-size: 17px; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; }
-.copper { color: #864105; } .soft { color: #c9a88a; }
+.gold { color: #f0c054; } .ink { color: #2f271f; } .soft { color: #c9a88a; }
 .disp { font-family: 'Cormorant'; font-weight: 600; line-height: .9; text-transform: uppercase; }
 h1 { font-size: 150px; margin-top: 36px; }
 .sub { font-family: 'Cormorant'; font-weight: 600; font-size: 40px; margin-top: 22px; max-width: 20ch; line-height: 1.1; }
@@ -48,7 +48,7 @@ h1 { font-size: 150px; margin-top: 36px; }
 .info { padding: 22px 28px; display: grid; align-content: center; gap: 8px; background: rgba(30,25,20,.35); }
 .info b { font-family: 'Cormorant'; font-weight: 600; font-size: 38px; text-transform: uppercase; letter-spacing: .02em; line-height: 1; }
 .info span { font-size: 16px; letter-spacing: .14em; opacity: .85; }
-.font { padding: 34px 0; border-top: 1px solid rgba(134,65,5,.35); }
+.font { padding: 34px 0; border-top: 1px solid rgba(47,39,31,.25); }
 .font:first-of-type { margin-top: 46px; }
 .font .row { display: flex; justify-content: space-between; align-items: baseline; }
 .big-c { font-size: 104px; margin-top: 14px; }
@@ -58,8 +58,8 @@ h1 { font-size: 150px; margin-top: 36px; }
 .sample { margin-top: 18px; font-size: 21px; line-height: 1.6; max-width: 40ch; color: #5a4a3a; }
 </style>
 <section class="half dark">
-  <p class="cap copper" style="color:#c27a3c">Identidad · Paleta</p>
-  <h1 class="disp">LN41.5</h1>
+  <p class="cap gold">Identidad · Paleta</p>
+  <h1 class="disp gold">LN41.5</h1>
   <p class="sub">Viajes a España diseñados con criterio y conocimiento local.</p>
   <div class="swatches">
     ${colores.map((c) => `<div class="sw"><div class="chip" style="background:${c.bg};${c.hex === '#2F271F' ? 'box-shadow: inset 0 0 0 1px rgba(238,230,216,.35)' : ''}"></div>
@@ -67,14 +67,14 @@ h1 { font-size: 150px; margin-top: 36px; }
   </div>
 </section>
 <section class="half light">
-  <p class="cap copper">Identidad · Tipografía</p>
+  <p class="cap ink">Identidad · Tipografía</p>
   <div class="font">
-    <div class="row"><p class="cap copper">Display / Títulos</p><p class="cap" style="opacity:.6">Semibold 600 · Mayúsculas</p></div>
-    <p class="disp big-c copper">Cormorant Garamond</p>
+    <div class="row"><p class="cap ink">Display / Títulos</p><p class="cap" style="opacity:.6">Semibold 600 · Mayúsculas</p></div>
+    <p class="disp big-c ink">Cormorant Garamond</p>
     <p class="alpha c">AaBbCc ÁÉÍÓÚ Ñ 0123456789</p>
   </div>
   <div class="font">
-    <div class="row"><p class="cap copper">Texto / Etiquetas</p><p class="cap" style="opacity:.6">Regular 400 · Medium 500</p></div>
+    <div class="row"><p class="cap ink">Texto / Etiquetas</p><p class="cap" style="opacity:.6">Regular 400 · Medium 500</p></div>
     <p class="big-m">Montserrat</p>
     <p class="alpha">AaBbCc ÁÉÍÓÚ Ñ 0123456789</p>
     <p class="sample">Cada viaje se diseña como una nueva experiencia: rutas de autor para conocer la otra España.</p>
