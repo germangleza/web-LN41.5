@@ -144,6 +144,14 @@ const paraTi = [
     </div>
     <div class="rutas__grid" data-stagger>
       {rutas.map((ruta) => <RouteCard ruta={ruta} />)}
+      <div class="rutas__end">
+        <span class="rutas__pin" data-trail-end aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 21s-6.5-6.1-6.5-11a6.5 6.5 0 0 1 13 0c0 4.9-6.5 11-6.5 11z M12 12.3a2.3 2.3 0 1 0 0-4.6 2.3 2.3 0 0 0 0 4.6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" /></svg>
+        </span>
+        <p class="caption rutas__end-num">Tu ruta</p>
+        <h3 class="subheading rutas__end-title">¿Y si la siguiente parada la diseñamos contigo?</h3>
+        <a class="btn btn--outline btn--small" href={designTripUrl()}>Diseñar mi viaje</a>
+      </div>
     </div>
   </section>
 
@@ -413,11 +421,30 @@ const paraTi = [
   .rutas__grid > :global(:nth-child(3)) { --tilt: -1deg; }
   .rutas__grid > :global(:nth-child(4)) { --tilt: 1deg; }
   .rutas__grid > :global(:nth-child(5)) { --tilt: -1.5deg; }
-  @media (min-width: 40rem) {
+  /* Llegada del sendero */
+  .rutas__end { position: relative; z-index: 3; display: grid; justify-items: start; align-content: center; gap: var(--space-3); padding-block: var(--space-5); }
+  .rutas__pin {
+    display: grid; place-items: center; width: 4rem; height: 4rem; border-radius: 50%;
+    color: var(--color-gold); background: var(--color-ink); border: 1.5px dashed var(--color-gold);
+    transition: scale 0.6s var(--ease-out), opacity 0.3s ease, background 0.4s ease, color 0.4s ease;
+  }
+  .rutas__pin:global(.is-reached) { background: var(--color-gold); color: var(--color-ink); border-style: solid; }
+  :global(html.motion) .rutas__pin:not(:global(.is-reached)) { scale: 0.5; opacity: 0.35; }
+  .rutas__end-num { color: var(--color-gold); }
+  .rutas__end-title { color: var(--color-sand); max-width: 16ch; }
+  /* Zigzag: cada fila corre en sentido contrario a la anterior para que el camino no regrese */
+  @media (min-width: 40rem) and (max-width: 63.999rem) {
     .rutas__grid { grid-template-columns: repeat(2, 1fr); }
+    .rutas__grid > :global(:nth-child(3)) { grid-area: 2 / 2; }
+    .rutas__grid > :global(:nth-child(4)) { grid-area: 2 / 1; }
+    .rutas__grid > :global(:nth-child(5)) { grid-area: 3 / 1; }
+    .rutas__end { grid-area: 3 / 2; }
   }
   @media (min-width: 64rem) {
     .rutas__grid { grid-template-columns: repeat(3, 1fr); }
     .rutas__grid > :global(:nth-child(2)) { margin-top: var(--space-6); }
+    .rutas__grid > :global(:nth-child(4)) { grid-area: 2 / 3; }
+    .rutas__grid > :global(:nth-child(5)) { grid-area: 2 / 2; margin-top: var(--space-6); }
+    .rutas__end { grid-area: 2 / 1; padding-inline-end: var(--space-5); }
   }
 </style>
