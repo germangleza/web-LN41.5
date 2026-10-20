@@ -193,7 +193,6 @@ ${rutas.map((r, i) => `
     <h2 class="disp gold" style="font-size:140px">¿Cuál va<br>contigo?</h2>
     <p class="body sandc" style="margin-top:44px;max-width:700px">Cada ruta es un punto de partida. La ajustamos a tu ritmo, tus fechas y tus intereses.</p>
   </div>
-  <p style="position:absolute;left:340px;bottom:150px;z-index:6"><span class="btn solid">Hablar por WhatsApp</span></p>
 </section>
 <svg class="overlay" width="${NS * W}" height="${H}" viewBox="0 0 ${NS * W} ${H}">
   <path d="${trailPath}" fill="none" stroke="#fccc6c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".95"/>
