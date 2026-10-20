@@ -134,27 +134,6 @@ const paraTi = [
     </div>
   </section>
 
-  <!-- RUTAS -->
-  <section id="rutas" class="band band--dark" aria-labelledby="rutas-title" data-trail>
-    <svg class="trail" aria-hidden="true" focusable="false"><path class="trail__path" /><g class="trail__dots"></g></svg>
-    <p class="caption section-label" data-reveal>04</p>
-    <div class="rutas__intro" data-trail-start>
-      <h2 id="rutas-title" class="heading rutas__title" data-split>Rutas de autor LN41.5</h2>
-      <p class="rutas__lead" data-reveal>5 maneras de comenzar a conocer la otra España.</p>
-    </div>
-    <div class="rutas__grid" data-stagger>
-      {rutas.map((ruta) => <RouteCard ruta={ruta} />)}
-      <div class="rutas__end">
-        <span class="rutas__pin" data-trail-end aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 21s-6.5-6.1-6.5-11a6.5 6.5 0 0 1 13 0c0 4.9-6.5 11-6.5 11z M12 12.3a2.3 2.3 0 1 0 0-4.6 2.3 2.3 0 0 0 0 4.6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" /></svg>
-        </span>
-        <p class="caption rutas__end-num">Tu ruta</p>
-        <h3 class="subheading rutas__end-title">¿Y si la siguiente parada la diseñamos contigo?</h3>
-        <a class="btn btn--outline btn--small" href={designTripUrl()}>Diseñar mi viaje</a>
-      </div>
-    </div>
-  </section>
-
   <!-- BANNER EDICIÓN ESPECIAL -->
   {especial && (
     <section class="band band--base topo especial" aria-labelledby="especial-title">
@@ -178,6 +157,27 @@ const paraTi = [
       </div>
     </section>
   )}
+
+  <!-- RUTAS -->
+  <section id="rutas" class="band band--dark" aria-labelledby="rutas-title" data-trail>
+    <svg class="trail" aria-hidden="true" focusable="false"><path class="trail__path" /><g class="trail__dots"></g></svg>
+    <p class="caption section-label" data-reveal>04</p>
+    <div class="rutas__intro" data-trail-start>
+      <h2 id="rutas-title" class="heading rutas__title" data-split>Rutas de autor LN41.5</h2>
+      <p class="rutas__lead" data-reveal>5 maneras de comenzar a conocer la otra España.</p>
+    </div>
+    <div class="rutas__grid" data-stagger>
+      {rutas.map((ruta) => <RouteCard ruta={ruta} />)}
+      <div class="rutas__end">
+        <span class="rutas__pin" data-trail-end aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 21s-6.5-6.1-6.5-11a6.5 6.5 0 0 1 13 0c0 4.9-6.5 11-6.5 11z M12 12.3a2.3 2.3 0 1 0 0-4.6 2.3 2.3 0 0 0 0 4.6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" /></svg>
+        </span>
+        <p class="caption rutas__end-num">Tu ruta</p>
+        <h3 class="subheading rutas__end-title">¿Y si la siguiente parada la diseñamos contigo?</h3>
+        <a class="btn btn--outline btn--small" href={designTripUrl()}>Diseñar mi viaje</a>
+      </div>
+    </div>
+  </section>
 
   <!-- CÓMO FUNCIONA -->
   <section id="como-funciona" class="band band--light topo" aria-labelledby="proceso-title">
