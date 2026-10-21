@@ -81,11 +81,11 @@ const footerRutas = (await getCollection('rutas', ({ data }) => !data.draft))
             <li><a href="/#contacto">Contacto</a></li>
           </ul>
         </div>
-        <div class="footer-rutas">
+        <div>
           <h2 class="caption">Rutas</h2>
           <ul>
             {footerRutas.map((r) => (
-              <li><a class="btn btn--outline btn--small" href={`/rutas/${r.id}`}>{r.data.title} <span aria-hidden="true">→</span></a></li>
+              <li><a href={`/rutas/${r.id}`}>{r.data.title}</a></li>
             ))}
           </ul>
         </div>
