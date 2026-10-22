@@ -8,9 +8,9 @@ Los textos entre [corchetes] los completa Miguel con su historia real.
 ---
 
 ## Guion 1 · Miguel presenta LN41.5
-**Pilar:** España desde dentro (marca + storytelling) · **Etapa:** Awareness / Trust
-**Formato:** Founder Reel, Miguel a cámara · **Duración:** ~55 s
-**Hook:** "La mayoría de la gente conoce la España que sale en el itinerario. Yo quiero enseñarte la otra."
+**Pilar:** España desde dentro (marca + storytelling) · **Etapa:** Awareness / Trust  
+**Formato:** Founder Reel, Miguel a cámara · **Duración:** ~55 s  
+**Hook:** "La mayoría de la gente conoce la España que sale en el itinerario. Yo quiero enseñarte la otra."  
 **CTA:** Síguenos
 
 | Tiempo | Qué se ve | Qué se dice (Miguel a cámara) |
@@ -38,9 +38,9 @@ Los textos entre [corchetes] los completa Miguel con su historia real.
 ---
 
 ## Guion 2 · No necesitas ir a Francia para hacer un gran viaje de vino
-**Pilar:** La España que te faltó (awareness + deseo) · **Etapa:** Descubrimiento
-**Formato:** Reel con voz en off (Miguel) + B-roll · **Duración:** ~45 s
-**Hook:** "No necesitas ir a Francia para hacer un gran viaje de vino."
+**Pilar:** La España que te faltó (awareness + deseo) · **Etapa:** Descubrimiento  
+**Formato:** Reel con voz en off (Miguel) + B-roll · **Duración:** ~45 s  
+**Hook:** "No necesitas ir a Francia para hacer un gran viaje de vino."  
 **CTA:** Envíaselo a tu compañero de viaje · Escribe VINO
 
 | Tiempo | Qué se ve | Qué se dice (voz en off) |
@@ -67,9 +67,9 @@ Los textos entre [corchetes] los completa Miguel con su historia real.
 ---
 
 ## Guion 3 · España Castellana (ruta medieval)
-**Pilar:** Rutas y experiencias LN41.5 (producto + conversión) · **Etapa:** Intent / Deseo
-**Formato:** Reel cinematográfico con voz en off · **Duración:** ~45 s
-**Hook:** "Un viaje para quien disfruta más una historia que una selfie."
+**Pilar:** Rutas y experiencias LN41.5 (producto + conversión) · **Etapa:** Intent / Deseo  
+**Formato:** Reel cinematográfico con voz en off · **Duración:** ~45 s  
+**Hook:** "Un viaje para quien disfruta más una historia que una selfie."  
 **CTA:** Escribe HISTORIA
 
 > Nota: en la web, la ruta "España Medieval" ahora se llama **España Castellana · Castillos, fogones y silencio**.
