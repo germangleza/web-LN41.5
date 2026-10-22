@@ -211,10 +211,6 @@ const paraTi = [
         <p class="lead espana__lead" data-reveal>Queremos construir profundidad donde realmente podemos aportar valor.</p>
         <p class="espana__text" data-reveal style="--d: 150">A España la conocemos desde dentro. Sus regiones, su mesa, sus pueblos y su ritmo. Por eso es el primer territorio de LN41.5: sabemos qué vale la pena, qué se queda fuera de los itinerarios y cómo se vive de verdad.</p>
       </div>
-      <p class="espana__remate" data-stagger>
-        <span><span class="caption">Especialidad</span> España.</span>
-        <span><span class="caption">Capacidad</span> Mundo.</span>
-      </p>
     </div>
     <SectionCta />
   </section>
@@ -271,8 +267,8 @@ const paraTi = [
   }
   .hero__title { color: var(--color-gold); }
   .hero__title span { display: block; }
-  .hero__aside { display: grid; gap: var(--space-4); max-width: 26rem; }
-  .hero__text { font-size: 1.0625rem; color: var(--color-sand); }
+  .hero__aside { display: grid; gap: var(--space-4); max-width: 32rem; }
+  .hero__text { font-size: clamp(1.1875rem, 1rem + 0.6vw, 1.4375rem); line-height: 1.5; color: var(--color-sand); }
   .hero__scroll { position: absolute; left: 50%; bottom: 1.25rem; translate: -50% 0; color: var(--color-gold); display: none; }
   @media (min-width: 64rem) {
     .hero__content { grid-template-columns: 1fr auto; }
@@ -284,7 +280,7 @@ const paraTi = [
   .partida__grid { display: grid; gap: var(--space-5); }
   .partida__grid .lead { color: var(--color-base); max-width: 40rem; }
   .partida__grid .lead em { color: var(--color-copper); }
-  .partida__text { display: grid; gap: var(--space-3); max-width: var(--max-text); font-size: 1.0625rem; }
+  .partida__text { display: grid; gap: var(--space-3); max-width: 36rem; font-size: clamp(1.1875rem, 1rem + 0.6vw, 1.4375rem); line-height: 1.5; }
   @media (min-width: 56rem) {
     .partida__grid { grid-template-columns: 7fr 5fr; align-items: end; }
   }
@@ -322,7 +318,7 @@ const paraTi = [
   .para-quien__title { color: var(--color-base); max-width: 20ch; margin-bottom: var(--space-6); }
   .para-quien__title em { color: var(--color-copper); }
   .para-quien__grid { display: grid; gap: var(--space-6); align-items: start; }
-  .para-quien__photo { aspect-ratio: 4 / 5; overflow: hidden; --rot: -3deg; max-width: 28rem; }
+  .para-quien__photo { aspect-ratio: 4 / 5; overflow: hidden; --rot: -3deg; width: 100%; }
   .para-quien__lead { margin-bottom: var(--space-5); max-width: 36rem; }
   .para-ti__label { color: var(--color-copper); margin-bottom: var(--space-2); }
   .para-ti { list-style: none; margin: 0; padding: 0; }
@@ -335,7 +331,7 @@ const paraTi = [
   .para-ti li:last-child { border-bottom: 1px solid var(--hairline-light); }
   .para-ti__num { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--color-copper); line-height: 1; }
   @media (min-width: 56rem) {
-    .para-quien__grid { grid-template-columns: 5fr 7fr; }
+    .para-quien__grid { grid-template-columns: 1fr 1fr; gap: var(--space-6); }
   }
 
   /* CÓMO FUNCIONA — checkpoints de ruta */
@@ -383,13 +379,6 @@ const paraTi = [
   .espana__lead { color: var(--color-sand); max-width: 38rem; }
   .espana__lead em { color: var(--color-gold); }
   .espana__text { max-width: var(--max-text); color: var(--color-stone); font-size: 1.0625rem; }
-  .espana__remate { display: grid; gap: var(--space-3); margin: 0; }
-  .espana__remate > span {
-    display: grid; gap: var(--space-1);
-    padding-top: var(--space-3); border-top: 1px solid var(--hairline-dark);
-    font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
-    font-size: clamp(2.75rem, 1.5rem + 4vw, 5.5rem); line-height: 0.9; color: var(--color-gold);
-  }
   /* CAPACIDAD MUNDO */
   .mundo { padding-block: var(--space-6); border-top: 1px solid var(--hairline-dark); }
   .mundo__inner { display: grid; gap: var(--space-4); align-items: center; justify-items: start; }
@@ -400,10 +389,6 @@ const paraTi = [
   .mundo__text { color: var(--color-stone); }
   @media (min-width: 56rem) {
     .mundo__inner { grid-template-columns: auto 1fr auto; gap: var(--space-5); }
-  }
-  .espana__remate .caption { color: var(--color-stone); font-family: var(--font-ui); }
-  @media (min-width: 56rem) {
-    .espana__grid { grid-template-columns: 7fr 5fr; }
   }
 
   /* MANIFIESTO */
