@@ -7,7 +7,7 @@
 export const SITE = {
   // === Básicos ===
   name: 'LN41.5 Travel',                     // Nombre de la marca/negocio
-  url: 'https://ln415travel.com',            // Dominio final SIN slash al final — PENDIENTE confirmar
+  url: 'https://www.ln415.com',              // Dominio final SIN slash al final (ln415.com redirige a www)
   title: 'LN41.5 Travel — Viajes a España diseñados a tu medida',
   description: 'Diseñamos viajes a España con criterio y conocimiento local: regiones, sabores e historias que se quedan fuera del itinerario tradicional.',
   locale: 'es_MX',                           // es_MX, es_ES, en_US...
