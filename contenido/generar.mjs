@@ -50,6 +50,7 @@ body { width: var(--w); height: ${H}px; position: relative; overflow: hidden; fo
 .btn { display:inline-flex; align-items:center; gap:14px; padding: 26px 40px; border: 2px solid currentColor; font-weight:600; font-size: 24px; letter-spacing:.18em; text-transform: uppercase; }
 .btn.solid { background: var(--gold); border-color: var(--gold); color: var(--ink); }
 .count { position:absolute; top: 96px; right: 88px; z-index: 4; }
+.logo { position:absolute; top: 80px; left: 88px; height: 120px; width: auto; z-index: 4; filter: drop-shadow(0 2px 14px rgba(30,25,20,.7)); }
 .mono { position:absolute; right: 80px; bottom: 72px; height: 76px; z-index: 4; }
 .bottom { position:absolute; left: 88px; right: 88px; bottom: 120px; z-index: 3; }
 .tilt { position:absolute; overflow:hidden; background-size:cover; background-position:center; }
@@ -75,6 +76,8 @@ const icon = {
 };
 const badge = (name, x, y) => `<div class="badge" style="left:${x - 54}px;top:${y - 54}px"><svg viewBox="0 0 24 24"><path d="${icon[name]}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`;
 const at = (i) => `left:${i * W}px`;
+// Logo: dorado sobre fondos oscuros/foto, marrón sobre fondos claros
+const logo = (fondo = 'oscuro', style = '') => `<img class="logo" src="${f(fondo === 'claro' ? 'public/Logotipo LN41.5 Travel en marrón oscuro.png' : 'public/logo-header.webp')}" alt="" style="${style}">`;
 
 /* ---------------- POSTS ---------------- */
 const posts = [];
@@ -281,8 +284,9 @@ posts.push({ id: 'post-07-ya-hiciste-madrid-y-barcelona', n: 5, html: `
   <div class="bg shade" style="background-image:url('${foto('ruta-catalunya')}')"></div>
   ${shadeTop}
   ${count(1, 5)}
-  <p class="cap label gold rel">La España que te faltó</p>
+  ${logo()}
   <div class="bottom">
+    <p class="cap label gold" style="margin-bottom:36px;text-shadow:0 2px 12px rgba(30,25,20,.9)">La España que te faltó</p>
     <h2 class="disp sandc" style="font-size:118px">Ya hiciste Madrid y Barcelona.</h2>
     <h2 class="disp gold" style="font-size:150px;margin-top:22px">¿Ahora qué?</h2>
     <p class="lead it sandc" style="font-size:46px;margin-top:36px;max-width:820px">Tu segundo viaje a España debería verse completamente diferente.</p>
@@ -326,6 +330,7 @@ posts.push({ id: 'post-07-ya-hiciste-madrid-y-barcelona', n: 5, html: `
   <div class="bg shade" style="background-image:url('${foto('hero')}');background-position:60% center"></div>
   ${shadeTop}
   ${count(5, 5)}
+  ${logo()}
   <div class="bottom" style="bottom:150px">
     <h2 class="disp gold" style="font-size:150px">¿Qué te faltó conocer?</h2>
     <p class="body sandc" style="margin-top:40px;max-width:820px">Cuéntanos en comentarios o escríbenos y diseñamos tu segundo viaje a España.</p>
