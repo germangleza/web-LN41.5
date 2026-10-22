@@ -256,6 +256,89 @@ ${pasos.map((p, i) => `
 </svg>
 ` });
 
+// POST 7 · Carrusel · Ya hiciste Madrid y Barcelona. ¿Ahora qué? (pilar: La España que te faltó)
+const otra = [
+  { badge: 'castillo', title: 'Castilla', sub: 'Castillos, fogones y silencio', img: 'ruta-castellana' },
+  { badge: 'copa', title: 'Rioja y Ribera del Duero', sub: 'El vino como hilo conductor', img: 'ruta-vino' },
+  { badge: 'montana', title: 'Catalunya insólita', sub: 'Priorat, Pirineos y Empordà', img: 'ruta-catalunya' },
+  { badge: 'encina', title: 'Extremadura', sub: 'Dehesa, imperios y silencio', img: 'ruta-profunda' },
+  { badge: 'ola', title: 'Galicia y el Cantábrico', sub: 'Faros, sidra y pueblos marineros', img: 'ruta-atlantica' },
+];
+// Columna de fotos a la izquierda con su badge; el sendero baja por la orilla uniendo los badges
+const RY = (i) => 450 + i * 186;
+const OW = 300, OH = 158, OX = 118;
+const OB = otra.map((_, i) => ({ x: 2 * W + OX + 4, y: RY(i) - OH / 2 + 4 }));
+let otraPath = `M${2 * W + 20} 330 C${2 * W + 80} 330, ${OB[0].x - 70} ${OB[0].y - 80}, ${OB[0].x} ${OB[0].y}`;
+for (let i = 1; i < OB.length; i++) {
+  const a = OB[i - 1], b = OB[i];
+  otraPath += ` C${a.x - 90} ${a.y + 70}, ${b.x - 90} ${b.y - 80}, ${b.x} ${b.y}`;
+}
+otraPath += ` C${OB[4].x - 90} ${OB[4].y + 90}, ${2 * W + 70} 1305, ${2 * W + 260} 1308`;
+const otraEnd = { x: 2 * W + 260, y: 1308 };
+const shadeTop = `<div style="position:absolute;inset:0 0 auto 0;height:300px;z-index:2;background:linear-gradient(to bottom, rgba(30,25,20,.8), rgba(30,25,20,0))"></div>`;
+posts.push({ id: 'post-07-ya-hiciste-madrid-y-barcelona', n: 5, html: `
+<section class="slide ink" style="${at(0)}">
+  <div class="bg shade" style="background-image:url('${foto('ruta-catalunya')}')"></div>
+  ${shadeTop}
+  ${count(1, 5)}
+  <p class="cap label gold rel">La España que te faltó</p>
+  <div class="bottom">
+    <h2 class="disp sandc" style="font-size:118px">Ya hiciste Madrid y Barcelona.</h2>
+    <h2 class="disp gold" style="font-size:150px;margin-top:22px">¿Ahora qué?</h2>
+    <p class="lead it sandc" style="font-size:46px;margin-top:36px;max-width:820px">Tu segundo viaje a España debería verse completamente diferente.</p>
+    <p class="cap gold" style="margin-top:52px">Desliza →</p>
+  </div>
+</section>
+<section class="slide ink" style="${at(1)}">
+  <div class="bg shade" style="background-image:url('${foto('ruta-castellana')}');background-position:38% center"></div>
+  ${shadeTop}
+  ${count(2, 5)}
+  <div class="bottom">
+    <h2 class="disp gold" style="font-size:120px">El error es repetir la fórmula.</h2>
+    <p class="body sandc" style="margin-top:40px">Más ciudades, más trenes, más check-ins.</p>
+    <p class="body sandc" style="margin-top:22px">El segundo viaje no se trata de ver más. Se trata de <b class="gold">entrar más</b>: regiones, comida local, pueblos y ritmo.</p>
+  </div>
+</section>
+<section class="slide ink topo" style="${at(2)}">
+  ${count(3, 5)}
+  <p class="cap label gold rel">Tu segundo viaje</p>
+  <h2 class="disp gold rel" style="font-size:92px;margin-top:26px">La otra España<br>empieza aquí</h2>
+  ${otra.map((r, i) => `
+  <div class="tilt" style="left:${OX}px;top:${RY(i) - OH / 2}px;width:${OW}px;height:${OH}px;rotate:${i % 2 ? 2 : -2}deg;background-image:url('${foto(r.img)}')"></div>
+  <div style="position:absolute;z-index:3;top:${RY(i) - 56}px;left:${OX + OW + 44}px;right:60px">
+    <p class="cap gold" style="font-size:20px">${String(i + 1).padStart(2, '0')}</p>
+    <p class="disp sandc" style="font-size:44px;line-height:.95;margin-top:8px;white-space:nowrap">${r.title}</p>
+    <p class="lead it gold" style="font-size:32px;margin-top:8px">${r.sub}</p>
+  </div>`).join('')}
+</section>
+<section class="slide ink" style="${at(3)}">
+  <div class="bg shade" style="background-image:url('${foto('ruta-atlantica')}')"></div>
+  ${shadeTop}
+  ${count(4, 5)}
+  <div class="bottom">
+    <h2 class="disp sandc" style="font-size:104px">No elijas la región más famosa.</h2>
+    <h2 class="disp gold" style="font-size:104px;margin-top:18px">Elige la que va contigo.</h2>
+    <p class="lead it sandc" style="font-size:46px;margin-top:40px">¿Te mueve el vino? ¿La historia? ¿La comida? ¿El mar?</p>
+    <p class="body stone" style="margin-top:26px;font-size:30px">Empieza por lo que quieres vivir, no por Google Maps.</p>
+  </div>
+</section>
+<section class="slide ink" style="${at(4)}">
+  <div class="bg shade" style="background-image:url('${foto('hero')}');background-position:60% center"></div>
+  ${shadeTop}
+  ${count(5, 5)}
+  <div class="bottom" style="bottom:150px">
+    <h2 class="disp gold" style="font-size:150px">¿Qué te faltó conocer?</h2>
+    <p class="body sandc" style="margin-top:40px;max-width:820px">Cuéntanos en comentarios o escríbenos y diseñamos tu segundo viaje a España.</p>
+  </div>
+</section>
+<svg class="overlay" width="${5 * W}" height="${H}" viewBox="0 0 ${5 * W} ${H}">
+  <path d="${otraPath}" fill="none" stroke="#fccc6c" stroke-width="4" stroke-linecap="round" opacity=".95"/>
+  <circle cx="${2 * W + 20}" cy="330" r="11" fill="#1e1914" stroke="#fccc6c" stroke-width="4"/>
+  <circle cx="${otraEnd.x}" cy="${otraEnd.y}" r="11" fill="#1e1914" stroke="#fccc6c" stroke-width="4"/>
+</svg>
+${otra.map((r, i) => `<div class="badge" style="left:${OB[i].x - 38}px;top:${OB[i].y - 38}px;width:76px;height:76px;box-shadow:0 0 0 6px var(--ink),0 0 0 8.5px var(--gold)"><svg viewBox="0 0 24 24" style="width:36px;height:36px"><path d="${icon[r.badge]}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`).join('')}
+` });
+
 /* ---------------- RENDER ---------------- */
 const build = join(here, '.build');
 mkdirSync(build, { recursive: true });

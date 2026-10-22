@@ -87,3 +87,19 @@ Así pasamos de "quiero ir a España" a un viaje con lógica, ritmo y decisiones
 ¿Estás pensando en ir o volver? Cuéntanos qué tienes en mente → link en bio.
 
 #LN415Travel #ViajesAMedida #ViajarAEspaña #DiseñoDeViajes
+
+---
+
+## Post 7 · Carrusel (5) · `post-07-ya-hiciste-madrid-y-barcelona/`
+Pilar: La España que te faltó · Descubrimiento
+
+Ya hiciste Madrid y Barcelona. ¿Ahora qué? 🇪🇸
+
+El segundo viaje a España no debería organizarse como el primero. No se trata de sumar ciudades, sino de entrar en las regiones: su comida local, sus pueblos y su ritmo.
+
+Castilla, Rioja y Ribera, Catalunya, Extremadura, Galicia y el Cantábrico… la otra España empieza donde termina el itinerario típico.
+
+👇 ¿Qué te faltó conocer?
+Guarda este post para tu próximo viaje.
+
+#LN415Travel #España #ViajarAEspaña #SegundoViaje #ViajesDeAutor
