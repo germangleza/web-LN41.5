@@ -22,7 +22,7 @@ export const SITE = {
   business: {
     type: 'Organization' as const,           // 'Organization' | 'LocalBusiness'
     legalName: '',                           // PENDIENTE razón social
-    email: 'hola@ln415travel.com',           // PENDIENTE confirmar
+    email: 'hola@ln415.com',
     phone: '+52 663 313 5555',
     whatsapp: '526633135555',                // Solo dígitos con lada país, para wa.me
     address: {
