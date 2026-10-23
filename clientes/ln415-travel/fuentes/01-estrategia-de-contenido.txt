@@ -1,0 +1,564 @@
++----------------------------------------------------------------------------------------------------------------------------------------------+
+| LN 41.5 TRAVEL                                                                                                                               |
+|                                                                                                                                              |
+| ESTRATEGIA                                                                                                                                   |
+| DE CONTENIDO                                                                                                                                 |
+|                                                                                                                                              |
+| España desde dentro                                                                                                                          |
+|                                                                                                                                              |
+| No queremos ser la cuenta que más lugares de España enseña. Queremos ser la cuenta que mejor te ayuda a decidir cómo vale la pena conocerla. |
++==============================================================================================================================================+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+
+Estrategia de contenido de LN 41.5
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6 pilares. Cada uno tiene una función distinta dentro del journey.
+
+  ----------------------------------------------------------------------------
+  Pilar                        Función principal       Etapa
+  ---------------------------- ----------------------- -----------------------
+  1. La España que te faltó    Awareness + deseo       Descubrimiento
+
+  2. Qué sí vale la pena       Autoridad + educación   Consideración
+
+  3. España desde dentro       Marca + storytelling    Awareness / Trust
+
+  4. Viajar mejor              Problema + utilidad     Consideración
+
+  5. Así diseñamos un viaje    Prueba + objeciones     Trust / Conversion
+
+  6. Rutas y experiencias LN   Producto + conversión   Intent / Venta
+  ----------------------------------------------------------------------------
+
+La mezcla inicial podría rondar 50% descubrimiento/autoridad, 30% educación y problema, 20% producto/conversión, consistente con el GTM que ya definimos.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. LA ESPAÑA QUE TE FALTÓ
+
+Objetivo
+
+Generar curiosidad y hacer que el viajero piense:
+
+  -----------------------------------------------------------------------
+  “Yo creía que conocía España, pero todavía me falta mucho.”
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Problema que resuelve
+
+El cliente conoce lo obvio, pero no sabe qué existe después de Madrid, Barcelona y los circuitos clásicos.
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Idea                                            Hook                                                                   Formato           CTA
+  ----------------------------------------------- ---------------------------------------------------------------------- ----------------- -----------------------------------
+  1. ¿Ya hiciste Madrid y Barcelona?              “Tu segundo viaje a España debería verse completamente diferente.”     Reel              ¿Qué te faltó conocer?
+
+  2. 5 regiones para un segundo viaje             “Si ya conoces lo típico, empieza por aquí.”                           Carrusel          Guarda esta lista
+
+  3. España sin Madrid ni Barcelona               “¿Harías 12 días por España sin pisar ninguna de las dos?”             Reel              Sí / no
+
+  4. Un lugar que casi nadie mete                 “La mayoría pasa de largo por aquí. Ese es el error.”                  Reel              Guarda para tu viaje
+
+  5. Norte vs sur                                 “Si solo pudieras elegir uno para tu segundo viaje…”                   Carrusel          ¿Cuál elegirías?
+
+  6. España para amantes del vino                 “No necesitas ir a Francia para hacer un gran viaje de vino.”          Reel              Envíaselo a tu compañero de viaje
+
+  7. Pueblos que valen más que una ciudad extra   “A veces quitar una ciudad mejora todo el viaje.”                      Carrusel          ¿Cuál agregarías?
+
+  8. Segunda vez en Andalucía                     “Ya viste Sevilla y Granada. ¿Ahora qué?”                              Reel              Escribe ANDALUCÍA
+
+  9. España en otoño                              “Hay viajes a España que tienen mucho más sentido fuera del verano.”   Carrusel          Guarda para después
+
+  10. “La otra España”                            “España no termina donde termina el itinerario turístico.”             Serie Reel        Sigue la serie
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Este pilar debe ser muy visual y altamente compartible.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. QUÉ SÍ VALE LA PENA
+
+Objetivo
+
+Construir autoridad.
+
+No queremos demostrar que Miguel conoce muchos lugares.
+
+Queremos demostrar que tiene criterio.
+
+Problema que resuelve
+
+El cliente tiene Google, TikTok, blogs, Booking y ChatGPT. Lo que no tiene es una forma clara de decidir.
+
+Ese es precisamente el problema estratégico del ICP: información abundante, poco criterio.
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Idea                                         Hook                                                                    Formato           CTA
+  -------------------------------------------- ----------------------------------------------------------------------- ----------------- ---------------------------------
+  1. ¿Vale la pena dormir en Toledo?           “Ir y volver el mismo día no siempre es la mejor decisión.”             Reel              ¿Quieres más comparaciones así?
+
+  2. Rioja vs Ribera del Duero                 “No son intercambiables.”                                               Carrusel          ¿Cuál va más contigo?
+
+  3. ¿Cuántos días darle a Sevilla?            “El error no es ir. Es ir con demasiado poco tiempo.”                   Reel              Guarda
+
+  4. Tren o coche                              “Hay rutas donde rentar coche mejora todo… y otras donde lo arruina.”   Carrusel          Comenta tu ruta
+
+  5. Hotel céntrico vs experiencia rural       “Pagar más no siempre significa viajar mejor.”                          Reel              ¿Cuál prefieres?
+
+  7. Tres ciudades que yo quitaría             “Un buen itinerario también se diseña eliminando.”                      Carrusel          ¿Cuál no quitarías?
+
+  8. El error de meter demasiadas ciudades     “Cinco hoteles en diez días no es aprovechar el viaje.”                 Reel              Envíaselo al organizador
+
+  9. ¿Cuándo contratar guía?                   “Hay lugares donde un buen guía cambia completamente la experiencia.”   Carrusel          Guarda
+
+  10. Lugares populares que sí valen la pena   “Ser turístico no significa automáticamente ser malo.”                  Reel              Sigue para más criterio
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Este debería convertirse en uno de los pilares distintivos de LN.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. ESPAÑA DESDE DENTRO
+
+Objetivo
+
+Construir marca, personalidad y conexión emocional.
+
+Problema que resuelve
+
+Una agencia generalista puede reservar España. LN tiene que demostrar que la mira con mayor profundidad.
+
+Contenido
+
+Historia, cultura, costumbres, comida, lenguaje, tradiciones, pequeños detalles locales.
+
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Idea                                             Hook                                                                Formato           CTA
+  ------------------------------------------------ ------------------------------------------------------------------- ----------------- ------------------------
+  1. Cómo se come realmente en España              “Si cenas a las 7, te vas a perder parte de la experiencia.”        Reel              Guarda
+
+  2. Qué significa realmente “ir de tapas”         “No es simplemente pedir tapas.”                                    Reel              ¿Lo sabías?
+
+  3. El sobremesa                                  “Esta palabra explica mucho de cómo se vive España.”                Story/Reel        Comparte
+
+  4. Por qué las regiones se sienten como países   “Viajar por España no es conocer una sola cultura.”                 Carrusel          ¿Cuál quieres conocer?
+
+  5. Una fiesta local                              “Esto pasa una vez al año y cambia completamente el viaje.”         Reel              Guarda fecha
+
+  6. Plato + región                                “Este plato tiene mucho más sentido cuando sabes de dónde viene.”   Reel              Guarda
+
+  7. Historia detrás de una ciudad                 “No entender esto es perderte la mitad del lugar.”                  Carrusel          Sigue
+
+  8. Costumbres que sorprenden a mexicanos         “Tres cosas que en España son completamente normales.”              Reel              ¿Cuál te sorprendió?
+
+  9. Palabras distintas España/México              Entretenimiento ligero                                              Reel              Comenta otra
+
+  10. Miguel cuenta una historia                   “Algo que aprendí creciendo/conociendo España…”                     Founder Reel      Síguenos
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Aquí Miguel debe aparecer bastante.
+
+No como influencer de viajes.
+
+Como fuente de contexto.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. VIAJAR MEJOR
+
+Objetivo
+
+Resolver problemas concretos que el cliente ya reconoce.
+
+Problema que resuelve
+
+El ICP tiene poco tiempo y quiere evitar errores logísticos, saturación y malas decisiones.
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------
+  Idea                                           Hook                                                         Formato           CTA
+  ---------------------------------------------- ------------------------------------------------------------ ----------------- --------------------------
+  1. Cómo saber si tu itinerario está saturado   “Si cambias de hotel cada dos noches, revisaría tu viaje.”   Carrusel          Guarda checklist
+
+  2. Error #1 de primer viaje                    “Intentar conocer España completa.”                          Reel              Envíaselo a quien planea
+
+  3. Cuántas bases usar                          “Menos hoteles, mejor viaje.”                                Carrusel          Guarda
+
+  4. Cómo elegir una región                      “No empieces preguntando qué ciudades son famosas.”          Reel              Comenta tus intereses
+
+  5. Organizar por intereses                     “Empieza por lo que quieres vivir, no por Google Maps.”      Carrusel          Guarda
+
+  6. Cómo planear comida                         “No dejes todas tus comidas importantes al azar.”            Reel              Comparte
+
+  7. Cuándo reservar                             “España no se reserva igual en mayo que en agosto.”          Carrusel          Guarda
+
+  8. Cómo dejar espacio libre                    “Planear bien también significa no planear todo.”            Reel              ¿Eres así?
+
+  9. Viaje familiar multigeneracional            “El viaje falla cuando todos llevan el mismo ritmo.”         Carrusel          Guarda
+
+  10. Primera vs segunda visita                  “Tu segundo viaje no debería organizarse como el primero.”   Reel              ¿Cuál estás planeando?
+  --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Este es probablemente el contenido que más saves va a generar.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. ASÍ DISEÑAMOS UN VIAJE
+
+Objetivo
+
+Eliminar objeciones y demostrar el valor de pagar a LN.
+
+Problema que resuelve
+
+La gran objeción es:
+
+  -----------------------------------------------------------------------
+  “Yo puedo organizar esto solo.”
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Y es verdad.
+
+La respuesta de LN no debe ser negarlo. Debe demostrar por qué el resultado puede ser mejor con criterio y diseño. Ese “yo lo puedo hacer solo” es justamente el competidor estratégico principal.
+
+  -------------------------------------------------------------------------------------------------------------------------------------------
+  Idea                                  Hook                                                            Formato           CTA
+  ------------------------------------- --------------------------------------------------------------- ----------------- -------------------
+  1. De brief a ruta                    “Así transformaríamos tres intereses en un viaje de 10 días.”   Carrusel          Diseñar mi viaje
+
+  2. Antes/después itinerario           “El cliente llegó con 7 ciudades. Esto cambiaríamos.”           Reel              ¿Harías lo mismo?
+
+  3. Qué quitamos y por qué             “Diseñar no siempre es agregar.”                                Carrusel          Guarda
+
+  4. Caso ficticio pareja               “Ama vino, ella historia y tienen 9 días.”                      Reel              ¿Qué harías tú?
+
+  5. Qué preguntamos antes de cotizar   “No empezamos preguntando presupuesto.”                         Carrusel          Conoce el proceso
+
+  6. Concepto de Viaje                  “Antes de cotizar, hacemos esto.”                               Reel              Diseñar mi viaje
+
+  7. Cómo seleccionamos hoteles         “No siempre recomendamos el hotel más lujoso.”                  Carrusel          Guarda
+
+  8. Por qué rechazamos una ciudad      “Agregar Barcelona hacía peor este viaje.”                      Reel              ¿La quitarías?
+
+  9. Qué significa curaduría            “No es darte 20 opciones.”                                      Reel              Sigue
+
+  10. Detrás de cámaras                 Miguel armando ruta / proveedores / llamadas                    Stories           Pregúntanos algo
+  -------------------------------------------------------------------------------------------------------------------------------------------
+
+Este pilar convierte la metodología en contenido.
+
+Muy importante.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. RUTAS Y EXPERIENCIAS LN 41.5
+
+Objetivo
+
+Crear deseo de producto y generar leads.
+
+Aquí sí podemos vender más directamente.
+
+Problema que resuelve
+
+El usuario puede tener ganas de viajar pero no una idea suficientemente concreta para actuar.
+
+Las rutas le dan algo que imaginar.
+
+Por ahora podemos trabajar con las tres conceptuales:
+
+España entre Viñedos
+
+Sabores del Norte
+
+España Medieval
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Idea                            Hook                                                                                   Formato                CTA
+  ------------------------------- -------------------------------------------------------------------------------------- ---------------------- --------------------
+  1. España entre Viñedos         “Si el vino fuera el hilo conductor de tu viaje…”                                      Reel cinematográfico   Escribe VINO
+
+  2. Itinerario conceptual vino   “Así podrían verse 10 días.”                                                           Carrusel               Diseñar esta ruta
+
+  3. Sabores del Norte            “Un viaje donde las decisiones empiezan por qué quieres comer.”                        Reel                   Escribe NORTE
+
+  4. Ruta del norte               “Mar, pueblos y gastronomía.”                                                          Carrusel               Guardar
+
+  5. España Medieval              “Un viaje para quien disfruta más una historia que una selfie.”                        Reel                   Escribe HISTORIA
+
+  6. ¿Qué ruta eres?              Vino vs Norte vs Medieval                                                              Carrusel               Comenta 1, 2 o 3
+
+  7. Pareja / familia             “Esta ruta la haríamos diferente dependiendo de quién viaja.”                          Reel                   Diseñar mi viaje
+
+  8. Una experiencia hero         “Esta podría ser la razón completa para construir un viaje alrededor de una región.”   Reel                   Guarda
+
+  9. Ruta del mes                 Serie editorial                                                                        Carrusel               Solicitar concepto
+
+  10. Personalización             “Esta es la ruta base. Esto es lo que cambiaríamos para ti.”                           Carrusel               Cuéntanos tu viaje
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+El customer journey completo
+
+No esperaría que alguien vea un Reel hoy y compre mañana.
+
+El sistema debe moverlo progresivamente:
+
+1. DESCUBRIMIENTO
+
+El usuario piensa:
+
+  -----------------------------------------------------------------------
+  “No sabía que España tenía todo esto.”
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Contenido:
+
+-   La España que te faltó.
+
+-   España desde dentro.
+
+-   entretenimiento / cultura.
+
+CTA: Guardar / seguir / compartir.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. RECONOCIMIENTO DEL PROBLEMA
+
+Piensa:
+
+  -----------------------------------------------------------------------
+  “Planeándolo yo probablemente me perdería cosas.”
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Contenido:
+
+-   Viajar mejor.
+
+-   errores.
+
+-   comparaciones.
+
+-   decisiones.
+
+CTA: Guardar / comentar / responder.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. AUTORIDAD
+
+Piensa:
+
+  -----------------------------------------------------------------------
+  “Esta gente sí tiene criterio.”
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Contenido:
+
+-   Qué sí vale la pena.
+
+-   Miguel explicando decisiones.
+
+-   contexto local.
+
+CTA: Seguir / preguntar / enviar DM.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. CONFIANZA
+
+Piensa:
+
+  -----------------------------------------------------------------------
+  “Sí entenderían cómo quiero viajar.”
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Contenido:
+
+-   Cómo diseñamos.
+
+-   detrás de cámaras.
+
+-   Concepto de Viaje.
+
+-   futuros casos/testimonios.
+
+CTA: Cuéntanos tu viaje.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. DESEO
+
+Piensa:
+
+  -----------------------------------------------------------------------
+  “Quiero vivir ese viaje.”
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Contenido:
+
+-   Signature Routes.
+
+-   experiencias.
+
+-   rutas.
+
+-   storytelling visual.
+
+CTA:
+
+Escribe ESPAÑA / VINO / NORTE / HISTORIA.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. CONVERSIÓN
+
+Piensa:
+
+  -----------------------------------------------------------------------
+  “Quiero que me ayuden a diseñarlo.”
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Contenido:
+
+-   proceso;
+
+-   CTA directo;
+
+-   prueba;
+
+-   rutas;
+
+-   disponibilidad / temporada.
+
+CTA:
+
+Diseñar mi viaje.
+
+Y de ahí:
+
+DM → WhatsApp → calificación → conversación → Concepto de Viaje → propuesta.
+
+Es exactamente el proceso comercial que acabamos de construir.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Los seis tipos de contenido que nunca deberían faltar
+
+Más que intentar equilibrar “educación / entretenimiento / venta” artificialmente, revisaría que cada mes tengamos contenido que haga estas seis cosas:
+
+Awareness: “5 regiones para tu segundo viaje a España.”
+
+Problema: “El error de intentar conocer seis ciudades en diez días.”
+
+Autoridad: “Rioja vs Ribera del Duero: cuál tiene más sentido según el viaje.”
+
+Storytelling: “Por qué España cambia completamente cuando empiezas a conocerla por regiones.”
+
+Prueba / confianza: “Cómo convertiríamos vino + historia + 10 días en una ruta.”
+
+Conversión: “España entre Viñedos: cuéntanos qué viaje tienes en mente.”
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Frecuencia inicial
+
+No intentaría publicar diario.
+
+Empezaría con 3 publicaciones fuertes por semana + Stories.
+
+Una semana tipo podría ser:
+
+Martes → Descubrimiento / autoridad Reel: “Ya hiciste Madrid y Barcelona. ¿Ahora qué?”
+
+Jueves → Educación / criterio Carrusel: “5 señales de que tu itinerario está saturado.”
+
+Domingo → Storytelling / producto Reel: “Así podría verse España entre Viñedos.”
+
+Stories durante la semana:
+
+-   encuestas;
+
+-   preguntas;
+
+-   lugares;
+
+-   detrás de cámaras;
+
+-   “¿primera o segunda vez?”;
+
+-   respuestas de Miguel;
+
+-   construcción de rutas.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Series que construiría desde el principio
+
+Para que el contenido tenga reconocimiento y no sea una colección aleatoria de publicaciones:
+
+La España que te faltó Lugares/regiones/experiencias.
+
+¿Vale la pena? Opinión + criterio de Miguel.
+
+Si fuera tu segundo viaje… Recomendaciones para returning travelers.
+
+España desde dentro Cultura e historias.
+
+Diseñando el viaje Casos y metodología.
+
+Rutas LN 41.5 Producto e inspiración.
+
+Estas seis series prácticamente pueden sostener la cuenta completa.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+La regla editorial de LN 41.5
+
+Antes de publicar algo preguntaría:
+
+  -------------------------------------------------------------------------------------------------------------------------
+  ¿Esta pieza ayuda a que alguien descubra una España distinta, tome una mejor decisión o confíe más en nuestro criterio?
+  -------------------------------------------------------------------------------------------------------------------------
+
+  -------------------------------------------------------------------------------------------------------------------------
+
+Si no hace ninguna de esas tres cosas, probablemente sea contenido genérico de viajes.
+
+Y eso es justamente lo que LN 41.5 debe evitar: el posicionamiento ya establece que la marca no debe competir como “otra agencia que organiza viajes personalizados”, sino convertirse en referencia para una España más profunda, mejor curada y menos obvia.
+
+La frase que debería resumir toda la estrategia de contenido sería:
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------
+  No queremos ser la cuenta que más lugares de España enseña. Queremos ser la cuenta que mejor te ayuda a decidir cómo vale la pena conocerla.
+  ----------------------------------------------------------------------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
++-------------------------------------------------------------------------------------------------------------------------+
+| REGLA EDITORIAL LN 41.5                                                                                                 |
+|                                                                                                                         |
+| ¿Esta pieza ayuda a que alguien descubra una España distinta, tome una mejor decisión o confíe más en nuestro criterio? |
++=========================================================================================================================+
++-------------------------------------------------------------------------------------------------------------------------+
