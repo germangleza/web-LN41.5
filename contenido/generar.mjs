@@ -332,8 +332,9 @@ posts.push({ id: 'post-07-ya-hiciste-madrid-y-barcelona', n: 5, html: `
   ${count(5, 5)}
   ${logo()}
   <div class="bottom" style="bottom:150px">
-    <h2 class="disp gold" style="font-size:150px">¿Qué te faltó conocer?</h2>
-    <p class="body sandc" style="margin-top:40px;max-width:820px">Cuéntanos en comentarios o escríbenos y diseñamos tu segundo viaje a España.</p>
+    <p class="lead it sandc" style="font-size:56px">¿Qué te faltó conocer?</p>
+    <h2 class="disp gold" style="font-size:170px;margin-top:28px">Comenta<br>RUTA</h2>
+    <p class="body sandc" style="margin-top:36px;max-width:820px">y te mando el test para saber qué ruta de autor va contigo.</p>
   </div>
 </section>
 <svg class="overlay" width="${5 * W}" height="${H}" viewBox="0 0 ${5 * W} ${H}">

@@ -91,15 +91,11 @@ Así pasamos de "quiero ir a España" a un viaje con lógica, ritmo y decisiones
 ---
 
 ## Post 7 · Carrusel (5) · `post-07-ya-hiciste-madrid-y-barcelona/`
-Pilar: La España que te faltó · Descubrimiento
+Pilar: La España que te faltó · CTA: Capturar (RUTA) · Pieza: `clientes/ln415-travel/piezas/2026-11-05-carrusel-ya-hiciste-madrid-y-barcelona.md`
 
 Ya hiciste Madrid y Barcelona. ¿Ahora qué? 🇪🇸
+El segundo viaje no se trata de sumar ciudades, sino de entrar en las regiones: su comida local, sus pueblos y su ritmo. Para que al volver digas "esto no lo habría armado así por mi cuenta".
+Comenta RUTA y te mando el test para saber cuál de las 5 rutas va contigo.
+P.D. Si prefieres verlo directo en tu caso, mándame VIAJE.
 
-El segundo viaje a España no debería organizarse como el primero. No se trata de sumar ciudades, sino de entrar en las regiones: su comida local, sus pueblos y su ritmo.
-
-Castilla, Rioja y Ribera, Catalunya, Extremadura, Galicia y el Cantábrico… la otra España empieza donde termina el itinerario típico.
-
-👇 ¿Qué te faltó conocer?
-Guarda este post para tu próximo viaje.
-
-#LN415Travel #España #ViajarAEspaña #SegundoViaje #ViajesDeAutor
+#ViajarAEspaña #SegundoViaje #EspañaDesdeDentro #ViajesDeAutor #LN415Travel
