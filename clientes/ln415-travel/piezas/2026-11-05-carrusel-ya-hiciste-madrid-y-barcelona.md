@@ -17,7 +17,7 @@ Problema → solución · Capturar con RUTA (el test responde "¿por dónde empi
 ## 3. Copy
 > Ya hiciste Madrid y Barcelona. ¿Ahora qué? 🇪🇸
 >
-> El segundo viaje no se trata de sumar ciudades, sino de entrar en las regiones: su comida local, sus pueblos y su ritmo. Para que al volver digas "esto no lo habría armado así por mi cuenta".
+> El segundo viaje no se trata de sumar ciudades, sino de entrar en las regiones: su comida local, sus pueblos y su ritmo. Esta vez, la otra España.
 >
 > Comenta RUTA y te mando el test para saber cuál de las 5 rutas va contigo.
 >

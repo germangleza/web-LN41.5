@@ -21,7 +21,7 @@ Este documento es la estrategia de contenido de LN41.5. Cada mes se planea a par
 | Rutas del pilar 6 | Entre Viñedos, Sabores del Norte, Medieval | Las 5 de la web + ediciones especiales | Se alinea con lo que hoy se vende |
 | Casos | "Caso ficticio pareja" | Todo caso no real se rotula **"ejemplo ilustrativo"**; los reales, solo con permiso | No se inventa prueba |
 | CTAs sueltos ("guarda", "sí/no") | Uno distinto por idea | 3 tipos: Distribuir / Capturar / Convertir (sección 6) | Cada pieza tiene un trabajo en el funnel |
-| Cierre | Sin firma fija | Firma: **"Esto no lo habría armado así por mi cuenta."** | Sin firma, la pieza es un tip genérico de viajes |
+| Cierre | Sin firma fija | Cada pieza cierra con un **payoff de criterio** que cumple su hook. La frase "Esto no lo habría armado así por mi cuenta." **no** se repite en cada pieza | Decisión del cliente (2026-10-23): repetirla siempre cansa. La idea de la marca se mantiene; la frase literal se reserva |
 | Entretenimiento ligero (palabras España/México) | Una idea más del pilar 3 | Máximo 1 al mes y conectada a una decisión de viaje | Atrae a quien no va a viajar (anti-ICP) |
 
 ---
@@ -33,7 +33,7 @@ Este documento es la estrategia de contenido de LN41.5. Cada mes se planea a par
 - **Promesa comercial:** "Tú puedes reservar España por tu cuenta. Nosotros te ayudamos a descubrir cuál España realmente vale la pena para ti." (03)
 - **Promesa editorial:** "No queremos ser la cuenta que más lugares de España enseña. Queremos ser la cuenta que mejor te ayuda a decidir cómo vale la pena conocerla." (01)
 - **Misma idea en ambas:** el cliente ya tiene información; LN aporta criterio (03).
-- **Firma narrativa:** "Esto no lo habría armado así por mi cuenta." Es el deseo secreto del ICP (03) y el estándar del manifiesto de la web (02).
+- **Firma narrativa:** la idea es "esto no lo habría armado así por mi cuenta" (deseo secreto del ICP, fuente 03; estándar del manifiesto de la web, fuente 02). **No se dice literal en cada pieza.** Cada reel y carrusel cierra con un payoff propio que cumple su hook y demuestra criterio. La frase literal solo se usa en piezas de marca o manifiesto, máximo 1 al mes.
 - **Pregunta propietaria:** "Ya hiciste Madrid y Barcelona. ¿Ahora qué?" Es un trigger de compra (03) y la serie de entrada (01).
 - **Especialidad y capacidad:** especialidad España, capacidad mundo. Otros destinos se atienden, pero el contenido no lidera con eso (03).
 
@@ -168,7 +168,7 @@ Este documento es la estrategia de contenido de LN41.5. Cada mes se planea a par
 
 - **Cámara real:** Miguel a cámara en todos los reels. **Clon digital:** [por confirmar].
 - **Estándar de reel (sección 4 del sistema):**
-  - 30–40 s (máx. 45);
+  - 50–60 s, hasta 70 s si el tema lo pide (decisión del cliente, 2026-10-23: a 30–40 s se sentían cortados);
   - hook en 0–2 s y promesa con loop en 2–5 s;
   - cuerpo en bloques de 3–5 s con re-hook por cambio de encuadre (plano medio / cerrado);
   - payoff con la firma y CTA en los últimos 2–3 s;
@@ -241,7 +241,7 @@ Este documento es la estrategia de contenido de LN41.5. Cada mes se planea a par
 | Anti-ICP | Cazador de precio, DIY hardcore, solo vuelo + hotel, más ciudades en menos días, cotizaciones infinitas | 03 |
 | Pilares y mezcla | La España que te faltó 15% (alcance) · **Qué sí vale la pena 25% (autoridad, firma)** · España desde dentro 10% (afinidad) · Viajar mejor 20% (problema) · Así diseñamos 10% (prueba) · Rutas LN41.5 20% (conversión) | 01 ajustado en diagnóstico |
 | Voz | Experta, cercana, con criterio · evitar tono de folleto y superlativos · prohibidas: ver sección 5 | 01, 03 |
-| Firma de marca | "Esto no lo habría armado así por mi cuenta." | 02, 03 |
+| Firma de marca | Idea: "esto no lo habría armado así por mi cuenta". Cada pieza cierra con un payoff de criterio propio; la frase literal solo en piezas de marca (máx. 1 al mes) | 02, 03 · decisión del cliente |
 | Oferta principal | Conversación inicial por WhatsApp → Concepto de Viaje → Propuesta | 01, 02 |
 | Palabra directa | VIAJE | Diagnóstico |
 | Puertas | RUTA → test "¿Qué ruta de autor va contigo?" en www.ln415.com/ruta | Diagnóstico |

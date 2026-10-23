@@ -18,7 +18,7 @@ Fórmula / framework (de la idea a la ruta) con las 5 rutas.
 ## 3. Copy
 > Tu viaje de 2027 a España empieza a decidirse ahora. 🗺️
 >
-> Empieza por lo que quieres vivir, elige tu ruta base y la ajustamos a tus fechas, a quién viaja y a tu ritmo. Para que al volver digas: "esto no lo habría armado así por mi cuenta".
+> Empieza por lo que quieres vivir, elige tu ruta base y la ajustamos a tus fechas, a quién viaja y a tu ritmo. Con tiempo, eliges; sin tiempo, aceptas lo que queda.
 >
 > Si quieres verlo en tu caso, comenta o mándame VIAJE y lo platicamos.
 >

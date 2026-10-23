@@ -2,10 +2,10 @@
 **Fecha:** dom 22 nov 2026 · **Pilar:** 6 · Rutas LN41.5 · **CTA:** Capturar · **Palabra:** RUTA
 
 ## 1. Brief y producción
-- **Duración:** 37 s · **Tema:** la ruta España Castellana como viaje de historia y mesa sin prisas.
+- **Duración:** 60 s · **Tema:** la ruta España Castellana como viaje de historia y mesa sin prisas.
 - **Público:** quien viaja por la historia, no por la foto.
 - **CTA:** Capturar con RUTA · **Tono:** pausado y con orgullo local.
-- **Producción:** Cámara real: Miguel a cámara, con ritmo más pausado. 1 inserto: foto de Peñafiel (seg. 17–21). Subtítulos.
+- **Producción:** Cámara real: Miguel a cámara, con ritmo más pausado. 1 inserto: foto de Peñafiel (seg. 25–29). Subtítulos.
 - **Texto en pantalla:** subtítulos + un solo texto clave: **Historia > selfie**.
 
 ## 2. Hooks
@@ -22,19 +22,24 @@ Bloques de 3–5 s; cada corte de encuadre es un re-hook.
 |---|---|---|---|
 | 0–2 | Este viaje no es para quien busca selfies. | Plano medio · Miguel guarda el celular · texto clave: **Historia > selfie** | Hook |
 | 2–5 | Es para quien disfruta más una historia. | Plano medio | Promesa + loop |
-| 5–9 | Se llama España Castellana. Castillos, fogones y silencio. | Plano cerrado | Re-hook |
-| 9–13 | En Segovia la historia no está en un museo. | Plano medio |  |
-| 13–17 | Está en la calle, y la caminas tú. | Plano cerrado | Re-hook · contraste |
-| 17–21 | En Peñafiel, castillo y viñedo cuentan la misma historia. | Inserto: foto de Peñafiel | Prueba |
-| 21–25 | Y Pedraza no se corre. Se vive despacio. | Plano medio | Opinión contraria |
-| 25–29 | Burgos y Palencia cierran con catedrales y románico. | Plano cerrado | Re-hook |
-| 29–34 | Y vuelves diciendo: esto no lo habría armado así por mi cuenta. | Plano medio | Payoff + firma |
-| 34–37 | Comenta RUTA y te digo cuál es tu historia. | Plano cerrado | CTA + loop (regresa a "historia") |
+| 5–9 | Se llama España Castellana: castillos, fogones y silencio. | Plano cerrado | Re-hook |
+| 9–13 | Empieza en Segovia, donde la historia no está en un museo. | Plano medio |  |
+| 13–17 | Está en la calle, bajo un acueducto romano que sigue en pie. | Plano cerrado | Re-hook · contraste |
+| 17–21 | Después Pedraza, una villa amurallada que se vive despacio. | Plano medio |  |
+| 21–25 | Ahí no se corre. Se camina, se come y se queda uno. | Plano cerrado | Re-hook · opinión |
+| 25–29 | En Peñafiel, castillo y viñedo cuentan la misma historia. | Inserto: foto de Peñafiel | Prueba |
+| 29–33 | Ahí entiendes por qué Castilla también es tierra de vino. | Plano medio |  |
+| 33–37 | Burgos te recibe con una catedral que se queda contigo. | Plano cerrado | Re-hook |
+| 37–41 | Y Palencia cierra con monasterios, románico y paisaje rural. | Plano medio |  |
+| 41–45 | Entre parada y parada, mesa larga y horno de leña. | Plano cerrado | Re-hook |
+| 45–49 | Porque en Castilla la comida también es historia. | Plano medio |  |
+| 49–54 | Es un viaje para entender, no para coleccionar fotos. | Plano cerrado | Payoff (cumple el hook) |
+| 54–60 | ¿No sabes si es tu ruta? Comenta RUTA. Te mando el test y sabes cuál es tu historia. | Plano medio | CTA + loop |
 
 ## 4. Picos del cuerpo
 - Contraste: historia contra selfie; museo contra calle.
-- Opinión: Pedraza no se corre.
-- Prueba: paradas reales de la ruta (fuente 02).
+- Opinión: "ahí no se corre".
+- Prueba: paradas reales de la ruta (fuente 02): Segovia, Pedraza, Peñafiel, Burgos, Lerma y Palencia.
 
 ## 5. Caption
 > Un viaje para quien disfruta más una historia que una selfie. 🏰
@@ -45,8 +50,8 @@ Bloques de 3–5 s; cada corte de encuadre es un re-hook.
 > P.D. Si prefieres verlo directo en tu caso, mándame VIAJE.
 
 ## 6. Variantes de CTA (Capturar)
-1. "Comenta RUTA y te digo cuál es tu historia."
-2. "¿No sabes si es tu ruta? Comenta RUTA y te mando el test."
+1. "¿No sabes si es tu ruta? Comenta RUTA y te mando el test."
+2. "Comenta RUTA y te digo cuál es tu historia."
 3. "Mándame RUTA por DM y en dos minutos sabes qué ruta va contigo."
 
 **DM 1:** ver `../recursos/RUTA.md`.
@@ -56,28 +61,39 @@ Este viaje no es para quien busca selfies.
 
 Es para quien disfruta más una historia.
 
-Se llama España Castellana. Castillos, fogones y silencio.
+Se llama España Castellana: castillos, fogones y silencio.
 
-En Segovia la historia no está en un museo.
+Empieza en Segovia, donde la historia no está en un museo.
 
-Está en la calle, y la caminas tú.
+Está en la calle, bajo un acueducto romano que sigue en pie.
+
+Después Pedraza, una villa amurallada que se vive despacio.
+
+Ahí no se corre. Se camina, se come y se queda uno.
 
 En Peñafiel, castillo y viñedo cuentan la misma historia.
 
-Y Pedraza no se corre. Se vive despacio.
+Ahí entiendes por qué Castilla también es tierra de vino.
 
-Burgos y Palencia cierran con catedrales y románico.
+Burgos te recibe con una catedral que se queda contigo.
 
-Y vuelves diciendo: esto no lo habría armado así por mi cuenta.
+Y Palencia cierra con monasterios, románico y paisaje rural.
 
-Comenta RUTA y te digo cuál es tu historia.
+Entre parada y parada, mesa larga y horno de leña.
+
+Porque en Castilla la comida también es historia.
+
+Es un viaje para entender, no para coleccionar fotos.
+
+¿No sabes si es tu ruta? Comenta RUTA. Te mando el test y sabes cuál es tu historia.
 
 ## Checklist
 - ✓ La primera frase engancha sin video
 - ✓ Se entiende sin audio (subtítulos)
 - ✓ Loop en los primeros 5 s
 - ✓ Re-hook cada 3–5 s
-- ✓ Firma presente
+- ✓ Duración 50–60 s (decisión del cliente: hasta 70 s)
+- ✓ Payoff que cumple el hook
 - ✓ CTA según la regla (puerta lista en la web; falta la automatización de DMs)
 - ✓ Frases de máx. 12 palabras
 - ✓ Datos reales o entre corchetes

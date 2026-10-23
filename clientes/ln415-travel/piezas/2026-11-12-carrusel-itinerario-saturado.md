@@ -19,7 +19,7 @@ Checklist / fugas · carrusel de referencia (fondo café claro).
 ## 3. Copy
 > 5 señales de que tu itinerario por España está saturado. 🧳
 >
-> Un buen viaje no se mide en ciudades, sino en lo que alcanzas a vivir. Que al volver digas: "esto no lo habría armado así por mi cuenta".
+> Un buen viaje no se mide en ciudades, sino en lo que alcanzas a vivir. Menos paradas, mejor vividas.
 >
 > Mándaselo a quien está armando el itinerario.
 >

@@ -94,7 +94,7 @@ Así pasamos de "quiero ir a España" a un viaje con lógica, ritmo y decisiones
 Pilar: La España que te faltó · CTA: Capturar (RUTA) · Pieza: `clientes/ln415-travel/piezas/2026-11-05-carrusel-ya-hiciste-madrid-y-barcelona.md`
 
 Ya hiciste Madrid y Barcelona. ¿Ahora qué? 🇪🇸
-El segundo viaje no se trata de sumar ciudades, sino de entrar en las regiones: su comida local, sus pueblos y su ritmo. Para que al volver digas "esto no lo habría armado así por mi cuenta".
+El segundo viaje no se trata de sumar ciudades, sino de entrar en las regiones: su comida local, sus pueblos y su ritmo. Esta vez, la otra España.
 Comenta RUTA y te mando el test para saber cuál de las 5 rutas va contigo.
 P.D. Si prefieres verlo directo en tu caso, mándame VIAJE.
 
