@@ -1,7 +1,7 @@
 # Diagnóstico de estrategia de contenido · LN41.5 Travel
 
 **Fecha:** 2026-10-23 · **Estado:** propuesta, pendiente de confirmar con el cliente.
-**Fuentes:** 01 Estrategia de contenido (docx) · 02 Sitio web www.ln415.com.
+**Fuentes:** 01 Estrategia de contenido (docx) · 02 Sitio web www.ln415.com · 03 Posicionamiento & ICP B2C, Sesión 2 (docx).
 **Nota:** el documento "Programa de Aceleración para Ópticas · Jarmar" es de otro cliente. No se usó como fuente: el sistema prohíbe copiar pilares, tono o firma de otra marca.
 
 ---
@@ -11,7 +11,7 @@
 | Elemento | Qué dice hoy | Fuente |
 |---|---|---|
 | Promesa | "España desde dentro" · "No queremos ser la cuenta que más lugares de España enseña. Queremos ser la cuenta que mejor te ayuda a decidir cómo vale la pena conocerla." | 01, 02 |
-| Cliente ideal | Viajero que ya conoce lo obvio (Madrid, Barcelona), tiene poco tiempo, mucha información y poco criterio; valora gastronomía, historia y regiones; mercado mexicano | 01, 02 |
+| Cliente ideal | Pareja o familia mexicana de 38–58 años, económicamente cómoda, acostumbrada a viajar, con poco tiempo; ya conoce Madrid/Barcelona y quiere descubrir "lo que le faltó" (returning traveler). JTBD: que alguien filtre, diseñe y coordine un viaje que se sienta suyo | 03 (detalla 01 y 02) |
 | Pilares | 1 La España que te faltó · 2 Qué sí vale la pena · 3 España desde dentro · 4 Viajar mejor · 5 Así diseñamos un viaje · 6 Rutas y experiencias LN | 01 |
 | Mezcla | Por grupos: 50% descubrimiento/autoridad · 30% educación y problema · 20% producto/conversión (sin % por pilar) | 01 |
 | Canales y cadencia | 3 publicaciones fuertes por semana + Stories (Instagram; Facebook ya creado) | 01 |
@@ -80,12 +80,29 @@ Las palabras ESPAÑA, NORTE, HISTORIA y ANDALUCÍA del documento se sustituyen p
 
 Recomendada: **A**, porque repite el nombre del posicionamiento y funciona para todos los pilares.
 
-## 8. Por confirmar
+## 8. Actualización con la fuente 03 (Posicionamiento & ICP B2C)
 
-- Historia y credenciales de Miguel (relación con España, años, experiencia).
+La fuente 03 confirma y precisa el diagnóstico; no cambia los pilares.
+
+| Tema | Qué aporta | Efecto en el sistema |
+|---|---|---|
+| Categoría | Travel designer especializado en España · The One Thing: "España desde dentro / La otra España" | Promesa del blueprint |
+| Competidor #1 | "Yo lo puedo organizar solo" (DIY) | Pilares 2 y 5 responden a esta objeción |
+| ICP y anti-ICP | 38–58 años, México, pareja o familia, más dinero que tiempo · Anti-ICP: cazador de precio, DIY hardcore, vuelo + hotel, "más ciudades en menos días", cotizaciones infinitas | Filtro de audiencia y calificación de la palabra directa |
+| Miedos y triggers | Pagar mucho por una mala decisión, perder días por logística, quedar mal con la familia · Triggers: "ya hicimos Madrid y Barcelona", aniversario, graduación, viaje familiar, vino, Camino de Santiago | Base de las puertas y los hooks |
+| Founder | Miguel es español y conoce el país (founder-market fit) | Resuelve la credencial del Founder Reel |
+| Claims prohibidos | "Somos los #1", "acceso exclusivo", "ahorramos X horas", "los mejores proveedores", cifras que no existen | Van a Prohibidos en la ficha |
+| Dejar de decir | "Viajes personalizados", "los mejores precios", "todo tipo de viajes", "servicio de excelencia", "recuerdos inolvidables" | Palabras prohibidas de la voz |
+| Ruta de posicionamiento | Público: A (España desde dentro) · Valor: B (criterio) · Producto: C (interest-first) | Confirma "Qué sí vale la pena" como pilar firma |
+| Validaciones pendientes | Entrevistas a 8–10 returning travelers, smoke test de headline, interés por rutas | Se pueden correr con Stories y la puerta RUTA |
+
+Las opciones de puertas y recursos están en `opciones-puertas.md`.
+
+## 9. Por confirmar
+
+- Detalle de la historia de Miguel para contarla en cámara (de qué parte de España es, desde cuándo vive en México). La fuente 03 confirma que es español.
 - @ de Instagram y Facebook.
-- Perfil del cliente ideal: edad, ciudad o país, rango de presupuesto, quién decide el viaje.
-- Anti-ICP explícito (p. ej. quien busca el paquete más barato o un tour masivo).
+- Ciudades foco en México y quién decide el viaje dentro de la pareja o familia (ICP y anti-ICP ya definidos en la fuente 03).
 - Rango de precio o ticket de referencia (para calificar en la palabra directa).
 - Casos o testimonios con permiso.
 - Derechos de uso de las fotos (algunas vienen de Google; la de Navidad es © Paco Grau).

@@ -1,0 +1,459 @@
+LN 41.5 TRAVEL
+
+POSITIONING & CUSTOMER BLUEPRINT
+
+B2C
+
+Ries & Trout + April Dunford · Sesión 2
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Objetivo del entregable
+  Definir con claridad dónde puede ganar LN 41.5, contra qué alternativas compite, para qué cliente tiene mayor valor y qué idea debe ocupar en la mente del mercado. Este documento integra el posicionamiento trabajado con Ries & Trout con el análisis competitivo de April Dunford.
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Resultado
+  Una respuesta concreta a tres preguntas: ¿para quién es LN 41.5?, ¿por qué debería elegirla en lugar de organizar el viaje solo o acudir con una agencia generalista?, y ¿cómo debemos hablarle?
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Diagnóstico de posicionamiento
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Diagnóstico central
+  LN 41.5 no debe competir como 'otra agencia que organiza viajes personalizados'. La oportunidad está en convertirse en la referencia para viajeros experimentados que quieren conocer una España más profunda, mejor curada y menos obvia.
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+La tensión competitiva principal no es acceso a información. Hoy el viajero puede encontrar vuelos, hoteles, reseñas, itinerarios y recomendaciones por su cuenta. El problema es decidir qué realmente vale la pena, cómo combinarlo y qué dejar fuera.
+
+  -----------------------------------------------------------------------
+  Insight central
+  El cliente ya tiene información. LN 41.5 aporta criterio.
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+2. Categoría y marco de referencia
+
+  -----------------------------------------------------------------------
+  RECOMENDACIÓN
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Categoría de mercado: Travel designer / viajes a medida especializado en España.
+
+Territorio diferenciador: España desde dentro. La otra España.
+
+Wedge inicial: viajero que quiere visitar o volver a España y descubrir lo que le faltó.
+
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Por qué esta arquitectura
+  La categoría explica rápidamente qué hace LN 41.5; 'España desde dentro' explica por qué es diferente. No necesitamos inventar una categoría difícil de entender: usamos una categoría conocida y ocupamos un territorio específico dentro de ella.
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Posicionamiento central
+
+  -----------------------------------------------------------------------
+  The One Thing
+  LN 41.5 = España desde dentro / La otra España
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Unique Value Proposition
+
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  UVP
+  LN 41.5 diseña viajes por España alrededor de lo que realmente quieres vivir, combinando conocimiento local y curaduría para ayudarte a descubrir qué merece tu tiempo más allá del circuito tradicional.
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+One-Sentence Positioning Statement
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Posicionamiento
+  Para viajeros mexicanos experimentados que quieren conocer o volver a España más allá del circuito tradicional, LN 41.5 es un travel designer especializado que combina conocimiento local y curaduría para convertir sus intereses en un viaje que difícilmente construirían igual por su cuenta.
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Propuesta de valor en lenguaje comercial
+
+  -----------------------------------------------------------------------------------------------------------------------
+  Value Proposition
+  Tú puedes reservar España por tu cuenta. Nosotros te ayudamos a descubrir cuál España realmente vale la pena para ti.
+  -----------------------------------------------------------------------------------------------------------------------
+
+  -----------------------------------------------------------------------------------------------------------------------
+
+Especialidad vs capacidad
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Principio
+  Especialidad: España. Capacidad comercial: mundo. LN 41.5 puede vender otros destinos cuando surjan oportunidades sin intentar posicionarse públicamente como especialista en todo.
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Competitive Alternatives
+
+Aplicando April Dunford, la competencia se define por lo que el cliente haría si LN 41.5 no existiera.
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Prioridad         Alternativa                                Por qué la elige                               Dónde LN puede ganar
+  ----------------- ------------------------------------------ ---------------------------------------------- --------------------------------------------------------------
+  1                 DIY: Google + Booking + ChatGPT + social   Control, flexibilidad y costo aparente menor   Criterio, selección, coherencia y ahorro de tiempo
+
+  2                 Agencia tradicional                        Conveniencia y ejecución                       Especialización en España y mayor profundidad
+
+  3                 Boutique / luxury travel advisor           Personalización y atención                     Foco geográfico + punto de vista España desde dentro
+
+  4                 Operador / paquete turístico               Claridad, precio y todo resuelto               Flexibilidad y experiencia menos estándar
+
+  5                 DMC local en España                        Conocimiento local                             Relación integral desde México + curaduría de viaje completo
+
+  6                 Repetir la fórmula anterior                Baja fricción                                  Descubrimiento de la otra España
+
+  7                 Posponer el viaje                          Evita la carga de planeación                   Reducir fricción y convertir intención en viaje
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+  Competidor estratégico #1
+  No es otra agencia. Es: 'yo lo puedo organizar solo'.
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+5. Unique Attributes → Customer Value
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Atributo                              Comparado con                  Beneficio                                       Valor para el cliente
+  ------------------------------------- ------------------------------ ----------------------------------------------- -------------------------------------------------------
+  Founder-market fit con España         Agencia generalista            Recomendaciones con contexto cultural/local     Menor probabilidad de terminar en opciones genéricas
+
+  Especialización explícita en España   Agencia multi-destino          Mayor profundidad acumulativa                   Más criterio en un territorio concreto
+
+  Curaduría sobre abundancia            DIY / internet                 Menos opciones y mejores decisiones             Ahorro de tiempo y menor costo de equivocarse
+
+  Diseño interest-first                 Paquete prearmado              Ruta alrededor de intereses, ritmo y contexto   Viaje más relevante para la persona
+
+  Signature Routes en desarrollo        Cotización 100% desde cero     Base reutilizable + personalización             Menos fricción sin volverse paquete rígido
+
+  Infraestructura travel disponible     Empezar operación desde cero   Capacidad de ejecutar primeras ventas           Permite validar sin construir toda la infraestructura
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Lo que NO es diferenciador
+
+-   “Servicio personalizado”.
+
+-   “Calidad”.
+
+-   “Atención”.
+
+-   “Innovación”.
+
+-   “Experiencias únicas”.
+
+-   “Los mejores precios”.
+
+  -------------------------------------------------------------------------------------
+  Regla
+  Si una agencia tradicional puede decir exactamente lo mismo, no es posicionamiento.
+  -------------------------------------------------------------------------------------
+
+  -------------------------------------------------------------------------------------
+
+6. Best-Fit Customer / ICP B2C
+
+  -----------------------------------------------------------------------
+  Arquetipo
+  El viajero experimentado que quiere hacerlo mejor esta vez.
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+Perfil demográfico
+
+-   Edad sweet spot: 38–58 años.
+
+-   Mercado inicial: México.
+
+-   Pareja o familia; frecuentemente con hijos adolescentes, universitarios o viajes multigeneracionales.
+
+-   Profesionales consolidados, empresarios, ejecutivos o independientes con alta carga de trabajo.
+
+-   Poder adquisitivo medio-alto / alto y capacidad de realizar viajes internacionales relevantes.
+
+Situación de mayor fit
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Returning Traveler
+  Ya ha viajado internacionalmente y puede incluso haber visitado España antes. Conoce Madrid, Barcelona o los lugares principales y ahora quiere volver para descubrir 'lo que le faltó': regiones, gastronomía, historia, vino, pueblos o experiencias más específicas.
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Psychographics
+
+-   Tiene más dinero que tiempo.
+
+-   Se frustra con la sobreinformación.
+
+-   Busca decisiones que 'valgan la pena', no necesariamente lujo ostentoso.
+
+-   Quiere libertad y flexibilidad, no un tour rígido.
+
+-   Le gusta descubrir, pero no quiere improvisar todo.
+
+-   Valora contexto, criterio y la sensación de viajar como alguien que conoce.
+
+Job to Be Done
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  JTBD
+  Cuando tengo pocos días para hacer un viaje importante, quiero que alguien filtre, diseñe y coordine una experiencia que se sienta realmente mía, para aprovechar el viaje sin pasar semanas convirtiéndome en experto del destino.
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. Problemas, miedos y deseos
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Problemas / pains                                          Biggest fears                                          Secret desires
+  ---------------------------------------------------------- ------------------------------------------------------ ----------------------------------------------------------------
+  • Demasiadas opciones y recomendaciones contradictorias.   • Pagar mucho por una mala decisión.                   • Sentirse 'in the know'.
+
+  • Poco tiempo para investigar.                             • Perder días por mala logística.                      • Ser quien organiza grandes viajes sin hacer todo el trabajo.
+
+  • Difícil distinguir hype de valor real.                   • Regresar y descubrir que se perdió algo increíble.   • Tener historias, no solo fotos.
+
+  • Complejidad logística al salir del circuito típico.      • Hacer el mismo viaje que todos.                      • Sentir que el dinero realmente valió la pena.
+
+  • No saber qué incluir y qué dejar fuera.                  • Quedar mal con pareja/familia.                       • Viajar como alguien que conoce.
+
+                                                             • Que algo salga mal y no saber quién responde.        • Regresar diciendo: 'Esto no lo habría armado así solo'.
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8. Buying Triggers y proceso de decisión
+
+Buying Triggers
+
+-   “Queremos volver a España.”
+
+-   “Ya hicimos Madrid y Barcelona; ¿ahora qué?”
+
+-   Aniversario, cumpleaños, graduación, honeymoon o viaje familiar relevante.
+
+-   Interés concreto en Camino de Santiago, vino, gastronomía, historia u otra temática.
+
+-   Saturación después de horas de investigación.
+
+-   Recomendación directa de alguien de confianza.
+
+-   Descubrir una región o experiencia que no sabía que existía.
+
+Emotional Conversion Moment
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Trigger emocional exacto
+  Compra cuando siente simultáneamente: “esta persona entiende cómo quiero viajar”, “sabe cosas que yo no sé” y “puedo dejar esto en sus manos sin perder control”.
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Resultado emocional
+  Por fin alguien entendió el viaje que yo tenía en la cabeza y además lo mejoró.
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Proceso de decisión
+
+  -----------------------------------------------------------------------------------------------------------
+  Etapa                   Pensamiento del cliente               Implicación para LN
+  ----------------------- ------------------------------------- ---------------------------------------------
+  1. Dream                “Queremos volver a España.”           Inspirar y activar curiosidad.
+
+  2. Explore              “¿Qué nos faltó?”                     Demostrar profundidad y criterio.
+
+  3. Overload             “Hay demasiadas opciones.”            Simplificar y priorizar.
+
+  4. Trust                “Esta gente sí conoce.”               Contenido + prueba + conocimiento.
+
+  5. Discovery            “¿Entienden cómo quiero viajar?”      Preguntar antes de cotizar.
+
+  6. Proposal             “Esto tiene sentido para nosotros.”   Explicar por qué la ruta está diseñada así.
+
+  7. Purchase             “Ya está resuelto.”                   Reducir fricción y generar confianza.
+  -----------------------------------------------------------------------------------------------------------
+
+9. Objeciones principales
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------
+  Objeción                            Respuesta estratégica
+  ----------------------------------- ----------------------------------------------------------------------------------------------------------
+  “Yo puedo hacerlo por internet.”    Sí. El valor no está en poder reservarlo, sino en saber qué reservar, cómo combinarlo y qué dejar fuera.
+
+  “Online seguro está más barato.”    La comparación no es solo el hotel; es el viaje completo, el tiempo invertido y el costo de equivocarse.
+
+  “No quiero un paquete.”             LN diseña alrededor de la persona y mantiene flexibilidad.
+
+  “Quiero libertad.”                  La curaduría estructura lo importante sin convertir el viaje en un tour rígido.
+
+  “¿Por qué confiaría en ustedes?”    La posición debe demostrarse con conocimiento, rutas, contenido, relaciones, casos y testimonios.
+  ----------------------------------------------------------------------------------------------------------------------------------------------
+
+10. Mensaje principal y pilares de marca
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Homepage Headline
+  Ya conociste España. Ahora conócela desde dentro. Ahora conoce a la otra España.
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Subheadline
+  Diseñamos viajes a medida para quienes quieren volver y descubrir la España que no aparece en el itinerario tradicional: regiones, gastronomía, historia y experiencias seleccionadas alrededor de cómo quieres viajar.
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tres messaging pillars
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Pilar                                     Mensaje                                                                                                                   Alternativa contra la que gana
+  ----------------------------------------- ------------------------------------------------------------------------------------------------------------------------- --------------------------------
+  1. Criterio, no más opciones              Internet puede darte mil recomendaciones. Nosotros te ayudamos a elegir las que realmente tienen sentido para tu viaje.   DIY / internet
+
+  2. España desde dentro / La otra España   Conoce regiones, historias, sabores y experiencias más allá del circuito que ya hiciste.                                  Agencia generalista / paquete
+
+  3. Diseñado alrededor de ti               No empezamos con un paquete. Empezamos entendiendo cómo quieres viajar.                                                   Circuito prearmado
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11. Reasons to Believe
+
+Hoy existen bases creíbles, pero todavía falta convertirlas en prueba comercial. Por eso conviene separar evidencia actual de prueba por construir.
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Reason to Believe             Evidencia actual                                                                                   Qué falta construir
+  ----------------------------- -------------------------------------------------------------------------------------------------- -------------------------------------------------------
+  Founder knowledge de España   Miguel es español, conoce el país y tiene relaciones / contexto cultural.                          Rutas, contenido, casos y supplier depth.
+
+  Especialización explícita     Decisión estratégica de concentrar marca y producto en España.                                     Consistencia sostenida en contenido, ventas y oferta.
+
+  Metodología de producto       Framework pasión → interés → experiencia → propuesta + Atlas y arquitectura de Signature Routes.   Validar rutas con clientes reales y medir demanda.
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Claims que NO debemos hacer todavía
+  No afirmar: “somos los #1”, “tenemos acceso exclusivo”, “ahorramos X horas”, “tenemos los mejores proveedores” o resultados cuantificados que todavía no existen.
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12. ICP en una frase
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ICP B2C
+  Pareja o familia mexicana de 38–58 años, económicamente cómoda, acostumbrada a viajar y con poco tiempo para planear, que puede organizar España por internet —y muchas veces ya la ha visitado— pero está dispuesta a pagar para que alguien con criterio local filtre las opciones, construya una experiencia mejor y le permita descubrir la España que todavía le falta.
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Voz del cliente
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Frase de diario
+  “Ya hice Madrid, Barcelona y lo típico. Si regreso a España, quiero hacerlo diferente: conocer regiones, comer bien, descubrir lugares que no habría encontrado solo y sentir que esta vez sí conocí otra parte del país.”
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13. Who This Business Is Not For / Anti-ICP
+
+-   Cazador de precio cuyo criterio principal es encontrar la opción más barata.
+
+-   DIY hardcore que disfruta investigar y reservar absolutamente todo.
+
+-   Viaje commodity donde solo se busca vuelo + hotel.
+
+-   Cliente que quiere recorrer la mayor cantidad de ciudades o países posible en pocos días.
+
+-   Cliente que valora cantidad sobre profundidad.
+
+-   Cliente que exige cotizaciones infinitas sin intención clara de compra.
+
+14. Lo que LN 41.5 debe dejar de decir
+
+  ------------------------------------------------------------------------------------------
+  Evitar                              Por qué
+  ----------------------------------- ------------------------------------------------------
+  “Viajes personalizados”             Demasiado genérico; cualquier agencia puede decirlo.
+
+  “Los mejores precios”               Mueve la competencia al terreno equivocado.
+
+  “Todo tipo de viajes”               Puede venderlos, pero no debe liderar con eso.
+
+  “Servicio de excelencia”            No explica una diferencia relevante.
+
+  “Creamos recuerdos inolvidables”    Emocional, pero intercambiable.
+  ------------------------------------------------------------------------------------------
+
+15. Tres rutas de posicionamiento evaluadas
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Ruta                                       Idea                                                               Ventaja                                            Riesgo
+  ------------------------------------------ ------------------------------------------------------------------ -------------------------------------------------- -------------------------------------------------------------------------------
+  A · España desde dentro / La Otra Espala   La España que existe más allá del itinerario turístico.            Mayor diferenciación, founder-market fit y foco.   Puede sentirse estrecho si se confunde posicionamiento con alcance comercial.
+
+  B · Curated Travel                         Menos opciones. Mejores decisiones.                                Flexible y compite bien contra DIY.                Mucho menos defendible; cualquier travel designer puede decirlo.
+
+  C · Interest-led Travel                    No empezamos por el destino; empezamos por lo que quieres vivir.   Conecta con el Atlas y expansión futura.           Más abstracto y pierde el wedge geográfico.
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  ---------------------------------------------------------------------------------------------------------
+  Recomendación
+  Posicionarnos públicamente con Ruta A, entregar valor mediante Ruta B y diseñar producto usando Ruta C.
+  ---------------------------------------------------------------------------------------------------------
+
+  ---------------------------------------------------------------------------------------------------------
+
+16. Tendencias que fortalecen la posición
+
+-   La información turística se está comoditizando: encontrar opciones es cada vez más fácil.
+
+-   El DIY es más sencillo: reservar vuelos, hoteles, trenes y tours ya no requiere necesariamente una agencia.
+
+-   La IA aumenta la cantidad de recomendaciones disponibles, pero no necesariamente mejora el criterio de selección.
+
+-   Hipótesis a validar: dentro del ICP experimentado existe mayor interés por profundidad y significado que por acumular destinos.
+
+17. Validaciones necesarias
+
+El posicionamiento está suficientemente definido para salir a validarlo, pero no debe tratarse todavía como verdad absoluta.
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Test                                Qué queremos aprender
+  ----------------------------------- -------------------------------------------------------------------------------------------------------------------------------
+  1. Returning Spain Travelers        Entrevistar 8–10 mexicanos que ya hayan visitado España. Pregunta: “Si regresaras mañana, ¿qué harías diferente?”
+
+  2. DIY vs Advisor                   Comparar: “te ayudamos a reservar España” vs “te ayudamos a descubrir la España que difícilmente encontrarías por tu cuenta”.
+
+  3. Landing Smoke Test               Probar headline: “Ya conociste España. Ahora conócela desde dentro.” y medir intención de contacto.
+
+  4. Product Concepts                 Mostrar 3 conceptos: España Medieval, España entre Viñedos, Sabores del Norte; medir interés real.
+
+  5. Why Not DIY?                     Preguntar sin sugerir: “¿Qué tendría que aportar una empresa para que prefirieras pagarle en lugar de organizarlo tú?”
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+18. La respuesta que debe poder dar LN 41.5
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Si soy el cliente ideal, ¿por qué elegir LN 41.5?
+  Si ya conozco España y quiero regresar para descubrir algo más profundo, elijo LN 41.5 en lugar de organizarlo solo o acudir con una agencia generalista porque está construyendo especialización específicamente en España y utiliza conocimiento local y curaduría para ayudarme a decidir qué realmente vale la pena vivir.
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Arquitectura final
+  Categoría: travel designer especializado en España · Wedge: viajero que regresa · Problema: abundancia de información, falta de criterio · Valor: curaduría · Diferenciador: España desde una perspectiva local · The One Thing: España desde dentro. La otra España.
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
