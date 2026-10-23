@@ -166,8 +166,16 @@ Este documento es la estrategia de contenido de LN41.5. Cada mes se planea a par
 
 ## 9. Producción
 
-- **Cámara real:** Miguel en cámara para el founder, el criterio y España desde dentro. **Clon digital:** [por confirmar].
-- **B-roll:** fotos de las rutas de la web y tomas propias de España [por confirmar quién graba allá].
+- **Cámara real:** Miguel a cámara en todos los reels. **Clon digital:** [por confirmar].
+- **Estándar de reel (sección 4 del sistema):**
+  - 30–40 s (máx. 45);
+  - hook en 0–2 s y promesa con loop en 2–5 s;
+  - cuerpo en bloques de 3–5 s con re-hook por cambio de encuadre (plano medio / cerrado);
+  - payoff con la firma y CTA en los últimos 2–3 s;
+  - frases de máx. 12 palabras;
+  - subtítulos y un solo texto clave.
+- **B-roll:** cero por default; máximo 1 inserto por reel (foto de ruta con derechos o toma propia de España [por confirmar quién graba allá]). Nada de voz en off sobre fotos.
+- **Antes de entregar** cada reel se pasa por su checklist.
 - **Carruseles:** generador del repo (`contenido/generar.mjs`) con plantillas en `contenido/templates/`.
 - **Sistema visual (02):**
   - Colores: café oscuro #2F271F, tinta #1E1914, café claro #EEE6D8, dorado #F0C054, cobre #864105.
