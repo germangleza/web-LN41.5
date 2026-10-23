@@ -17,8 +17,11 @@ Historia / build in public con caso **ilustrativo**, rotulado así en la portada
 
 ## 3. Copy
 > Así convertiríamos 3 intereses en un viaje de 10 días (ejemplo ilustrativo). 🧭
+>
 > Él ama el vino, ella la historia. Tres bases en lugar de seis hoteles, y una ciudad menos para ganar tiempo. El tipo de viaje del que dices: "esto no lo habría armado así por mi cuenta".
+>
 > Si quieres verlo en tu caso, comenta o mándame VIAJE y lo platicamos.
+>
 > #DiseñoDeViajes #ViajesDeAutor #ViajarAEspaña #EspañaDesdeDentro #LN415Travel
 
 ## 4. Primer comentario

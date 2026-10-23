@@ -17,8 +17,11 @@ Historia de ruta con fechas cerradas (edición especial). Convertir: es un produ
 
 ## 3. Copy
 > Una Navidad que no habrías armado por tu cuenta. ⭐
+>
 > Del 27 de diciembre al 6 de enero: obradores, aceite, cerámica, castillos, turrón y la Cabalgata de Reyes de Alcoy, en un grupo de 6 a 8 viajeros.
+>
 > Si quieres verlo en tu caso, comenta o mándame VIAJE y lo platicamos.
+>
 > #EspañaEnNavidad #NavidadEnEspaña #ReyesMagos #ViajesDeAutor #LN415Travel
 
 ## 4. Primer comentario

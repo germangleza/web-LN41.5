@@ -17,8 +17,11 @@ Antes / ahora (comparativa) con pregunta abierta.
 
 ## 3. Copy
 > Rioja o Ribera del Duero: no son intercambiables. 🍷
+>
 > Dos territorios y dos formas de leer el paisaje. Elegir bien es lo que hace que al volver digas: "esto no lo habría armado así por mi cuenta".
+>
 > ¿Rioja o Ribera? Comenta cuál va más contigo.
+>
 > #RiberaDelDuero #RiojaAlavesa #ViajeDeVino #EspañaDelVino #LN415Travel
 
 ## 4. Primer comentario
