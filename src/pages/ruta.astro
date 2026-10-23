@@ -1,0 +1,174 @@
+---
+/**
+ * Test "¿Qué ruta de autor va contigo?" — recurso de la puerta RUTA (Instagram/Facebook → DM → este link).
+ * Las preguntas y la lógica viven en src/data/test-ruta.ts. El resultado se calcula en el navegador
+ * y no pide correo: termina en la página de la ruta y en WhatsApp.
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Photo from '../components/Photo.astro';
+import { designTripUrl } from '../config/site.config';
+import { preguntas, orden, porQue } from '../data/test-ruta';
+
+const rutas = (await getCollection('rutas', ({ data }) => !data.draft && data.kind === 'ruta'))
+  .sort((a, b) => orden.indexOf(a.id as never) - orden.indexOf(b.id as never));
+const total = preguntas.length;
+---
+<BaseLayout
+  fullBleed
+  title="¿Qué ruta de autor va contigo?"
+  description="Responde 10 preguntas y descubre cuál de las Rutas de autor de LN41.5 va con tu forma de viajar por España."
+>
+  <section class="band band--dark topo test" aria-labelledby="test-title">
+    <div class="test__inner">
+      <p class="caption section-label">Test · Rutas de autor</p>
+      <h1 id="test-title" class="heading test__title">¿Qué ruta de autor va contigo?</h1>
+      <p class="test__intro">Diez preguntas sobre cómo te gusta viajar. Al final te decimos cuál de nuestras rutas por España va contigo y por qué. Toma 2 minutos y no te pedimos correo.</p>
+
+      <div class="test__quiz" data-quiz hidden>
+        <div class="test__progress" aria-hidden="true"><span data-bar></span></div>
+        <p class="caption test__count" aria-live="polite"><span data-current>1</span> / {total}</p>
+
+        {preguntas.map((p, i) => (
+          <fieldset class="test__q" data-q={i} hidden={i > 0}>
+            <legend class="subheading test__question">{p.pregunta}</legend>
+            <div class="test__options">
+              {p.opciones.map((o) => (
+                <button type="button" class="test__option" data-points={JSON.stringify(o.puntos)}>{o.texto}</button>
+              ))}
+            </div>
+          </fieldset>
+        ))}
+
+        <button type="button" class="caption test__back" data-back hidden>← Pregunta anterior</button>
+      </div>
+
+      <noscript>
+        <p class="test__intro">Para hacer el test necesitas activar JavaScript. También puedes escribirnos directo:</p>
+        <a class="btn btn--solid" href={designTripUrl('Quiero saber qué ruta de autor va conmigo')}>Escribir por WhatsApp</a>
+      </noscript>
+    </div>
+
+    {rutas.map((r) => (
+      <div class="test__result" data-result={r.id} hidden>
+        <div class="test__photo">
+          <Photo name={r.data.photo} alt={r.data.photoAlt ?? r.data.title} sizes="(min-width: 56rem) 40vw, 90vw" />
+        </div>
+        <div class="test__copy">
+          <p class="caption section-label">Tu ruta de autor</p>
+          <h2 class="heading test__route">{r.data.title}</h2>
+          <p class="lead test__subtitle"><em>{r.data.subtitle}</em></p>
+          <p class="test__why">{porQue[r.id as keyof typeof porQue]}</p>
+          <p class="test__second" data-second hidden>Tu segunda opción: <a data-second-link href="#"></a></p>
+          <p class="test__firma">Es una ruta base de {r.data.duration?.toLowerCase() ?? '10 días'}: la ajustamos a tus fechas, a quién viaja y a tu ritmo, para que al volver digas <em>“esto no lo habría armado así por mi cuenta”</em>.</p>
+          <div class="btn-row">
+            <a class="btn btn--solid" href={designTripUrl(`Hice el test de rutas y me salió "${r.data.title}". Me gustaría diseñar mi viaje`)}>Diseñar mi viaje con esta ruta</a>
+            <a class="btn btn--outline" href={`/rutas/${r.id}`}>Ver la ruta completa</a>
+          </div>
+          <button type="button" class="caption test__restart" data-restart>Repetir el test</button>
+        </div>
+      </div>
+    ))}
+  </section>
+</BaseLayout>
+
+<script define:vars={{ rutas: rutas.map((r) => ({ id: r.id, title: r.data.title })), orden }}>
+  const quiz = document.querySelector('[data-quiz]');
+  const qs = [...document.querySelectorAll('[data-q]')];
+  const bar = document.querySelector('[data-bar]');
+  const current = document.querySelector('[data-current]');
+  const back = document.querySelector('[data-back]');
+  const results = [...document.querySelectorAll('[data-result]')];
+  const answers = [];
+  let step = 0;
+
+  const show = (i) => {
+    qs.forEach((q, j) => (q.hidden = j !== i));
+    current.textContent = String(i + 1);
+    bar.style.width = `${(i / qs.length) * 100}%`;
+    back.hidden = i === 0;
+  };
+
+  const finish = () => {
+    const score = Object.fromEntries(orden.map((id) => [id, 0]));
+    answers.forEach((pts) => Object.entries(pts).forEach(([id, n]) => (score[id] += n)));
+    const ranking = [...orden].sort((a, b) => score[b] - score[a] || orden.indexOf(a) - orden.indexOf(b));
+    const [first, second] = ranking;
+    quiz.hidden = true;
+    document.querySelector('.test__intro').hidden = true;
+    const panel = results.find((r) => r.dataset.result === first);
+    const secondRuta = rutas.find((r) => r.id === second);
+    const secondP = panel.querySelector('[data-second]');
+    if (secondRuta && score[second] > 0) {
+      const link = panel.querySelector('[data-second-link]');
+      link.textContent = secondRuta.title;
+      link.href = `/rutas/${second}`;
+      secondP.hidden = false;
+    }
+    panel.hidden = false;
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (typeof window.plausible === 'function') window.plausible('Test ruta', { props: { ruta: first } });
+  };
+
+  qs.forEach((q, i) =>
+    q.querySelectorAll('button').forEach((btn) =>
+      btn.addEventListener('click', () => {
+        answers[i] = JSON.parse(btn.dataset.points);
+        if (i === qs.length - 1) return finish();
+        step = i + 1;
+        show(step);
+      })
+    )
+  );
+  back.addEventListener('click', () => { if (step > 0) show(--step); });
+  document.querySelectorAll('[data-restart]').forEach((b) =>
+    b.addEventListener('click', () => {
+      answers.length = 0;
+      step = 0;
+      results.forEach((r) => (r.hidden = true));
+      document.querySelector('.test__intro').hidden = false;
+      quiz.hidden = false;
+      show(0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+  );
+  quiz.hidden = false;
+  show(0);
+</script>
+
+<style>
+  .test { min-height: 100svh; padding-top: clamp(8rem, 12vw, 10rem); }
+  .test [hidden] { display: none !important; }
+  .test__inner { max-width: 46rem; }
+  .test__title { color: var(--color-gold); }
+  .test__intro { margin-top: var(--space-4); color: var(--color-stone); font-size: 1.1875rem; line-height: 1.6; max-width: 38rem; }
+  .test__quiz { margin-top: var(--space-6); }
+  .test__progress { height: 2px; background: var(--hairline-dark); }
+  .test__progress span { display: block; height: 100%; width: 0; background: var(--color-gold); transition: width 0.4s ease; }
+  .test__count { color: var(--color-gold); margin: var(--space-3) 0 var(--space-4); }
+  .test__q { border: 0; margin: 0; padding: 0; }
+  .test__question { color: var(--color-sand); margin-bottom: var(--space-4); padding: 0; }
+  .test__options { display: grid; gap: var(--space-2); }
+  .test__option {
+    text-align: left; font: inherit; font-size: 1.0625rem; color: var(--color-sand);
+    background: transparent; border: 1px solid var(--hairline-dark); padding: 1rem 1.25rem; cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+  .test__option:hover, .test__option:focus-visible { border-color: var(--color-gold); background: rgb(240 192 84 / 0.08); color: var(--color-gold); }
+  .test__back, .test__restart { margin-top: var(--space-4); background: none; border: 0; padding: 0; color: var(--color-stone); cursor: pointer; }
+  .test__back:hover, .test__restart:hover { color: var(--color-gold); }
+
+  .test__result { display: grid; gap: var(--space-6); align-items: center; margin-top: var(--space-4); scroll-margin-top: 7rem; }
+  .test__photo { aspect-ratio: 4 / 5; overflow: hidden; rotate: -2deg; max-width: 30rem; }
+  .test__route { color: var(--color-gold); }
+  .test__subtitle { color: var(--color-sand); margin-top: var(--space-2); }
+  .test__why { margin-top: var(--space-4); font-size: 1.1875rem; line-height: 1.6; color: var(--color-sand); max-width: 34rem; }
+  .test__second { margin-top: var(--space-3); color: var(--color-stone); }
+  .test__second a { color: var(--color-gold); }
+  .test__firma { margin-top: var(--space-4); color: var(--color-stone); max-width: 34rem; line-height: 1.6; }
+  .test__firma em { color: var(--color-gold); }
+  .test__copy .btn-row { margin-top: var(--space-5); }
+  @media (min-width: 56rem) {
+    .test__result { grid-template-columns: 5fr 7fr; }
+  }
+</style>
