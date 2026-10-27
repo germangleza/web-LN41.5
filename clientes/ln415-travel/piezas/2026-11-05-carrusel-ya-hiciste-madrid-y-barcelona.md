@@ -32,4 +32,4 @@ Problema → solución · Capturar con RUTA (el test responde "¿por dónde empi
 Carrusel de 5 imágenes de LN41.5 Travel. Portada con foto aérea de Besalú y el título "Ya hiciste Madrid y Barcelona. ¿Ahora qué?". Siguen el castillo de Peñafiel con "El error es repetir la fórmula", una lámina con las 5 regiones (Castilla, Rioja y Ribera, Catalunya, Extremadura, Galicia y el Cantábrico) unidas por un sendero dorado, el faro de Cabo Vilán con "Elige la que va contigo" y Siurana con "Comenta RUTA".
 
 ## 6. Recurso y DM 1
-Test RUTA (`../recursos/RUTA.md`). **DM 1:** "¡Aquí está tu test! 🧭 [www.ln415.com/ruta?utm_source=instagram&utm_medium=dm&utm_campaign=ruta&utm_content=2026-11-05-madrid-barcelona] Cuéntame: ¿ya conoces España o sería tu primera vez?"
+Test RUTA (`../recursos/RUTA.md`). **DM 1:** "¡Aquí está tu test! 🧭 [www.ln415.com/test-ruta?utm_source=instagram&utm_medium=dm&utm_campaign=ruta&utm_content=2026-11-05-madrid-barcelona] Cuéntame: ¿ya conoces España o sería tu primera vez?"

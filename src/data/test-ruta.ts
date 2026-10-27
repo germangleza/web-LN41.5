@@ -2,7 +2,7 @@
  * Test "¿Qué ruta de autor va contigo?" (puerta RUTA del sistema de contenido).
  * Cada respuesta suma puntos a una o dos rutas (id = archivo en src/content/rutas/).
  * Gana la ruta con más puntos; en empate, gana la que aparece primero en `orden`.
- * Documentación del recurso: clientes/ln415-travel/recursos/RUTA.md
+ * Página: src/pages/test-ruta.astro · Documentación del recurso: clientes/ln415-travel/recursos/RUTA.md
  */
 export type RutaId = 'espana-castellana' | 'espana-del-vino' | 'catalunya-insolita' | 'espana-profunda' | 'espana-atlantica';
 

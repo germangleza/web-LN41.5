@@ -13,5 +13,6 @@ export default defineConfig({
     '/rutas/espana-entre-vinedos': '/rutas/espana-del-vino',
     '/rutas/espana-medieval': '/rutas/espana-castellana',
     '/rutas/sabores-del-norte': '/rutas/espana-atlantica',
+    '/ruta': '/test-ruta',
   },
 });

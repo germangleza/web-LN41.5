@@ -109,7 +109,7 @@ Este documento es la estrategia de contenido de LN41.5. Cada mes se planea a par
 | Tipo | Palabra | Recurso | Estado |
 |---|---|---|---|
 | **Convertir** (directa) | **VIAJE** | Sin recurso: 3 preguntas de calificación y luego WhatsApp | ✅ Lista (falta configurar la respuesta automática) |
-| **Capturar** (puerta 1) | **RUTA** | Test "¿Qué ruta de autor va contigo?": 10 preguntas y como resultado 1 de las 5 rutas | ✅ Publicado en www.ln415.com/ruta (`recursos/RUTA.md`) · falta la automatización de DMs |
+| **Capturar** (puerta 1) | **RUTA** | Test "¿Qué ruta de autor va contigo?": 10 preguntas y como resultado 1 de las 5 rutas | ✅ Publicado en www.ln415.com/test-ruta (`recursos/RUTA.md`) · falta la automatización de DMs |
 | Congeladas | ITINERARIO · VALE · SEGUNDO · FAMILIA · FECHAS · CELEBRAR · VINO | Ver `opciones-puertas.md` | ❄️ Se activan con 3+ piezas al mes del tema y recurso listo |
 
 **Fase inicial:** Arranque ≈ **60% Distribuir · 20% Capturar · 20% Convertir**.
@@ -244,10 +244,10 @@ Este documento es la estrategia de contenido de LN41.5. Cada mes se planea a par
 | Firma de marca | Idea: "esto no lo habría armado así por mi cuenta". Cada pieza cierra con un payoff de criterio propio; la frase literal solo en piezas de marca (máx. 1 al mes) | 02, 03 · decisión del cliente |
 | Oferta principal | Conversación inicial por WhatsApp → Concepto de Viaje → Propuesta | 01, 02 |
 | Palabra directa | VIAJE | Diagnóstico |
-| Puertas | RUTA → test "¿Qué ruta de autor va contigo?" en www.ln415.com/ruta | Diagnóstico |
+| Puertas | RUTA → test "¿Qué ruta de autor va contigo?" en www.ln415.com/test-ruta | Diagnóstico |
 | Producción | Miguel en cámara; fotos de ruta; carruseles con el generador del repo; clon [por confirmar] | 01, 02 |
 | Sistema visual | #2F271F · #1E1914 · #EEE6D8 · #F0C054 · #864105 · Cormorant Garamond + Montserrat · líneas topográficas · sendero dorado | 02 |
-| Sitio y links | www.ln415.com · WhatsApp +52 663 313 5555 · hola@ln415.com · test RUTA www.ln415.com/ruta con UTM | 02 |
+| Sitio y links | www.ln415.com · WhatsApp +52 663 313 5555 · hola@ln415.com · test RUTA www.ln415.com/test-ruta con UTM | 02 |
 | Canales y cadencia | Instagram 3 piezas por semana + Stories · Facebook espejo · WhatsApp conversión | 01 |
 | Prueba disponible | Miguel es español (founder-market fit). Casos: ninguno publicable aún | 03 |
 | Prohibidos | Claims no comprobables (#1, exclusivo, X horas, mejores proveedores) · casos inventados sin rotular · fotos sin derechos · datos de clientes sin permiso | 03, sistema |

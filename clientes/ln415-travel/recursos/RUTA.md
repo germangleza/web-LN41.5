@@ -1,8 +1,8 @@
 # Recurso RUTA · Test "¿Qué ruta de autor va contigo?"
 
 **Puerta:** RUTA (Capturar) · **Estado:** ✅ publicado en la web
-**Link:** `https://www.ln415.com/ruta?utm_source=instagram&utm_medium=dm&utm_campaign=ruta&utm_content=<pieza>`
-**Código:** página `src/pages/ruta.astro`; preguntas y puntos en `src/data/test-ruta.ts`. Si se cambia una pregunta, se cambia ahí y en este documento.
+**Link:** `https://www.ln415.com/test-ruta?utm_source=instagram&utm_medium=dm&utm_campaign=ruta&utm_content=<pieza>`
+**Código:** página `src/pages/test-ruta.astro`; preguntas y puntos en `src/data/test-ruta.ts`. Si se cambia una pregunta, se cambia ahí y en este documento.
 
 ---
 
