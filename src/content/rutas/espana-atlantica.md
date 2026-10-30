@@ -3,7 +3,7 @@ title: "España Atlántica"
 subtitle: "La España Verde, Marinera y Celta"
 summary: "De Galicia al País Vasco: faros, pueblos marineros, aldeas de piedra, sidra y cocina del Cantábrico en una España verde y ancestral."
 description: "España Atlántica: de Santiago y la Costa da Morte a Asturias, Cantabria y Getaria. Pueblos marineros, aldeas de piedra y cocina atlántica. 10 días."
-order: 5
+order: 3
 photo: "ruta-atlantica"
 photoAlt: "Faro de Cabo Vilán al atardecer en la Costa da Morte, Galicia"
 icon: "ola"

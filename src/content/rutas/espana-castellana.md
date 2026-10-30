@@ -4,6 +4,7 @@ subtitle: "Castillos, Fogones y Silencio"
 summary: "Una Castilla de fortalezas, pueblos medievales, viñedos y mesas compartidas. Historia y gastronomía recorridas sin prisas."
 description: "España Castellana: Segovia, Pedraza, Ribera del Duero, Peñafiel, Burgos, Lerma y Palencia. Castillos, vino y cocina castellana sin prisas. 10 días."
 order: 3
+draft: true
 photo: "ruta-castellana"
 photoAlt: "Murallas y torre del homenaje del castillo de Peñafiel"
 icon: "castillo"

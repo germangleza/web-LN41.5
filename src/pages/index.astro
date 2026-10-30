@@ -169,7 +169,7 @@ const paraTi = [
     <p class="caption section-label" data-reveal>04</p>
     <div class="rutas__intro" data-trail-start>
       <h2 id="rutas-title" class="heading rutas__title" data-split>Rutas de autor LN41.5</h2>
-      <p class="rutas__lead" data-reveal>5 maneras de comenzar a conocer la otra España.</p>
+      <p class="rutas__lead" data-reveal>3 maneras de comenzar a conocer la otra España.</p>
     </div>
     <div class="rutas__grid" data-stagger>
       {rutas.map((ruta) => <RouteCard ruta={ruta} />)}
@@ -438,8 +438,6 @@ const paraTi = [
   .rutas__grid > :global(:nth-child(1)) { --tilt: -2deg; }
   .rutas__grid > :global(:nth-child(2)) { --tilt: 1.5deg; }
   .rutas__grid > :global(:nth-child(3)) { --tilt: -1deg; }
-  .rutas__grid > :global(:nth-child(4)) { --tilt: 1deg; }
-  .rutas__grid > :global(:nth-child(5)) { --tilt: -1.5deg; }
   /* Llegada del sendero */
   .rutas__end { position: relative; z-index: 3; display: grid; justify-items: start; align-content: center; gap: var(--space-3); padding-block: var(--space-5); }
   .rutas__pin {
@@ -455,15 +453,10 @@ const paraTi = [
   @media (min-width: 40rem) and (max-width: 63.999rem) {
     .rutas__grid { grid-template-columns: repeat(2, 1fr); }
     .rutas__grid > :global(:nth-child(3)) { grid-area: 2 / 2; }
-    .rutas__grid > :global(:nth-child(4)) { grid-area: 2 / 1; }
-    .rutas__grid > :global(:nth-child(5)) { grid-area: 3 / 1; }
-    .rutas__end { grid-area: 3 / 2; }
+    .rutas__end { grid-area: 2 / 1; }
   }
   @media (min-width: 64rem) {
-    .rutas__grid { grid-template-columns: repeat(3, 1fr); }
+    .rutas__grid { grid-template-columns: repeat(3, 1fr) 0.8fr; }
     .rutas__grid > :global(:nth-child(2)) { margin-top: var(--space-6); }
-    .rutas__grid > :global(:nth-child(4)) { grid-area: 2 / 3; }
-    .rutas__grid > :global(:nth-child(5)) { grid-area: 2 / 2; margin-top: var(--space-6); }
-    .rutas__end { grid-area: 2 / 1; padding-inline-end: var(--space-5); }
   }
 </style>

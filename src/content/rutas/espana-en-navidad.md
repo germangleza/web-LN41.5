@@ -5,6 +5,7 @@ subtitle: "Dulces, Oficios y Magia de Reyes"
 summary: "Una edición especial entre obradores, aceite, cerámica, castillos, turrón y una de las celebraciones de Reyes más singulares de España."
 description: "España en Navidad, edición especial 2026/27: obradores, aceite, cerámica, castillos, turrón y la Cabalgata de Reyes de Alcoy. Grupo de 6–8 viajeros."
 order: 100
+draft: true
 photo: "ruta-navidad"
 photoAlt: "Llegada de los Reyes Magos a la plaza de Alcoy entre fuegos artificiales"
 icon: "estrella"

@@ -10,8 +10,8 @@ export default defineConfig({
   build: { format: 'file' },
   // Rutas anteriores que se sustituyeron por las nuevas Rutas de autor
   redirects: {
-    '/rutas/espana-entre-vinedos': '/rutas/espana-del-vino',
-    '/rutas/espana-medieval': '/rutas/espana-castellana',
+    '/rutas/espana-entre-vinedos': '/#rutas',
+    '/rutas/espana-medieval': '/#rutas',
     '/rutas/sabores-del-norte': '/rutas/espana-atlantica',
     '/ruta': '/test-ruta',
   },
