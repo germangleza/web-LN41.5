@@ -107,7 +107,7 @@ export const preguntas: Pregunta[] = [
 
 /** Por qué le va cada ruta (se muestra en el resultado). */
 export const porQue: Record<RutaId, string> = {
-  'catalunya-insolita': 'Quieres una Catalunya más allá de lo obvio: Priorat, Pirineos y Empordà, con pueblos, paisaje y gastronomía que casi nadie mete en el itinerario.',
+  'catalunya-insolita': 'Quieres una Catalunya más allá de lo obvio: Penedès, Pirineos y Empordà, con pueblos, paisaje y gastronomía que casi nadie mete en el itinerario.',
   'andalucia-blanca': 'Buscas calma, paisaje y tradición. Sevilla, la Serranía de Ronda y la Córdoba del olivar: palacios, caballos de pura raza y pueblos blancos colgados de la roca.',
   'espana-atlantica': 'Te llama el mar y la cocina de producto. Del Atlántico al Cantábrico: faros, pueblos marineros y una España verde y celta.',
 };

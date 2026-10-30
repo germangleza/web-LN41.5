@@ -107,7 +107,7 @@ Cada respuesta suma puntos a una o dos rutas. Una sola respuesta por pregunta.
 
 | Resultado | Qué le decimos |
 |---|---|
-| Catalunya Insólita | Una Catalunya más allá de lo obvio: Priorat, Pirineos y Empordà |
+| Catalunya Insólita | Una Catalunya más allá de lo obvio: Penedès, Pirineos y Empordà |
 | Andalucía Blanca | Calma, paisaje y tradición: Sevilla, la Serranía de Ronda, caballos y el olivar de Córdoba |
 | España Atlántica | Mar y cocina de producto: faros, pueblos marineros y una España verde y celta |
 

@@ -1,8 +1,8 @@
 ---
 title: "Catalunya Insólita"
 subtitle: "Una Catalunya menos evidente y más personal"
-summary: "De Barcelona al Priorat, los Pirineos y el Empordà: pueblos, paisaje, gastronomía y experiencias para descubrir Catalunya más allá de lo obvio."
-description: "Catalunya Insólita: de Barcelona al Priorat, Montserrat, la Garrotxa, los Pirineos y el Empordà. Pueblos, vino y paisaje más allá de lo obvio. 10 días."
+summary: "De Barcelona al Penedès, los Pirineos y el Empordà: pueblos, paisaje, gastronomía y experiencias para descubrir Catalunya más allá de lo obvio."
+description: "Catalunya Insólita: de Barcelona al Penedès, Montserrat, la Garrotxa, los Pirineos y el Empordà. Pueblos, vino y paisaje más allá de lo obvio. 10 días."
 order: 1
 photo: "ruta-catalunya"
 photoAlt: "Vista aérea de Besalú y su puente medieval sobre el río Fluvià"
@@ -15,7 +15,7 @@ intro:
   title: "Catalunya no termina en Barcelona"
   paragraphs:
     - "> La ciudad puede ser el punto de partida. No tiene por qué ser todo el viaje."
-    - "Esta ruta empieza con una Barcelona más íntima y después entra al Priorat, Montserrat, Osona, la Garrotxa, los Pirineos, el Empordà y Girona."
+    - "Esta ruta empieza con una Barcelona más íntima y después entra al Penedès, Montserrat, Osona, la Garrotxa, los Pirineos, el Empordà y Girona."
     - "El objetivo no es mostrar toda Catalunya. Es contar una historia concreta del territorio."
 route:
   title: "La ruta"
@@ -24,9 +24,9 @@ route:
       stops:
         - name: "Barcelona íntima"
           paragraphs: ["Una mirada más tranquila a la ciudad, lejos de la lógica del checklist."]
-        - name: "Priorat + Siurana"
-          title: "Vino, montaña y paisaje"
-          paragraphs: ["Viñedos sobre licorella, bodegas boutique y un pequeño pueblo suspendido sobre un paisaje extraordinario."]
+        - name: "Finca Viladellops · Penedès"
+          title: "Vino, finca y paisaje"
+          paragraphs: ["Una finca vinícola histórica en el Penedès: viñedos, bodega y una forma de entender el vino desde el territorio."]
         - name: "Montserrat + masía catalana"
           paragraphs: ["Naturaleza, patrimonio y una experiencia gastronómica vinculada directamente al territorio."]
     - title: "Catalunya profunda"
