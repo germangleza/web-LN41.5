@@ -3,7 +3,7 @@ title: "Catalunya Insólita"
 subtitle: "Una Catalunya menos evidente y más personal"
 summary: "De Barcelona al Priorat, los Pirineos y el Empordà: pueblos, paisaje, gastronomía y experiencias para descubrir Catalunya más allá de lo obvio."
 description: "Catalunya Insólita: de Barcelona al Priorat, Montserrat, la Garrotxa, los Pirineos y el Empordà. Pueblos, vino y paisaje más allá de lo obvio. 10 días."
-order: 3
+order: 1
 photo: "ruta-catalunya"
 photoAlt: "Vista aérea de Besalú y su puente medieval sobre el río Fluvià"
 icon: "montana"

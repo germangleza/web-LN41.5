@@ -4,6 +4,7 @@ subtitle: "Extremadura · Dehesa, Imperios y Silencio"
 summary: "Ciudades monumentales, dehesas, productores, monasterios y paisajes abiertos en una de las regiones más auténticas y menos exploradas de España."
 description: "España Profunda: Extremadura entre Cáceres, Trujillo, Guadalupe, Mérida, la dehesa y Monfragüe. Patrimonio, productores y calma. 10 días."
 order: 4
+draft: true
 photo: "ruta-profunda"
 photoAlt: "Cerdos ibéricos en la dehesa extremeña, con la sierra al fondo"
 icon: "encina"

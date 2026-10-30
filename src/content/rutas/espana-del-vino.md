@@ -3,7 +3,7 @@ title: "España del Vino"
 subtitle: "Rioja Alavesa & Ribera del Duero"
 summary: "Dos territorios, dos formas de interpretar el vino. Un viaje entre viñedos, bodegas de autor, gastronomía y las personas detrás de cada botella."
 description: "España del Vino: Rioja Alavesa y Ribera del Duero. Bodegas de autor, viñedos, gastronomía y las personas detrás de cada botella. 10 días."
-order: 2
+order: 4
 photo: "ruta-vino"
 photoAlt: "Viñedos de la Abadía Retuerta al atardecer, en la Ribera del Duero"
 icon: "copa"

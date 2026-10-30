@@ -23,7 +23,7 @@ Cada respuesta suma puntos a una o dos rutas. Una sola respuesta por pregunta.
 | Historias de castillos, catedrales y villas medievales | Castellana +2 |
 | Entender por qué cada vino sabe como sabe | Vino +2 |
 | Pueblos de piedra, montaña y mar en un mismo viaje | Catalunya +2 |
-| Producto, paisaje abierto y silencio | Profunda +2 |
+| Pueblos blancos, sierra y caballos | Andalucía +2 |
 | Faros, pueblos marineros y cocina de mar | Atlántica +2 |
 
 **2. Tu día perfecto termina…**
@@ -33,7 +33,7 @@ Cada respuesta suma puntos a una o dos rutas. Una sola respuesta por pregunta.
 | Cenando asado de horno de leña en una villa amurallada | Castellana +2 |
 | En una bodega al atardecer, entre viñedos | Vino +2 |
 | En un pueblo del Empordà mirando al Mediterráneo | Catalunya +2 |
-| En una casa rural en la dehesa, sin ruido | Profunda +2 |
+| En una finca en la sierra de Grazalema, sin ruido | Andalucía +2 |
 | Con sidra y pescado frente al Cantábrico | Atlántica +2 |
 
 **3. ¿Qué paisaje te llama más?**
@@ -43,7 +43,7 @@ Cada respuesta suma puntos a una o dos rutas. Una sola respuesta por pregunta.
 | Meseta, murallas y cielos abiertos | Castellana +2 |
 | Viñedos hasta donde alcanza la vista | Vino +2 |
 | Montaña que baja hasta la costa | Catalunya +2 |
-| Dehesa de encinas y llanuras | Profunda +2 |
+| Sierra, olivares y pueblos colgados de la roca | Andalucía +2 |
 | Costa verde, acantilados y niebla | Atlántica +2 |
 
 **4. ¿Qué tanto te mueve el vino?**
@@ -52,23 +52,23 @@ Cada respuesta suma puntos a una o dos rutas. Una sola respuesta por pregunta.
 |---|---|
 | Es el motivo del viaje | Vino +3 |
 | Me gusta acompañar bien la comida | Castellana +1 · Vino +1 |
-| Me interesa más el producto local | Profunda +1 · Atlántica +1 |
+| Me interesa más el producto local | Andalucía +1 · Atlántica +1 |
 | No es lo mío | Catalunya +1 · Atlántica +1 |
 
 **5. ¿Qué le da más sentido a un viaje para ti?**
 
 | Respuesta | Suma a |
 |---|---|
-| La historia de cada lugar | Castellana +2 · Profunda +1 |
-| Conocer a quien hace las cosas: productores, enólogos, artesanos | Vino +2 · Profunda +1 |
+| La historia de cada lugar | Castellana +2 · Andalucía +1 |
+| Conocer a quien hace las cosas: productores, enólogos, artesanos | Vino +2 · Andalucía +1 |
 | El paisaje y la arquitectura | Catalunya +2 · Atlántica +1 |
-| La comida, de principio a fin | Atlántica +2 · Profunda +1 |
+| La comida, de principio a fin | Atlántica +2 · Andalucía +1 |
 
 **6. ¿Cómo te gusta moverte?**
 
 | Respuesta | Suma a |
 |---|---|
-| Pocas bases y mucho tiempo en cada una | Profunda +1 · Vino +1 |
+| Pocas bases y mucho tiempo en cada una | Andalucía +1 · Vino +1 |
 | Combinar ciudad y pueblos | Castellana +1 · Catalunya +1 |
 | En carretera, cambiando de paisaje | Atlántica +1 · Catalunya +1 |
 
@@ -77,14 +77,14 @@ Cada respuesta suma puntos a una o dos rutas. Una sola respuesta por pregunta.
 | Respuesta | Suma a |
 |---|---|
 | Sí, y quiero conocer otra Catalunya | Catalunya +2 |
-| Sí, y esta vez quiero otra región | Castellana +1 · Profunda +1 · Atlántica +1 |
+| Sí, y esta vez quiero otra región | Castellana +1 · Andalucía +1 · Atlántica +1 |
 | Todavía no | Catalunya +1 |
 
 **8. ¿Cuándo te imaginas viajando?**
 
 | Respuesta | Suma a |
 |---|---|
-| Primavera | Castellana +1 · Profunda +1 |
+| Primavera | Castellana +1 · Andalucía +1 |
 | Verano | Atlántica +1 · Catalunya +1 |
 | Otoño | Vino +1 · Castellana +1 |
 | Todavía no lo sé | — |
@@ -93,7 +93,7 @@ Cada respuesta suma puntos a una o dos rutas. Una sola respuesta por pregunta.
 
 | Respuesta | Suma a |
 |---|---|
-| En pareja | Vino +1 · Profunda +1 |
+| En pareja | Vino +1 · Andalucía +1 |
 | En familia | Castellana +1 · Atlántica +1 |
 | Con amigos | Vino +1 · Catalunya +1 |
 | Varias generaciones juntas | Castellana +1 · Atlántica +1 |
@@ -105,10 +105,10 @@ Cada respuesta suma puntos a una o dos rutas. Una sola respuesta por pregunta.
 | Clásico, pero visto de otra forma | Castellana +2 |
 | Con nombre propio, para los que saben | Vino +2 |
 | Algo que me sorprenda | Catalunya +1 · Atlántica +1 |
-| Lo menos explorado posible | Profunda +2 |
+| Lo menos explorado posible | Andalucía +2 |
 
 ## 4. Interpretación del resultado
-- **Ruta principal:** la que suma más puntos. En empate gana el orden Castellana → Vino → Catalunya → Profunda → Atlántica.
+- **Ruta principal:** la que suma más puntos. En empate gana el orden Castellana → Vino → Catalunya → Andalucía → Atlántica.
 - **Segunda opción:** la siguiente en puntos. Se muestra como link a su página; sirve para proponer combinaciones en la conversación.
 
 | Resultado | Qué le decimos |
@@ -116,7 +116,7 @@ Cada respuesta suma puntos a una o dos rutas. Una sola respuesta por pregunta.
 | España Castellana | Te mueve la historia y la mesa sin prisas: fortalezas, villas medievales y cocina de horno de leña |
 | España del Vino | El vino como forma de entender el lugar: Rioja Alavesa y Ribera del Duero |
 | Catalunya Insólita | Una Catalunya más allá de lo obvio: Priorat, Pirineos y Empordà |
-| España Profunda | Profundidad y silencio: Extremadura, dehesa y productores |
+| Andalucía Blanca | Calma, paisaje y tradición: Sevilla, la Serranía de Ronda, caballos y el olivar de Córdoba |
 | España Atlántica | Mar y cocina de producto: faros, pueblos marineros y una España verde y celta |
 
 ## 5. Firma
