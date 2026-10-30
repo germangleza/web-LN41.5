@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "test": "node --experimental-strip-types --no-warnings --test src/data/*.test.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

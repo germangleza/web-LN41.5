@@ -1,0 +1,411 @@
+---
+/**
+ * Test "¿Qué España te falta?" — recurso de la puerta ESPAÑA (Instagram → DM → este link).
+ * Preguntas, copy y cálculo viven en src/data/test-espana.ts. Todo corre en el navegador:
+ * el resultado se muestra sin pedir datos y termina en WhatsApp o en la página de la ruta.
+ * La captura opcional solo aparece si existe PUBLIC_TEST_LEAD_ENDPOINT (Formspree, Apps Script…).
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Photo from '../components/Photo.astro';
+import { SITE, designTripUrl } from '../config/site.config';
+import { preguntas, bloques } from '../data/test-espana';
+
+const total = preguntas.length;
+const leadEndpoint = import.meta.env.PUBLIC_TEST_LEAD_ENDPOINT ?? '';
+const privacyUrl = import.meta.env.PUBLIC_PRIVACY_URL || '/aviso-de-privacidad';
+---
+<BaseLayout
+  fullBleed
+  title="¿Qué España te falta? · Test"
+  description="Catorce preguntas para descubrir si tu España es Mediterránea, Blanca o Atlántica, y qué tan listo estás para un viaje de autor."
+>
+  <section class="band band--dark topo qe" aria-labelledby="qe-title" data-qe data-whatsapp={SITE.business.whatsapp} data-endpoint={leadEndpoint}>
+    <div class="qe__inner">
+      <!-- INTRO -->
+      <div class="qe__screen" data-screen="intro">
+        <p class="caption section-label">Test · 2 minutos</p>
+        <h1 id="qe-title" class="heading qe__title">¿Qué España te falta?</h1>
+        <p class="qe__lead">Catorce preguntas para saber qué España va contigo —Mediterránea, Blanca o Atlántica— y qué tan listo estás para un viaje de autor.</p>
+        <p class="caption qe__note">Sin registro. Ves tu resultado al terminar.</p>
+        <button type="button" class="btn btn--solid qe__start" data-start>Empezar</button>
+        <noscript>
+          <p class="qe__lead">Para hacer el test necesitas activar JavaScript. También puedes escribirnos directo:</p>
+          <a class="btn btn--outline" href={designTripUrl('Quiero saber qué España me falta')}>Escribir por WhatsApp</a>
+        </noscript>
+      </div>
+
+      <!-- PREGUNTAS -->
+      <div class="qe__screen" data-screen="quiz" hidden>
+        <div class="qe__progress" aria-hidden="true"><span data-bar></span></div>
+        <p class="caption qe__count"><span data-block></span> · <span data-current>1</span> / {total}</p>
+        <div aria-live="polite">
+          {preguntas.map((p) => (
+            <fieldset class="qe__q" data-q={p.id} data-bloque={p.bloque} data-bloque-nombre={bloques[p.bloque]} hidden>
+              <legend class="subheading qe__question" tabindex="-1">{p.pregunta}</legend>
+              <div class="qe__options">
+                {p.opciones.map((o, i) => (
+                  <button type="button" class="qe__option" data-i={i} data-value={String(o.valor)}>{o.texto}</button>
+                ))}
+              </div>
+            </fieldset>
+          ))}
+        </div>
+        <button type="button" class="caption qe__link" data-back>← Atrás</button>
+      </div>
+
+      <!-- CARGANDO -->
+      <div class="qe__screen qe__loading" data-screen="loading" hidden>
+        <span class="qe__spinner" aria-hidden="true"></span>
+        <p class="caption" role="status">Calculando tu España…</p>
+      </div>
+    </div>
+
+    <!-- RESULTADO -->
+    <div class="qe__screen qe__result" data-screen="result" hidden>
+      <div class="qe__media">
+        <div class="qe__img" data-img="M" hidden><Photo name="ruta-catalunya" alt="Vista aérea de Besalú y su puente medieval sobre el río Fluvià" sizes="(min-width: 40rem) 640px, 100vw" /></div>
+        <div class="qe__img qe__img--solid" data-img="B" hidden></div>
+        <div class="qe__img" data-img="A" hidden><Photo name="ruta-atlantica" alt="Faro de Cabo Vilán al atardecer en la Costa da Morte, Galicia" sizes="(min-width: 40rem) 640px, 100vw" /></div>
+      </div>
+      <div class="qe__inner qe__copy" aria-live="polite">
+        <p class="caption section-label">Tu España es…</p>
+        <h2 class="heading qe__espana" data-r="titulo" tabindex="-1"></h2>
+        <p class="qe__text" data-r="texto"></p>
+        <p class="qe__secondary" data-r="secundaria" hidden></p>
+        <p class="qe__extra" data-r="extra"></p>
+
+        <div class="qe__perfil">
+          <p class="caption">Tu perfil de viaje de autor</p>
+          <p class="qe__score"><span data-r="perfil"></span><small>/16</small></p>
+          <h3 class="subheading qe__rango" data-r="rango"></h3>
+          <p data-r="rango-texto"></p>
+          <p class="qe__debil" data-r="debil" hidden></p>
+        </div>
+
+        <p class="lead qe__firma"><em>Esto es España desde dentro.</em></p>
+
+        <div class="qe__ctas">
+          <a class="btn btn--solid" data-r="whatsapp" href="#" target="_blank" rel="noopener"></a>
+          <p class="qe__support">Cuéntanos tu resultado y qué viaje tienes en mente. Te responde Miguel, no un bot.</p>
+          <a class="btn btn--outline" data-r="ruta" href="#">Ver la ruta</a>
+          <button type="button" class="btn btn--outline" data-share>Mándaselo a con quien viajas</button>
+          <p class="caption qe__copied" data-copied hidden role="status">Link copiado</p>
+        </div>
+
+        {leadEndpoint && (
+          <form class="qe__lead-form" data-lead novalidate>
+            <h3 class="subheading">¿Te mandamos tu resultado?</h3>
+            <label>Nombre <span>(opcional)</span><input name="nombre" autocomplete="name" /></label>
+            <label>WhatsApp o correo<input name="contacto" required autocomplete="email" /></label>
+            <label class="qe__check"><input type="checkbox" name="consentimiento_resultado" required /> <span>Acepto el <a href={privacyUrl}>aviso de privacidad</a> para recibir mi resultado.</span></label>
+            <label class="qe__check"><input type="checkbox" name="consentimiento_marketing" /> <span>Quiero recibir ideas de viaje y salidas de LN41.5.</span></label>
+            <button type="submit" class="btn btn--solid">Enviarme mi resultado</button>
+            <p class="caption qe__form-msg" data-lead-msg role="status"></p>
+          </form>
+        )}
+
+        <button type="button" class="caption qe__link" data-restart>Volver a hacer el test</button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { calcular, espanas, rangoDe, lineaDebil, mensajeWhatsapp, preguntas, type Espana } from '../data/test-espana';
+
+  type Utm = Partial<Record<'utm_source' | 'utm_medium' | 'utm_campaign' | 'utm_content', string>>;
+  interface Estado {
+    pantalla: 'intro' | 'quiz' | 'result';
+    paso: number;
+    respuestas: Record<string, number | Espana>;
+    /** Orden aleatorio de las opciones del bloque B (índices), fijo durante el test para que «Atrás» lo respete. */
+    ordenes: Record<string, number[]>;
+    utm: Utm;
+  }
+
+  const root = document.querySelector<HTMLElement>('[data-qe]')!;
+  const KEY = 'ln-test-espana';
+  const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'] as const;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = <T extends Element = HTMLElement>(sel: string) => root.querySelector<T>(sel)!;
+  const r = (name: string) => $(`[data-r="${name}"]`);
+
+  // Analytics: usa lo que el sitio tenga cargado (Plausible, GA4, Meta Pixel); si no hay nada, no hace nada.
+  function track(event: string, params: Record<string, unknown> = {}) {
+    const w = window as any;
+    try {
+      w.plausible?.(event, { props: params });
+      w.gtag?.('event', event, params);
+      if (event === 'test_whatsapp_click' || event === 'test_lead_submit') w.fbq?.('track', 'Lead', params);
+    } catch { /* sin analytics */ }
+  }
+
+  const shuffle = (n: number) => {
+    const a = [...Array(n).keys()];
+    for (let i = n - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  };
+  const nuevoEstado = (utm: Utm): Estado => ({
+    pantalla: 'intro', paso: 0, respuestas: {}, utm,
+    ordenes: Object.fromEntries(preguntas.filter((p) => p.bloque === 'B').map((p) => [p.id, shuffle(p.opciones.length)])),
+  });
+
+  const guardar = () => { try { sessionStorage.setItem(KEY, JSON.stringify(estado)); } catch { /* storage bloqueado */ } };
+  const cargar = (): Estado | null => { try { return JSON.parse(sessionStorage.getItem(KEY) ?? 'null'); } catch { return null; } };
+
+  const params = new URLSearchParams(location.search);
+  const utmUrl: Utm = Object.fromEntries(UTM_KEYS.filter((k) => params.get(k)).map((k) => [k, params.get(k)!]));
+  let estado: Estado = cargar() ?? nuevoEstado(utmUrl);
+  if (Object.keys(utmUrl).length) estado.utm = utmUrl;
+
+  const fieldsets = [...root.querySelectorAll<HTMLFieldSetElement>('[data-q]')];
+
+  // Aplica el orden aleatorio guardado a las opciones del bloque B
+  function aplicarOrdenes() {
+    fieldsets.forEach((fs) => {
+      const orden = estado.ordenes[fs.dataset.q!];
+      if (!orden) return;
+      const box = fs.querySelector('.qe__options')!;
+      orden.forEach((i) => box.appendChild(box.querySelector(`[data-i="${i}"]`)!));
+    });
+  }
+
+  function pantalla(nombre: string) {
+    root.querySelectorAll<HTMLElement>('[data-screen]').forEach((s) => (s.hidden = s.dataset.screen !== nombre));
+  }
+
+  function mostrarPregunta(i: number, foco = true) {
+    estado.paso = i;
+    fieldsets.forEach((fs, j) => (fs.hidden = j !== i));
+    const fs = fieldsets[i];
+    const elegida = estado.respuestas[fs.dataset.q!];
+    fs.querySelectorAll<HTMLButtonElement>('button').forEach((b) => {
+      const sel = elegida !== undefined && b.dataset.value === String(elegida);
+      b.classList.toggle('is-selected', sel);
+      b.setAttribute('aria-pressed', String(sel));
+    });
+    $('[data-current]').textContent = String(i + 1);
+    $('[data-block]').textContent = fs.dataset.bloqueNombre!;
+    $('[data-bar]').style.width = `${(i / fieldsets.length) * 100}%`;
+    if (foco) fs.querySelector<HTMLElement>('legend')!.focus({ preventScroll: true });
+    guardar();
+  }
+
+  function iniciar() {
+    estado.pantalla = 'quiz';
+    pantalla('quiz');
+    mostrarPregunta(estado.paso);
+    window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+  }
+
+  const conUtm = (href: string, espana: Espana) =>
+    `${href}?utm_source=test&utm_medium=resultado&utm_campaign=espana&utm_content=${espana}`;
+
+  function resultado(animar: boolean) {
+    const c = calcular(estado.respuestas);
+    const e = espanas[c.espana];
+    const rango = rangoDe(c.perfil);
+    root.querySelectorAll<HTMLElement>('[data-img]').forEach((el) => (el.hidden = el.dataset.img !== c.espana));
+    r('titulo').textContent = e.titulo;
+    r('texto').textContent = e.texto;
+    r('extra').textContent = e.extra;
+    r('secundaria').hidden = !c.secundaria;
+    if (c.secundaria) r('secundaria').textContent = `Tu segunda España: ${espanas[c.secundaria].titulo}.`;
+    r('perfil').textContent = String(c.perfil);
+    r('rango').textContent = rango.titulo;
+    r('rango-texto').textContent = rango.texto;
+    r('debil').hidden = !c.bloqueDebil;
+    if (c.bloqueDebil) r('debil').textContent = lineaDebil[c.bloqueDebil];
+    const wa = r('whatsapp') as HTMLAnchorElement;
+    wa.textContent = e.cta;
+    wa.href = `https://wa.me/${root.dataset.whatsapp}?text=${encodeURIComponent(mensajeWhatsapp(c, estado.utm.utm_content))}`;
+    (r('ruta') as HTMLAnchorElement).href = conUtm(`/rutas/${e.rutaId}`, c.espana);
+
+    const mostrar = () => {
+      estado.pantalla = 'result';
+      guardar();
+      pantalla('result');
+      window.scrollTo({ top: 0 });
+      r('titulo').focus({ preventScroll: true });
+      if (animar) track('test_complete', { espana: c.espana, secundaria: c.secundaria ?? '', perfil: c.perfil, codigo: c.codigo, ...estado.utm });
+    };
+    if (!animar) return mostrar();
+    pantalla('loading');
+    setTimeout(mostrar, reduced ? 800 : 1100);
+  }
+
+  // Respuestas: marcar, 250 ms de feedback y avanzar
+  let avanzando = false;
+  fieldsets.forEach((fs, i) => fs.addEventListener('click', (ev) => {
+    const btn = (ev.target as Element).closest<HTMLButtonElement>('button');
+    if (!btn || avanzando) return;
+    const p = preguntas[i];
+    const raw = btn.dataset.value!;
+    const valor = p.bloque === 'B' ? (raw as Espana) : Number(raw);
+    estado.respuestas[p.id] = valor;
+    track('test_answer', { question_id: p.id, value: valor });
+    fs.querySelectorAll('button').forEach((b) => { b.classList.toggle('is-selected', b === btn); b.setAttribute('aria-pressed', String(b === btn)); });
+    guardar();
+    avanzando = true;
+    setTimeout(() => {
+      avanzando = false;
+      if (i + 1 < fieldsets.length) mostrarPregunta(i + 1);
+      else resultado(true);
+    }, 250);
+  }));
+
+  $('[data-start]').addEventListener('click', () => {
+    track('test_start', { ...estado.utm });
+    iniciar();
+  });
+  $('[data-back]').addEventListener('click', () => {
+    if (estado.paso === 0) { estado.pantalla = 'intro'; guardar(); pantalla('intro'); return; }
+    mostrarPregunta(estado.paso - 1);
+  });
+  $('[data-restart]').addEventListener('click', () => {
+    estado = nuevoEstado(estado.utm);
+    aplicarOrdenes();
+    guardar();
+    pantalla('intro');
+    window.scrollTo({ top: 0 });
+  });
+
+  r('whatsapp').addEventListener('click', () => {
+    const c = calcular(estado.respuestas);
+    track('test_whatsapp_click', { espana: c.espana, perfil: c.perfil, codigo: c.codigo });
+  });
+  r('ruta').addEventListener('click', () => track('test_route_click', { espana: calcular(estado.respuestas).espana }));
+
+  $('[data-share]').addEventListener('click', async () => {
+    const url = `${location.origin}${location.pathname}?utm_source=compartido&utm_medium=test&utm_campaign=espana`;
+    const data = { title: '¿Qué España te falta?', text: 'Haz este test y dime qué España te sale.', url };
+    try {
+      if (navigator.share) { await navigator.share(data); track('test_share', { metodo: 'web_share' }); return; }
+    } catch { return; /* cancelado */ }
+    try {
+      await navigator.clipboard.writeText(url);
+      const msg = $('[data-copied]');
+      msg.hidden = false;
+      setTimeout(() => (msg.hidden = true), 2500);
+      track('test_share', { metodo: 'copiar_link' });
+    } catch { prompt('Copia este link:', url); }
+  });
+
+  // Captura opcional (solo existe si hay endpoint)
+  const form = root.querySelector<HTMLFormElement>('[data-lead]');
+  form?.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const msg = $('[data-lead-msg]');
+    const fd = new FormData(form);
+    const contacto = String(fd.get('contacto') ?? '').trim();
+    if (!contacto) { msg.textContent = 'Escribe tu WhatsApp o tu correo.'; return; }
+    if (!fd.get('consentimiento_resultado')) { msg.textContent = 'Necesitamos que aceptes el aviso de privacidad para enviarte tu resultado.'; return; }
+    const c = calcular(estado.respuestas);
+    const payload = {
+      nombre: String(fd.get('nombre') ?? '').trim(),
+      contacto,
+      tipo_contacto: contacto.includes('@') ? 'correo' : 'whatsapp',
+      espana: c.espana, secundaria: c.secundaria, perfil: c.perfil, bloqueA: c.bloqueA, bloqueC: c.bloqueC, codigo: c.codigo,
+      respuestas: estado.respuestas,
+      utm_source: estado.utm.utm_source ?? '', utm_medium: estado.utm.utm_medium ?? '',
+      utm_campaign: estado.utm.utm_campaign ?? '', utm_content: estado.utm.utm_content ?? '',
+      consentimiento_resultado: true,
+      consentimiento_marketing: Boolean(fd.get('consentimiento_marketing')),
+      timestamp: new Date().toISOString(),
+    };
+    msg.textContent = 'Enviando…';
+    try {
+      const res = await fetch(root.dataset.endpoint!, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) });
+      if (!res.ok) throw new Error(String(res.status));
+      msg.textContent = 'Listo. Te llega en unos minutos.';
+      form.querySelector('button')!.disabled = true;
+      track('test_lead_submit', { espana: c.espana, consentimiento_marketing: payload.consentimiento_marketing });
+    } catch {
+      msg.textContent = 'No se pudo enviar. Inténtalo de nuevo o escríbenos por WhatsApp.';
+    }
+  });
+
+  // Arranque: retoma donde se quedó (si el storage lo permite)
+  aplicarOrdenes();
+  if (estado.pantalla === 'result') resultado(false);
+  else if (estado.pantalla === 'quiz') { pantalla('quiz'); mostrarPregunta(estado.paso, false); }
+  else pantalla('intro');
+</script>
+
+<style>
+  .qe { min-height: 100svh; padding-top: clamp(7rem, 12vw, 10rem); }
+  .qe [hidden] { display: none !important; }
+  .qe__inner { max-width: 40rem; margin-inline: auto; }
+  .qe__title { color: var(--color-gold); }
+  .qe__lead { margin-top: var(--space-4); color: var(--color-sand); font-size: 1.1875rem; line-height: 1.6; }
+  .qe__note { margin-top: var(--space-3); color: var(--color-stone); }
+  .qe__start { margin-top: var(--space-5); }
+
+  .qe__progress { height: 2px; background: var(--hairline-dark); }
+  .qe__progress span { display: block; height: 100%; width: 0; background: var(--color-gold); transition: width 0.4s ease; }
+  .qe__count { color: var(--color-gold); margin: var(--space-3) 0 var(--space-4); }
+  .qe__q { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .qe__question { color: var(--color-sand); margin-bottom: var(--space-4); padding: 0; outline: none; }
+  .qe__options { display: grid; gap: var(--space-2); }
+  .qe__option {
+    text-align: left; font: inherit; font-size: 1.0625rem; line-height: 1.4; color: var(--color-sand);
+    background: transparent; border: 1px solid var(--hairline-dark); padding: 1rem 1.25rem; cursor: pointer; min-height: 3.25rem;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+  .qe__option:hover, .qe__option:focus-visible { border-color: var(--color-gold); background: rgb(240 192 84 / 0.08); color: var(--color-gold); }
+  .qe__option.is-selected { border-color: var(--color-gold); background: var(--color-gold); color: var(--color-ink); }
+  .qe__link { display: inline-block; margin-top: var(--space-4); background: none; border: 0; padding: 0.5rem 0; color: var(--color-stone); cursor: pointer; }
+  .qe__link:hover { color: var(--color-gold); }
+
+  .qe__loading { display: grid; justify-items: center; gap: var(--space-3); padding-block: var(--space-6); color: var(--color-gold); }
+  .qe__spinner { width: 2.5rem; height: 2.5rem; border-radius: 50%; border: 2px solid var(--hairline-dark); border-top-color: var(--color-gold); animation: qe-spin 0.9s linear infinite; }
+  @keyframes qe-spin { to { rotate: 360deg; } }
+  @media (prefers-reduced-motion: reduce) {
+    .qe__spinner { animation: none; border-color: var(--color-gold); }
+    .qe__progress span, .qe__option { transition: none; }
+  }
+
+  /* Resultado: imagen a sangre en móvil con degradado inferior */
+  .qe__result { margin-top: calc(-1 * clamp(7rem, 12vw, 10rem)); }
+  .qe__media { position: relative; margin-inline: calc(-1 * var(--gutter)); }
+  .qe__img { position: relative; aspect-ratio: 4 / 5; max-height: 70svh; width: 100%; overflow: hidden; }
+  .qe__img :global(.photo) { position: absolute; inset: 0; }
+  .qe__img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(30 25 20 / 0.55) 0%, transparent 30%, transparent 60%, var(--color-ink) 100%); pointer-events: none; }
+  .qe__img--solid { background: radial-gradient(circle at 70% 30%, var(--color-gold-deep), var(--color-copper) 55%, var(--color-base)); }
+  .qe__copy { position: relative; margin-top: calc(-1 * var(--space-6)); }
+  .qe__espana { color: var(--color-gold); outline: none; }
+  .qe__text { margin-top: var(--space-4); font-size: 1.1875rem; line-height: 1.6; color: var(--color-sand); }
+  .qe__secondary { margin-top: var(--space-3); color: var(--color-gold); }
+  .qe__extra { margin-top: var(--space-4); padding-left: var(--space-3); border-left: 2px solid var(--color-gold); color: var(--color-sand); line-height: 1.6; }
+
+  .qe__perfil { margin-top: var(--space-5); padding: var(--space-4); border: 1px solid var(--hairline-dark); display: grid; gap: var(--space-2); color: var(--color-stone); line-height: 1.6; }
+  .qe__perfil .caption { color: var(--color-gold); }
+  .qe__score { font-family: var(--font-display); font-weight: 600; font-size: clamp(3.5rem, 12vw, 5rem); line-height: 1; color: var(--color-gold); }
+  .qe__score small { font-size: 0.4em; color: var(--color-stone); margin-left: 0.15em; }
+  .qe__rango { color: var(--color-sand); }
+  .qe__debil { color: var(--color-sand); }
+
+  .qe__firma { margin-top: var(--space-5); color: var(--color-gold); }
+  .qe__ctas { margin-top: var(--space-4); display: grid; gap: var(--space-2); justify-items: stretch; }
+  .qe__ctas .btn { justify-content: center; text-align: center; }
+  .qe__support { color: var(--color-stone); font-size: var(--text-small); line-height: 1.5; margin-bottom: var(--space-3); }
+  .qe__copied { color: var(--color-gold); }
+
+  .qe__lead-form { margin-top: var(--space-6); display: grid; gap: var(--space-3); padding-top: var(--space-5); border-top: 1px solid var(--hairline-dark); }
+  .qe__lead-form h3 { color: var(--color-sand); }
+  .qe__lead-form label { display: grid; gap: var(--space-1); color: var(--color-sand); font-size: var(--text-small); }
+  .qe__lead-form label span { color: var(--color-stone); }
+  .qe__lead-form input:not([type='checkbox']) { font: inherit; font-size: 1rem; color: var(--color-sand); background: transparent; border: 1px solid var(--hairline-dark); padding: 0.85rem 1rem; }
+  .qe__lead-form input:focus-visible { border-color: var(--color-gold); }
+  .qe__check { grid-template-columns: auto 1fr; align-items: start; gap: var(--space-2) !important; }
+  .qe__check input { margin-top: 0.2rem; accent-color: var(--color-gold); }
+  .qe__check a { color: var(--color-gold); }
+  .qe__form-msg { color: var(--color-gold); min-height: 1em; }
+
+  @media (min-width: 40rem) {
+    .qe__result { margin-top: 0; }
+    .qe__media { max-width: 40rem; margin-inline: auto; }
+    .qe__ctas { justify-items: start; }
+    .qe__ctas .btn { min-width: 22rem; }
+  }
+</style>

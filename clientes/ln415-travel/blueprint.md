@@ -109,7 +109,7 @@ Este documento es la estrategia de contenido de LN41.5. Cada mes se planea a par
 | Tipo | Palabra | Recurso | Estado |
 |---|---|---|---|
 | **Convertir** (directa) | **VIAJE** | Sin recurso: 3 preguntas de calificación y luego WhatsApp | ✅ Lista (falta configurar la respuesta automática) |
-| **Capturar** (puerta 1) | **RUTA** | Test "¿Qué ruta de autor va contigo?": 10 preguntas y como resultado 1 de las 5 rutas | ✅ Publicado en www.ln415.com/test-ruta (`recursos/RUTA.md`) · falta la automatización de DMs |
+| **Capturar** (puerta 1) | **RUTA** | Test "¿Qué ruta de autor va contigo?": 10 preguntas y como resultado 1 de las 5 rutas | ⚠️ Reemplazado por el test ESPAÑA en www.ln415.com/que-espana-te-falta (`recursos/ESPANA.md`) · falta la automatización de DMs |
 | Congeladas | ITINERARIO · VALE · SEGUNDO · FAMILIA · FECHAS · CELEBRAR · VINO | Ver `opciones-puertas.md` | ❄️ Se activan con 3+ piezas al mes del tema y recurso listo |
 
 **Fase inicial:** Arranque ≈ **60% Distribuir · 20% Capturar · 20% Convertir**.
