@@ -5,7 +5,9 @@ summary: "Sevilla, Carmona, la Serranía de Ronda y la Córdoba de los olivares:
 description: "Andalucía Blanca: Sevilla, Carmona, Ronda, Grazalema, Zahara, Setenil y Priego de Córdoba. Caballos, pueblos blancos, aceite y vino. 10 días."
 order: 2
 photo: "ruta-andalucia"
-photoAlt: "Pueblo blanco andaluz sobre la roca en la Serranía de Ronda"
+photoAlt: "Calle de Setenil de las Bodegas con las casas blancas bajo la roca"
+heroPhoto: "ruta-andalucia-hero"
+heroPhotoAlt: "Zahara de la Sierra: pueblo blanco y torre del castillo entre olivos, en la Sierra de Grazalema"
 icon: "encina"
 duration: "10 días · 9 noches"
 hero:

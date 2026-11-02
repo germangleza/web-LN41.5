@@ -23,7 +23,7 @@ const blog = defineCollection({
  * Rutas de autor. Cada archivo = una página en /rutas/<nombre-del-archivo>.
  * Todo el contenido de la página vive en el frontmatter; las secciones sin datos no se muestran (ver src/pages/rutas/[slug].astro).
  * - kind 'ruta' aparece en la home (ordenada por `order`); 'especial' solo como banner.
- * - `photo` = nombre del archivo en src/assets/fotos (sin extensión).
+ * - `photo` = nombre del archivo en src/assets/fotos (sin extensión). `heroPhoto` (opcional) cambia solo la portada de la página.
  * - En `paragraphs`, un texto que empieza con "> " se muestra destacado.
  */
 const stop = z.object({
@@ -44,6 +44,8 @@ const rutas = defineCollection({
     order: z.number(),
     photo: z.string(),
     photoAlt: z.string().optional(),
+    heroPhoto: z.string().optional(),
+    heroPhotoAlt: z.string().optional(),
     icon: z.enum(['copa', 'ola', 'castillo', 'brujula', 'montana', 'encina', 'estrella']).default('brujula'),
     eyebrow: z.string().optional(),
     duration: z.string().optional(),

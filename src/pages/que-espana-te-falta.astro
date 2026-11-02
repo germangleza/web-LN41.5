@@ -64,7 +64,7 @@ const privacyUrl = import.meta.env.PUBLIC_PRIVACY_URL || '/aviso-de-privacidad';
     <div class="qe__screen qe__result" data-screen="result" hidden>
       <div class="qe__media">
         <div class="qe__img" data-img="M" hidden><Photo name="ruta-catalunya" alt="Vista aérea de Besalú y su puente medieval sobre el río Fluvià" sizes="(min-width: 40rem) 640px, 100vw" /></div>
-        <div class="qe__img qe__img--solid" data-img="B" hidden></div>
+        <div class="qe__img" data-img="B" hidden><Photo name="ruta-andalucia" alt="Calle de Setenil de las Bodegas con las casas blancas bajo la roca" sizes="(min-width: 40rem) 640px, 100vw" /></div>
         <div class="qe__img" data-img="A" hidden><Photo name="ruta-atlantica" alt="Faro de Cabo Vilán al atardecer en la Costa da Morte, Galicia" sizes="(min-width: 40rem) 640px, 100vw" /></div>
       </div>
       <div class="qe__inner qe__copy" aria-live="polite">
@@ -371,7 +371,6 @@ const privacyUrl = import.meta.env.PUBLIC_PRIVACY_URL || '/aviso-de-privacidad';
   .qe__img { position: relative; aspect-ratio: 4 / 5; max-height: 70svh; width: 100%; overflow: hidden; }
   .qe__img :global(.photo) { position: absolute; inset: 0; }
   .qe__img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(30 25 20 / 0.55) 0%, transparent 30%, transparent 60%, var(--color-ink) 100%); pointer-events: none; }
-  .qe__img--solid { background: radial-gradient(circle at 70% 30%, var(--color-gold-deep), var(--color-copper) 55%, var(--color-base)); }
   .qe__copy { position: relative; margin-top: calc(-1 * var(--space-6)); }
   .qe__espana { color: var(--color-gold); outline: none; }
   .qe__text { margin-top: var(--space-4); font-size: 1.1875rem; line-height: 1.6; color: var(--color-sand); }

@@ -40,7 +40,7 @@ const clean = (p: string) => p.replace(/^> /, '');
   <!-- HERO -->
   <section class="ruta-hero" aria-labelledby="ruta-title">
     <div class="ruta-hero__bg" data-parallax="0.25">
-      <Photo name={d.photo} alt={d.photoAlt ?? ''} eager />
+      <Photo name={d.heroPhoto ?? d.photo} alt={(d.heroPhoto ? d.heroPhotoAlt : d.photoAlt) ?? ''} eager />
     </div>
     <div class="ruta-hero__content">
       <p class="caption ruta-hero__eyebrow">
