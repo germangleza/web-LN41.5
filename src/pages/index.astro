@@ -12,6 +12,8 @@ const rutas = todas.filter((r) => r.data.kind === 'ruta').sort((a, b) => a.data.
 // Edición especial que se anuncia en el banner (la primera publicada)
 const especial = todas.find((r) => r.data.kind === 'especial');
 
+// Curaduría / Diseño de viaje / Acompañamiento: oculto en la home para acortarla (cambiar a true para mostrarlo)
+const mostrarServicios = false;
 const servicios = [
   {
     title: 'Curaduría',
@@ -101,7 +103,7 @@ const paraTi = [
         </span>
       </div>
     </div>
-    <ul class="servicios" role="list" data-stagger>
+    {mostrarServicios && <ul class="servicios" role="list" data-stagger>
       {servicios.map((s, i) => (
         <li class="servicio">
           <p class="caption servicio__num">{String(i + 1).padStart(2, '0')}</p>
@@ -111,7 +113,7 @@ const paraTi = [
           </ul>
         </li>
       ))}
-    </ul>
+    </ul>}
     <SectionCta />
   </section>
 
